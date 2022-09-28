@@ -1,0 +1,32 @@
+﻿{% extends "layout.html" %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Preview Your Creation</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/StyleSheet1.css" />
+
+</head>
+<body>
+    <script>
+        let newImg = localStorage.getItem('imgData');
+        console.log(newImg)
+    </script>
+    <div class="column">
+        <center>
+            <h3>9 x 7 in</h3>
+            <label for="fname">Quantity:</label><br>
+            <input type="number" id="fname" style="width: 50px;" name="fname_qty1" value="0"><br><br />
+            <img src="https://www.moca.org/storage/app/uploads/public/55e/775/674/thumb_820_1120_0_0_0_auto.jpg" style="width:90px;height:70px;">
+            <br /><br /><br /><br /><br />
+            <h3>11 x 8.5 in</h3>
+            <label for="fname">Quantity:</label><br>
+            <input type="number" id="fname" style="width: 50px;" name="fname_qty2" value="0"><br><br />
+            <img src="newImg" style="width:110px;height:85px;">
+            <br />
+        </center>
+    </div>
+</body>
+</html>
