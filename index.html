@@ -1,5 +1,6 @@
-{% extends "layout.html" %}
-
+<!DOCTYPE html>
+<html lang="en">
+    
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,34 @@
     <link rel="stylesheet" type="text/css" href="/static/content/StyleSheet1.css" />
 
 </head>
-{% block content %}
 
 <body>
+    <div class="container">
+        <div class="hero">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="/" class="navbar-brand">MyPollock</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="{{ url_for('home') }}">Home</a></li>
+                            <li><a href="{{ url_for('history') }}">History</a></li>
+                            <li><a href="{{ url_for('about') }}">About</a></li>
+                            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="hero">
             <h1><b>Martin House of Art</b></h1>
@@ -54,4 +80,4 @@
         </div>
     </div>
 </body>
-{% endblock %}
+</html>
