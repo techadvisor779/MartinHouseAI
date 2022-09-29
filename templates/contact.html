@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Paint like Pollock</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/StyleSheet1.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+{% block content %}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>&emsp; &emsp; &emsp; &emsp; &emsp;{{ title }}</h2>
+<h3>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;{{ message }}</h3>
+
+<address>
+    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;One Microsoft Way<br />
+    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;edmond, WA 98052-6399<br />
+    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+{% endblock %}
