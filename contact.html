@@ -1,37 +1,63 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Paint like Pollock</title>
+    <title>Contact Martin House AI</title>
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/StyleSheet1.css" />
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
-{% block content %}
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<h2>&emsp; &emsp; &emsp; &emsp; &emsp;{{ title }}</h2>
-<h3>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;{{ message }}</h3>
 
-<address>
-    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;One Microsoft Way<br />
-    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;edmond, WA 98052-6399<br />
-    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="/" class="navbar-brand">MyPollock</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="{{ url_for('home') }}">Home</a></li>
+                            <li><a href="{{ url_for('history') }}">History</a></li>
+                            <li><a href="{{ url_for('about') }}">About</a></li>
+                            <li><a href="{{ url_for('contact') }}">Contact</a></li>
 
-<address>
-    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-{% endblock %}
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h2>Contact</h2>
+    <br />
+    <br />
+    <address>
+        <center>
+            <h4>
+                <strong>Support:&emsp; </strong><a href="mailto:techadvisor779@gmail.com">techadvisor779@gmail.com</a>
+            </h4>
+        </center>
+    </address>
+</body>
+</html>
+
