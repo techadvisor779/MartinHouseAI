@@ -478,9 +478,15 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-family: papyrus, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 200;
   line-height: 1.1;
+  text-shadow: 2px 3px 5px black;
+  width: 250px;
+  padding-left: 0px;
+  color: black;
+  text-align: center;
 }
 
 h1 small,
