@@ -4,7 +4,7 @@ if(!jQuery)throw new Error("Bootstrap requires jQuery");+function(a){"use strict
 body {
     color:black;
     background: url("bg.jpg");
-    background-size: 100% 1750px;
+    background-size: 100% 1550px;
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 40pt;
