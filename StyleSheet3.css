@@ -64,7 +64,7 @@ body {
 
 .column3 {
     display: flex;
-    column-width: 250px;
+    column-width: auto;
     word-wrap: normal;
     padding-top: 20px;
     padding-left: 60px;
