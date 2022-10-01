@@ -498,7 +498,7 @@ var disengage = function (e) {
     //document.appendChild(pnGImage);
 
     window.sessionStorage;
-    localStorage.setItem('imgData', dataUrl);  
+    sessionStorage.setItem('imgData', dataUrl);  
 }    
 
 function assignColors(COLORS) {    
