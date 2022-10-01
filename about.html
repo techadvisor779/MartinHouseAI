@@ -1,51 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Preview Your Creation</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="site.css" />
-    <link rel="stylesheet" type="text/css" href="StyleSheet2.css" />
+    <title>{{ title }} - Paint like a master artist</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/StyleSheet1.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
-
+{% block content %}
 <body>
-    <div class="container">
-        <div class="hero">
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a href="/" class="navbar-brand">MyPollock</a>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a href="https://techadvisor779.github.io/MartinHouseAI/">Home</a></li>
-                            <li><a href="templates/history.html">History</a></li>
-                            <li><a href="https://techadvisor779.github.io/MartinHouseAI/about.html">About</a></li>
-                            <li><a href="https://techadvisor779.github.io/MartinHouseAI/contact.html">Contact</a></li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <h1><b>Meet the Artists</b></h1>
+    <div class="column2">
+        <section>
+            <h2> &emsp; &emsp;Jackson Pollock</h2>
+            <a><img src="https://m.media-amazon.com/images/M/MV5BNzc2YzNlYzctMWE3Yy00NjRjLWEyYWUtNmY4YThjMjc3Yjk1XkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_.jpg" width=120 height=150></a>
+            <p><a>Born:3433</a></p>
+            <p><a>Died:3433</a></p>
+            <p><a>Pollock ersefdfsdfsdf</a></p>
+        </section>
+</div>
+    <div class="column2">
+        <h2> &emsp;Piet Mondrian</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Piet_Mondriaan.jpg" width=120 height=150>
     </div>
-    <h1>Inspiration</h1>
-    <br /><br />
-    <div class="column3">
-        <h3> Edward Lewis Martin</h3>
-        <h3> Born: 1935</h3>
-        <h3> Died: 2017</h3>
-        <h3> Edward Lewis Martin is my father and source for the artistic inspiration. Ed Martin was a Korean War veteran, loving husband and father of 2 sons. He wrote book and was published as "Randy's World: The marauders". Please don't ask to buy his paintings from our family. They are not for sale.</h3>
-        <h3> This web site is deicated to the synthesis of science and art, the synergy of coding with creativity.</h3>
-        <br />
-        <h3>&emsp; &emsp;&emsp; &emsp; Have fun and I hope you enjoy!</h3>
+    <div class="column2">
+        <h2> &emsp;Claude Monet</h2>
+        <img src="http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcS9cumAy4tq60h12fAPA8RnQgMxQakJHgeKgJpDAcge2UeAaoqMbJNzf361oSfk04q2" width=120 height=150>
     </div>
-    </body>
-</html>
+</body>
+{% endblock %}
