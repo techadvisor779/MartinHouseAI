@@ -5,7 +5,7 @@ body {
     background-size: 100% 1400px;
     background-repeat: no-repeat;
     background-position: center;
-    padding-top: 40pt;
+    padding-top: 50pt;
     padding-left: 0pt;
     overflow: scroll;
 }
@@ -61,7 +61,7 @@ body {
 
 .column3 {
     display: block;
-    column-width: 200px;
+    column-width: 100px;
     word-wrap: normal;
     padding-top: 20px;
     padding-left: 60px;
