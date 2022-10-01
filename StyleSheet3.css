@@ -5,7 +5,7 @@ body {
     background-size: 100% 1400px;
     background-repeat: no-repeat;
     background-position: center;
-    padding-top: 80pt;
+    padding-top: 40pt;
     padding-left: 0pt;
     overflow: scroll;
 }
@@ -153,18 +153,20 @@ h1 {
 
 h2 {
     font-family: papyrus, Helvetica, sans-serif;
+    font-size: 36px;
     font-weight: 200;
     line-height: 1.1;
     text-shadow: 2px 3px 5px black;
     text-align: left;
 }
 
-h3 {
+h3, h6 {
     font-family: papyrus, Helvetica, sans-serif;
     font-size: 24px;
     font-weight: 200;
     line-height: 1.1;
     text-shadow: 2px 3px 5px black;
+    text-align: left;
 }
 
 
