@@ -5,7 +5,7 @@ body {
     background-size: 100% 1584px;
     background-repeat: no-repeat;
     background-position: top;
-    padding-top: 40pt;
+    padding-top: 80pt;
     padding-left: 0pt;
     overflow: visible;
 }
@@ -140,7 +140,7 @@ body {
 .hero {
 height: 100%;
 width: 100%;
-text-align: center;
+text-align: left;
 }
 
 h1 {
