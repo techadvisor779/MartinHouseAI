@@ -59,8 +59,8 @@ body {
 }
 
 .column3 {
-    display: block;
-    column-width: 180px;
+    display: flex;
+    column-width: 250px;
     word-wrap: normal;
     padding-top: 20px;
     padding-left: 60px;
@@ -68,6 +68,7 @@ body {
     border: 0px;
     margin: 0px;
     font-size: 14px;
+    text-align: left;
 }
 
 .container .img {
