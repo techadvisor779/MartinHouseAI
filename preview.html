@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Preview Your Creation</title>
-    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
-    <link rel="stylesheet" type="text/css" href="/static/content/StyleSheet3.css" />
+
+    <link rel="stylesheet" type="text/css" href="site.css" />
+    <link rel="stylesheet" type="text/css" href="StyleSheet3.css" />
 </head>
 
 <body>
@@ -25,10 +25,10 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="{{ url_for('home') }}">Home</a></li>
-                            <li><a href="{{ url_for('history') }}">History</a></li>
-                            <li><a href="{{ url_for('about') }}">About</a></li>
-                            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                            <li><a href="https://techadvisor779.github.io/MartinHouseAI/index.html">Home</a></li>
+                            <li><a href="https://techadvisor779.github.io/MartinHouseAI/history.html">History</a></li>
+                            <li><a href="https://techadvisor779.github.io/MartinHouseAI/about.html">About</a></li>
+                            <li><a href="https://techadvisor779.github.io/MartinHouseAI/contact.html">Contact</a></li>
 
                         </ul>
                     </div>
@@ -48,7 +48,7 @@
         canvas.width = innerWidth;
         canvas.height = innerHeight;
         var c = canvas.getContext('2d');
-        var recentImageURI = localStorage.getItem('imgData');
+        var recentImageURI = sessionStorage.getItem('imgData');
         //var myImage = new Image();
         //myImage.src = recentImageURI;
         document.querySelector("canvas1").setAttribute("src", recentImageURI);
