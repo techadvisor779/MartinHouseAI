@@ -488,7 +488,7 @@ var moving_clicked = function (e) {
 var disengage = function (e) {
     dragging = false;  
    
-    img.data = canvas.c.getImageData(400, 0, 1000, 600);
+    img.data = c.getImageData(400, 0, 1000, 600);
     
     window.sessionStorage;
     session.setItem('imgData', img); 
