@@ -62,17 +62,16 @@ body {
     margin: 0px;
 }
 
-.column3 {
-    display: flex;
-    width: auto;
-    word-wrap: normal;
-    padding-top: 20px;
-    padding-left: 60px;
-    padding-right: 0px;
-    border: 0px;
-    margin: 0px;
-    font-size: 14px;
-    text-align: left;
+.h3 {
+    font-family: papyrus, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 1.1;
+    text-shadow: 2px 3px 5px black;
+    width: 250px;
+    padding-left: 0px;
+    color: black;
+    text-align: center;
 }
 
 .container .img {
