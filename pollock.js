@@ -490,7 +490,7 @@ var disengage = function (e) {
    
     var canvas2 = document.getElementById('canvas1')
     var c2 = canvas.getContext('2d');
-    img.data = c2.getImageData(400, 0, 1000, 600);
+    img.data = canvas2.c2.getImageData(400, 0, 1000, 600);
     
     window.sessionStorage;
     session.setItem('imgData', img); 
