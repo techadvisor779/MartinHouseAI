@@ -77,8 +77,8 @@ body {
 
 .container .img {
     position: relative;
-    padding-left: 20px;
-    padding-right: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
     border: 10px;
 }
 
