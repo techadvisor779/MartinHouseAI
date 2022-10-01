@@ -4,7 +4,7 @@ body {
     background-size: 100% 1400px;
     background-repeat: no-repeat;
     background-position: center;
-    padding-top: 80pt;
+    padding-top: 40pt;
     padding-left: 0pt;
     overflow: scroll;
 }
@@ -22,7 +22,7 @@ body {
     text-align: left;
 }
 
-.h3, .h6 {
+.h3 {
     font-family: papyrus, Helvetica, sans-serif;
     font-size: 24px;
     font-weight: 200;
