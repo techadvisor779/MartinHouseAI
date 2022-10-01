@@ -487,13 +487,14 @@ var moving_clicked = function (e) {
 
 var disengage = function (e) {
     dragging = false;  
-    
+    var c2 = c;
     var canvasTemp = document.getElementById('canvas1')
     canvasTemp.width = innerWidth;
     canvasTemp.height = innerHeight-135;
     dataUrl = canvasTemp.toDataURL("image/png");
     window.sessionStorage;
-    sessionStorage.setItem('imgData', dataUrl);  
+    sessionStorage.setItem('imgData', dataUrl); 
+    c = c2;
 }    
 
 function assignColors(COLORS) {    
