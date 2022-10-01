@@ -1,13 +1,13 @@
 ﻿
 body {
-    color: #fff;
-    background-image: none;
-    background-size: 100% 1584px;
+    color:black;
+    background: url("NewBG2.jpg");
+    background-size: 100% 1400px;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     padding-top: 80pt;
     padding-left: 0pt;
-    overflow: visible;
+    overflow: scroll;
 }
 
 .container {
