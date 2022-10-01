@@ -492,7 +492,7 @@ var disengage = function (e) {
     canvasTemp.width = innerWidth;
     canvasTemp.height = innerHeight-135;
     dataUrl = canvasTemp.toDataURL("image/png");
-    img.src = dataURL;
+    img.src = dataUrl;
     window.sessionStorage;
     sessionStorage.setItem('imgData', img); 
     c = c2;
