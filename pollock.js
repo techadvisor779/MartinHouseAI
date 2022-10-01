@@ -473,7 +473,8 @@ var engage = function (e) {
     color_check(e);
     dragging = true;
     radius = 14;
-    putPoint(e);    
+    putPoint(e);
+    console.log(e.clientX, e.clientY);
 }
 
 var moving_clicked = function (e) {
