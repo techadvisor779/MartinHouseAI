@@ -476,8 +476,7 @@ h6,
 .h2,
 .h3,
 .h4,
-.h5,
-.h6 {
+.h5 {
   font-family: papyrus, Helvetica, sans-serif;
   font-weight: 200;
   line-height: 1.1;
@@ -486,6 +485,17 @@ h6,
   padding-left: 0px;
   color: black;
   text-align: center;
+}
+
+.h6 {
+  font-family: papyrus, Helvetica, sans-serif;
+  font-weight: 200;
+  line-height: 1.1;
+  text-shadow: 2px 3px 5px black;
+  width: 600px;
+  padding-left: 0px;
+  color: black;
+  text-align: left;
 }
 
 h1 small,
