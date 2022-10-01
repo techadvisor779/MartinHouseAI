@@ -488,9 +488,7 @@ var moving_clicked = function (e) {
 var disengage = function (e) {
     dragging = false;  
    
-    var canvas2 = document.getElementById('canvas1')
-    var c2 = canvas.getContext('2d');
-    img.data = canvas2.c2.getImageData(400, 0, 1000, 600);
+    img.data = c.getImageData(400, 0, 1000, 600);
     
     window.sessionStorage;
     session.setItem('imgData', img); 
