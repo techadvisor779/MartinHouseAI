@@ -9,6 +9,10 @@ body {
     overflow: scroll;
 }
 
+.section {
+    width: 200px;
+}
+
 .container {
     padding-right: 65px;
     padding-left: 15px;
