@@ -488,17 +488,17 @@ var moving_clicked = function (e) {
 var disengage = function (e) {
     dragging = false;  
 
-    function convertCanvasToImage() {
-        let canvasTemp = document.getElementById("canvas1");
-        img.src = canvasTemp.toDataURL("image/jpeg");
-        return img;
-    }
+    //function convertCanvasToImage() {
+    //    let canvasTemp = document.getElementById("canvas1");
+    //    img.src = canvasTemp.toDataURL("image/jpeg");
+    //  return img;
+    //}
 
-    let pnGImage = convertCanvasToImage();
-    document.appendChild(pnGImage);
+    //let pnGImage = convertCanvasToImage();
+    //document.appendChild(pnGImage);
 
     window.sessionStorage;
-    localStorage.setItem('imgData', img);  
+    localStorage.setItem('imgData', dataUrl);  
 }    
 
 function assignColors(COLORS) {    
