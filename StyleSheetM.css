@@ -5,6 +5,13 @@ body {
     padding: 1em;
 }
 
+.range-slider {
+    max-width: 30em;
+    margin: 8em auto;
+    position: replative;
+    display: flex;
+}
+
 range-slider .slider {
     -webkit-appearance: none;
     width: 100%;
