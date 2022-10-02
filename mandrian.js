@@ -16,7 +16,8 @@ var change_pallet1 = function () {
     c.fillRect(200, 100, 1000, 700);
     c.strokeStyle = 'Black';
     c.strokeRect(200, 100, 1000, 700);
-    c.fillStyle='White';
 }
 
 change_pallet1();
+
+
