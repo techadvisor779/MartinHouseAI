@@ -29,7 +29,7 @@ var change_pallet1 = function () {
     c.fillStyle = 'DarkOliveGreen';
 }
 
-//const container = document.querySelectAll(".range-slider");
+const container1 = document.querySelect  (".range-slider");
 
 for ( let i=0; i < container.length; i++) {
      const slider = container[i].querySelector(".slider");
@@ -38,10 +38,20 @@ for ( let i=0; i < container.length; i++) {
      const progress = container[i].querySelector(".progress");
 }
 
-customSlider();
+function customSlider() {
+     const maxVal = slider.getAttribute("max");
+     const val = (slider.value / maxValue) * 100 + "%";
+     
+     tooltip.innerHTML = slider.value;
+     progress.style.width = val;
+     thumb.style.left = val;     
+}
+
+//customSlider();
 change_pallet1();
 
 slider.addEventListener("input", () => {
-     customSlider();     
+     //customSlider();   
+     pass;
 });
 
