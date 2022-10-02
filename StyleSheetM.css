@@ -23,6 +23,11 @@ body {
     height:fit-content;
 }
 
+.column {
+    width: 300px;
+    padding-left:50px;
+}
+
 range-slider .slider {
     -webkit-appearance: none;
     width: 100%;
