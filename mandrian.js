@@ -27,10 +27,6 @@ var change_pallet1 = function () {
     c.fillStyle='White';
 }
 
-function assignColors(COLORS) {    
-    
-}
-
 change_pallet1()
 canvas.addEventListener('resize', function () {
     canvas.width = innerWidth;
