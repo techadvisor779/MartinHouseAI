@@ -47,8 +47,8 @@ function customSlider() {
      thumb.style.left = val;     
 }
 
-change_pallet1();
 customSlider();
+change_pallet1();
 
 slider.addEventListener("input", () => {
      customSlider();     
