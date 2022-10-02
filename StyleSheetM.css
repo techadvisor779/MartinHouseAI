@@ -17,6 +17,7 @@ body {
     width: auto;
     display: grid;
     height:fit-content;
+    padding-left: 50px;
 }
 
 column4 {
