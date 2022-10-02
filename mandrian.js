@@ -13,9 +13,20 @@ const pallet0 = [
 
 var change_pallet1 = function () {
     c.fillStyle = 'White';
-    c.fillRect(200, 100, 1000, 700);
+    c.fillRect(100, 0, 280, 600);
     c.strokeStyle = 'Black';
-    c.strokeRect(200, 100, 1000, 700);
+    c.strokeRect(100, 0, 280, 600);
+    c.fillStyle='White';
+    c.fillRect(400, 0, 1000, 600);
+    c.strokeStyle = 'Black';
+    c.strokeRect(400, 0, 1000, 600);
+
+    c.fillStyle = 'Black';
+    c.font = "16px Georgia";
+    c.fillText("Paint Brush", 200, 46);
+    c.fillStyle = 'Black';
+    c.strokeRect(181, 56, 28, 28);
+    c.fillStyle = 'DarkOliveGreen';
 }
 
 change_pallet1();
