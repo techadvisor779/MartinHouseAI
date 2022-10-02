@@ -15,14 +15,8 @@ body {
     display: flex;
     float: left;
     width: auto;
-    display: grid;
     height:fit-content;
     padding-left: 50px;
-}
-
-div.column4 {
-    width: 300px;
-    padding-left:50px;
 }
 
 range-slider .slider {
