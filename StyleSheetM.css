@@ -10,7 +10,7 @@ body {
 .range-slider {
     max-width: 30em;
     margin: 8em auto;
-    position: replative;
+    position: relative;
     display: block;
     float: left;
     width: auto;
