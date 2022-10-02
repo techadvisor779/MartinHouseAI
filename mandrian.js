@@ -3,9 +3,6 @@ canvas.width = innerWidth;
 canvas.height = innerHeight-135;
 var c = canvas.getContext('2d');
 
-let btn_clear;
-let btn_exit;
-
 const pallet0 = [
      'white',               //white  0
      '#fff001',             //yellow   1
@@ -13,8 +10,6 @@ const pallet0 = [
      '#0101fd',             //blue    3
      'Black'                //black 7
 ]	
-
-const button = document.getElementById('button');
 
 var change_pallet1 = function () {
     c.fillStyle = 'White';
@@ -24,10 +19,4 @@ var change_pallet1 = function () {
     c.fillStyle='White';
 }
 
-change_pallet1()
-
-canvas.addEventListener('resize', function () {
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
-});
-
+change_pallet1();
