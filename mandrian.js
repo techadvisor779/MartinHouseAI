@@ -29,7 +29,7 @@ var change_pallet1 = function () {
     c.fillStyle = 'DarkOliveGreen';
 }
 
-const container = document.querySelectAll(".range-slider");
+//const container = document.querySelectAll(".range-slider");
 
 for ( let i=0; i < container.length; i++) {
      const slider = container[i].querySelector(".slider");
