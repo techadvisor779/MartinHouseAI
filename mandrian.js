@@ -3,9 +3,6 @@ canvas.width = innerWidth;
 canvas.height = innerHeight-135;
 var c = canvas.getContext('2d');
 
-var img = new Image();
-img.crossOrigin = "Anonymous";
-
 let btn_clear;
 let btn_exit;
 
