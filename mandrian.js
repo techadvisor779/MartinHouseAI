@@ -25,10 +25,9 @@ var change_pallet1 = function () {
 }
 
 change_pallet1()
+
 canvas.addEventListener('resize', function () {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
 });
-canvas.addEventListener('mousedown', engage)
-canvas.addEventListener('mousemove', moving_clicked)
-canvas.addEventListener('mouseup', disengage)
+
