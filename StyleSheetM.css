@@ -19,8 +19,11 @@ body {
     padding-left: 50px;
 }
 
-div {
-  column-width: 100px;
+.column {
+    float: left;
+    width: 250px;
+    display: grid;
+    height:fit-content;
 }
 
 range-slider .slider {
