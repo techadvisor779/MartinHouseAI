@@ -29,6 +29,28 @@ var change_pallet1 = function () {
     c.fillStyle = 'DarkOliveGreen';
 }
 
-change_pallet1();
+const container = document.querySelectAll(".range-slider");
 
+for ( let i=0; i < container.length; i++) {
+     const slider = container[i].querySelector(".slider");
+     const thumb = container[i].querySelector(".slider-thumb");
+     const tooltip = container[i].querySelector(".tooltip");
+     const progress = container[i].querySelector(".progress");
+}
+
+function customSlider() {
+     const maxVal = slider.getAttribute("max");
+     const val = (slider.value / maxValue) * 100 + "%";
+     
+     tooltip.innerHTML = slider.value;
+     progress.style.width = val;
+     thumb.style.left = val;     
+}
+
+change_pallet1();
+customSlider();
+
+slider.addEventListener("input", () => {
+     customSlider();     
+});
 
