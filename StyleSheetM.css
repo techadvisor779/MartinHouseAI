@@ -78,7 +78,7 @@ range-slider:hover .slider-thumb:before {
 }  
 
 .range-slider .tooltip::before {
-  content: '':
+  content: '';
   position: absolute;
   width: 0;
   height: 0;
