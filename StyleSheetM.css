@@ -19,6 +19,10 @@ body {
     padding-left: 50px;
 }
 
+div {
+  column-width: 100px;
+}
+
 range-slider .slider {
     -webkit-appearance: none;
     width: 100%;
