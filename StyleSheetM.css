@@ -2,19 +2,19 @@ body {
     margin: 0;
     background: linear-gradient(0deg, #1f1f1f 0%, #414141 100%);
     padding: 1em;
-    padding-top: 40pt;
+    margin-top: 40pt;
     padding-left: 0pt;
     overflow: visible;
 }
 
 .range-slider {
     max-width: 30em;
-    margin: 8em auto;
+    margin: 2em auto;
     position: relative;
 
     float: left;
     width: auto;
-    height: 100px;
+    height: 20px;
     padding-left: 50px;
 }
 
