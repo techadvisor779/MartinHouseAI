@@ -38,15 +38,6 @@ for ( let i=0; i < container.length; i++) {
      const progress = container[i].querySelector(".progress");
 }
 
-function customSlider() {
-     const maxVal = slider.getAttribute("max");
-     const val = (slider.value / maxValue) * 100 + "%";
-     
-     tooltip.innerHTML = slider.value;
-     progress.style.width = val;
-     thumb.style.left = val;     
-}
-
 customSlider();
 change_pallet1();
 
