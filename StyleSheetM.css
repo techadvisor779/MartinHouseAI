@@ -14,8 +14,7 @@ body {
     display: block;
     float: left;
     width: auto;
-    height: 70px;
-    height:fit-content;
+    height: fit-content;
     padding-left: 50px;
 }
 
@@ -23,7 +22,7 @@ body {
     float: left;
     width: 250px;
     display: grid;
-    height:fit-content;
+    height: fit-content;
 }
 
 range-slider .slider {
