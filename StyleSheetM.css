@@ -14,7 +14,7 @@ body {
 
     float: left;
     width: auto;
-    height: 30px;
+    max-height: 20px;
     padding-left: 50px;
 }
 
