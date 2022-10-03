@@ -500,12 +500,12 @@ h6,
 
 h7 {
   font-family: papyrus, Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: 240;
+  font-size: 18px;
+  font-weight: 180;
   line-height: 1.1;
   text-shadow: 2px 3px 5px black;
   width: 220px;
-  margin-left: 70px;
+  margin-left: 40px;
   padding-bottom: 10px;
   color: black;
   text-align: left;
