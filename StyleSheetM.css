@@ -29,8 +29,8 @@ body {
 }
 
 .column4 {
-    float: left;
-    width: 25%;
+    float: center;
+    width: 200px;
     display: grid;
     text-shadow: 2px 3px 5px black;
 }
