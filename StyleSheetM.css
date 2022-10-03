@@ -13,14 +13,14 @@ body {
     position: relative;
     transform: translateX(-80px), translateY(-1em);
     float: left;
-    width: auto;
+    width: 80px;
     max-height: 20px;
     padding-left: 50px;
 }
 
 .column4 {
     float: left;
-    width: 80px;
+    width: 40px;
     display: grid;
     text-shadow: 2px 3px 5px black;
 }
