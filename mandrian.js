@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas1')
-canvas.width = innerWidth;
-canvas.height = innerHeight-135;
+canvas.width = 1000;
+canvas.height = 600;
 var c = canvas.getContext('2d');
 
 const pallet0 = [
@@ -29,7 +29,7 @@ var change_pallet1 = function () {
     c.fillStyle = 'DarkOliveGreen';
 }
 
-const container1 = document.querySelect  (".range-slider");
+const container1 = document.querySelectAll(".range-slider");
 
 for ( let i=0; i < container.length; i++) {
      const slider = container[i].querySelector(".slider");
