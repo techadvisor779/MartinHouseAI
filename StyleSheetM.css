@@ -23,14 +23,14 @@ body {
     margin: 2em auto;
     position: relative;
     float: left;
-    width: 200px;
+    width: 150px;
     max-height: 20px;
     padding-left: 30px;
 }
 
 .column4 {
     width: 150px;
-    float: center;
+    float: left;
     display: flex;
     text-shadow: 2px 3px 5px black;
 }
