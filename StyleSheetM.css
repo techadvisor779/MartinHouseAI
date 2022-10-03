@@ -7,6 +7,17 @@ body {
     overflow: visible;
 }
 
+.h7 {
+  font-family: papyrus, Helvetica, sans-serif;
+  font-weight: 200;
+  line-height: 1.1;
+  text-shadow: 2px 3px 5px black;
+  width: 200px;
+  padding-left: 0px;
+  color: black;
+  text-align: left;
+}
+
 .range-slider {
     max-width: 30em;
     margin: 2em auto;
