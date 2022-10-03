@@ -14,7 +14,7 @@ body {
     transform: translateX(-80px);
     transform: translateY(-10px);
     float: left;
-    width: 80px;
+    width: 150px;
     max-height: 20px;
     padding-left: 50px;
 }
