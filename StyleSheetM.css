@@ -15,9 +15,7 @@ body {
   width: 200px;
   padding-left: 10px;
   color: black;
-  text-align: left;
-  transform: translateX(-40px);
-  transform: translateY(-10px);
+  text-align: center;    
 }
 
 .range-slider {
