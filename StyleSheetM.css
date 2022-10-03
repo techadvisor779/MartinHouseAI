@@ -15,7 +15,7 @@ body {
   width: auto;
   padding-left: 10px;
   color: black;
-  text-align: center;    
+  align-content: center;   
 }
 
 .range-slider {
@@ -23,14 +23,13 @@ body {
     margin: 2em auto;
     position: relative;
     float: left;
-    width: auto;
+    width: 200px;
     max-height: 20px;
-    padding-left: 50px;
+    padding-left: 30px;
 }
 
 .column4 {
     float: center;
-    width: 200px;
     display: grid;
     text-shadow: 2px 3px 5px black;
 }
