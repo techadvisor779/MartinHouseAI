@@ -31,7 +31,7 @@ body {
 .column4 {
     width: 150px;
     float: center;
-    display: grid;
+    display: flex;
     text-shadow: 2px 3px 5px black;
 }
 
