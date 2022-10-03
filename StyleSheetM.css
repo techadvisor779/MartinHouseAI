@@ -13,17 +13,17 @@ body {
   line-height: 1.1;
   text-shadow: 2px 3px 5px black;
   width: 200px;
-  padding-left: 0px;
+  padding-left: 10px;
   color: black;
   text-align: left;
+  transform: translateX(-40px);
+  transform: translateY(-10px);
 }
 
 .range-slider {
     max-width: 30em;
     margin: 2em auto;
     position: relative;
-    transform: translateX(-80px);
-    transform: translateY(-10px);
     float: left;
     width: 150px;
     max-height: 20px;
