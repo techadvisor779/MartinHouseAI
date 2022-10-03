@@ -12,7 +12,7 @@ body {
   font-weight: 200;
   line-height: 1.1;
   text-shadow: 2px 3px 5px black;
-  width: 200px;
+  width: auto;
   padding-left: 10px;
   color: black;
   text-align: center;    
@@ -23,7 +23,7 @@ body {
     margin: 2em auto;
     position: relative;
     float: left;
-    width: 150px;
+    width: auto;
     max-height: 20px;
     padding-left: 50px;
 }
