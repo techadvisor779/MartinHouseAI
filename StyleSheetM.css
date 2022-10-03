@@ -11,7 +11,7 @@ body {
     max-width: 30em;
     margin: 2em auto;
     position: relative;
-    
+    transform: translateX(-80px), translateY(-1em);
     float: left;
     width: auto;
     max-height: 20px;
@@ -22,7 +22,7 @@ body {
     float: left;
     width: 100px;
     display: grid;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    text-shadow: 2px 3px 5px black;
 }
 
 range-slider .slider {
