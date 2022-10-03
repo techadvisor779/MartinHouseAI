@@ -498,13 +498,13 @@ h6,
   text-align: left;
 }
 
-.h7 {
+h7 {
   font-family: papyrus, Helvetica, sans-serif;
   font-weight: 200;
   line-height: 1.1;
   text-shadow: 2px 3px 5px black;
   width: 200px;
-  padding-left: 0px;
+  padding-left: 20px;
   color: black;
   text-align: center;
 }
