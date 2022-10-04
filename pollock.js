@@ -84,11 +84,11 @@ var putPoint = function (e, dragging, dribble_COLORS, COLORS) {
     console.log( e.clientX, e.clientY);
     delta = (e.clientX * e.clientX) + (e.clientY * e.clientY);
     if (e.clientX > 400) {
-        if (e.clientX < 946) {
+        if (e.clientX < 1000) {
             if (e.clientY > 120) {
                 if (e.clientY < 716 - radius) {
                     c.beginPath();
-                    c.arc(e.clientX, e.clientY - 85, radius, 0, Math.PI * 2);
+                    c.arc(e.clientX, e.clientY - 125, radius, 0, Math.PI * 2);
                     c.fill();
                     c.arc(1800 - e.clientX, 700 - e.clientY, radius, 0, Math.PI * 2);
                     c.fill();
