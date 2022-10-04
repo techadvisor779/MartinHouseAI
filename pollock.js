@@ -249,7 +249,7 @@ var color_check = function (e){
             }
         }
     }
-    if (e.clientY > 459 {            
+    if (e.clientY > 459) {            
         if (e.clientY < 536) {     
             if (e.clientX > 180) {
                 if (e.clientX < 298) {
