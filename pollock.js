@@ -81,7 +81,6 @@ color_choice = 0;
 const arr = new Uint8ClampedArray(40_000);
 
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {
-    console.log( e.clientX, e.clientY);
     delta = (e.clientX * e.clientX) + (e.clientY * e.clientY);
     if (e.clientX > 400) {
         if (e.clientX < 1000) {
@@ -141,32 +140,6 @@ var dribble = function (e) {
 
 var color_check = function (e) {
 //brush click detect    
-    if (e.clientY > 203) {
-        if (e.clientY < 232) {
-            if (e.clientX > 181) {
-                if (e.clientX < 205) {
-                    console.log("1");
-                    brush_num = 1;
-                    c.fillStyle = current_pallet[0];
-                }
-                else if (e.clientX < 239) {
-                    console.log("2");
-                    brush_num = 2;
-                    c.fillStyle = current_pallet[1];
-                }
-                else if (e.clientX < 265) {
-                    console.log("3");
-                    brush_num = 3;
-                    c.fillStyle = current_pallet[2];
-                }
-                else if (e.clientX < 300) {
-                    console.log("4");
-                    brush_num = 4;
-                    c.fillStyle = current_pallet[3];
-                }
-            }
-        }
-    }
     if (e.clientY > 177) {
         if (e.clientY < 201) {
             if (e.clientX > 181) {
@@ -189,6 +162,32 @@ var color_check = function (e) {
                     console.log("8");
                     brush_num = 7;
                     c.fillStyle = current_pallet[6];
+                }
+            }
+        }
+    }
+    if (e.clientY > 203) {
+        if (e.clientY < 232) {
+            if (e.clientX > 181) {
+                if (e.clientX < 205) {
+                    console.log("1");
+                    brush_num = 1;
+                    c.fillStyle = current_pallet[0];
+                }
+                else if (e.clientX < 239) {
+                    console.log("2");
+                    brush_num = 2;
+                    c.fillStyle = current_pallet[1];
+                }
+                else if (e.clientX < 265) {
+                    console.log("3");
+                    brush_num = 3;
+                    c.fillStyle = current_pallet[2];
+                }
+                else if (e.clientX < 300) {
+                    console.log("4");
+                    brush_num = 4;
+                    c.fillStyle = current_pallet[3];
                 }
             }
         }
