@@ -145,18 +145,22 @@ var color_check = function (e) {
         if (e.clientY < 232) {
             if (e.clientX > 181) {
                 if (e.clientX < 205) {
+                    console.log("1");
                     brush_num = 1;
                     c.fillStyle = current_pallet[0];
                 }
                 else if (e.clientX < 239) {
+                    console.log("2");
                     brush_num = 2;
                     c.fillStyle = current_pallet[1];
                 }
                 else if (e.clientX < 265) {
+                    console.log("3");
                     brush_num = 3;
                     c.fillStyle = current_pallet[2];
                 }
                 else if (e.clientX < 300) {
+                    console.log("4");
                     brush_num = 4;
                     c.fillStyle = current_pallet[3];
                 }
@@ -167,18 +171,22 @@ var color_check = function (e) {
         if (e.clientY < 201) {
             if (e.clientX > 181) {
                 if (e.clientX < 205) {
+                    console.log("5");
                     brush_num = 8;
                     c.fillStyle = current_pallet[7];
                 }
                 else if (e.clientX < 239) {
+                    console.log("6");
                     brush_num = 5;
                     c.fillStyle = current_pallet[4];
                 }
                 else if (e.clientX < 265) {
+                    console.log("7");
                     brush_num = 6;
                     c.fillStyle = current_pallet[5];
                 }
                 else if (e.clientX < 300) {
+                    console.log("8");
                     brush_num = 7;
                     c.fillStyle = current_pallet[6];
                 }
@@ -190,20 +198,24 @@ var color_check = function (e) {
         if (e.clientY > 203) {
             if (e.clientX > 181) {
                 if (e.clientX < 205) {
+                    console.log("9");
                     bg_color = current_pallet[0];
                     change_bg();
                 }
                 else if (e.clientX < 239) {
+                    console.log("10");
                     bg_color = 5;
                     bg_color = current_pallet[1];
                     change_bg();
                 }
                 else if (e.clientX < 265) {
+                    console.log("11");
                     bg_color = 6;
                     bg_color = current_pallet[2];
                     change_bg();
                 }
                 else if (e.clientX < 300) {
+                    console.log("12");
                     bg_color = 7;
                     bg_color = current_pallet[3];
                     change_bg();
@@ -215,21 +227,25 @@ var color_check = function (e) {
         if (e.clientY < 299) {
             if (e.clientX > 181) {
                 if (e.clientX < 205) {
+                    console.log("13");
                     bg_color = 1;
                     bg_color = current_pallet[7];
                     change_bg();
                 }
                 else if (e.clientX < 246) {
+                    console.log("14");
                     bg_color = 2;
                     bg_color = current_pallet[4];
                     change_bg();
                 }
                 else if (e.clientX < 277) {
+                    console.log("15");
                     bg_color = 3;
                     bg_color = current_pallet[5];
                     change_bg();
                 }
                 else if (e.clientX < 307) {
+                    console.log("16");
                     bg_color = 4;
                     bg_color = current_pallet[6];
                     change_bg();
