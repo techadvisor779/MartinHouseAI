@@ -140,6 +140,7 @@ var dribble = function (e) {
 }
 
 var color_check = function (e) {
+//brush click detect
     if (e.clientY > 177) {
         if (e.clientY < 201) {
             if (e.clientX > 181) {
@@ -162,7 +163,7 @@ var color_check = function (e) {
             }
         }
     }
-    else if (e.clientY > 203) {
+    if (e.clientY > 203) {
         if (e.clientY < 232) {
             if (e.clientX > 181) {
                 if (e.clientX < 205) {
@@ -184,6 +185,7 @@ var color_check = function (e) {
             }
         }
     }
+ // bg click detect
     if (e.clientY < 232) {
         if (e.clientY > 203) {
             if (e.clientX > 181) {
@@ -209,10 +211,10 @@ var color_check = function (e) {
             }
         }
     }
-    else if (e.clientY > 277) {
+    if (e.clientY > 277) {
         if (e.clientY < 299) {
             if (e.clientX > 181) {
-                if (e.clientX < 206) {
+                if (e.clientX < 205) {
                     bg_color = 1;
                     bg_color = current_pallet[7];
                     change_bg();
@@ -235,6 +237,7 @@ var color_check = function (e) {
             }
         }
     }
+ // pallet change click detect
     if (e.clientY > 359) {       
         if (e.clientY < 437) {
             if (e.clientX > 180) {
