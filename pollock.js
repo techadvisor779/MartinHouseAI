@@ -193,8 +193,8 @@ var color_check = function (e) {
         }
     }
  // bg click detect
-    if (e.clientY < 232) {
-        if (e.clientY > 203) {
+    if (e.clientY < 277) {
+        if (e.clientY > 299) {
             if (e.clientX > 181) {
                 if (e.clientX < 205) {
                     console.log("9");
@@ -222,8 +222,8 @@ var color_check = function (e) {
             }
         }
     }
-    if (e.clientY > 277) {
-        if (e.clientY < 299) {
+    if (e.clientY > 304) {
+        if (e.clientY < 331) {
             if (e.clientX > 181) {
                 if (e.clientX < 205) {
                     console.log("13");
@@ -480,7 +480,6 @@ var engage = function (e) {
     dragging = true;
     radius = 14;
     putPoint(e);
-    console.log(e.clientX, e.clientY);
 }
 
 var moving_clicked = function (e) {
@@ -492,10 +491,8 @@ var moving_clicked = function (e) {
 }
 
 var disengage = function (e) {
-    dragging = false;  
-   
-    //img.data = c.getImageData(400, 0, 1000, 600);
-    
+    dragging = false;     
+    //img.data = c.getImageData(400, 0, 1000, 600);    
     window.sessionStorage;
     sessionStorage.setItem('imgData', dataUrl); 
 }    
