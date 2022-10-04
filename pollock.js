@@ -147,11 +147,11 @@ var color_check = function (e) {
                     brush_num = 8;
                     c.fillStyle = current_pallet[7];
                 }
-                else if (e.clientX < 236) {
+                else if (e.clientX < 239) {
                     brush_num = 5;
                     c.fillStyle = current_pallet[4];
                 }
-                else if (e.clientX < 268) {
+                else if (e.clientX < 265) {
                     brush_num = 6;
                     c.fillStyle = current_pallet[5];
                 }
@@ -162,10 +162,10 @@ var color_check = function (e) {
             }
         }
     }
-    if (e.clientY > 203) {
+    else if (e.clientY > 203) {
         if (e.clientY < 232) {
             if (e.clientX > 181) {
-                if (e.clientX < 208) {
+                if (e.clientX < 205) {
                     brush_num = 1;
                     c.fillStyle = current_pallet[0];
                 }
@@ -187,7 +187,7 @@ var color_check = function (e) {
     if (e.clientY < 232) {
         if (e.clientY > 203) {
             if (e.clientX > 181) {
-                if (e.clientX < 208) {
+                if (e.clientX < 205) {
                     bg_color = current_pallet[0];
                     change_bg();
                 }
