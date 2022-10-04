@@ -81,7 +81,7 @@ color_choice = 0;
 const arr = new Uint8ClampedArray(40_000);
 
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {
-    c2 = canvas.getContext('2d');
+    console.log( e.clientX, e.clientY);
     delta = (e.clientX * e.clientX) + (e.clientY * e.clientY);
     if (e.clientX > 410) {
         if (e.clientX < 1400) {
@@ -488,10 +488,10 @@ var moving_clicked = function (e) {
 var disengage = function (e) {
     dragging = false;  
    
-    img.data = c.getImageData(400, 0, 1000, 600);
+    //img.data = c.getImageData(400, 0, 1000, 600);
     
     window.sessionStorage;
-    session.setItem('imgData', img); 
+    session.setItem('imgData', dataUrl); 
 }    
 
 function assignColors(COLORS) {    
