@@ -139,9 +139,9 @@ var dribble = function (e) {
 }
 
 var color_check = function (e) {
-//brush click detect    
-     if (e.clientY > 177) {
-        if (e.clientY < 201) {    
+//brush click detect   
+     if (e.clientY > 203) {
+        if (e.clientY < 232) {         
             if (e.clientX > 181) {
                 if (e.clientX < 205) {
                     console.log("5");
@@ -166,8 +166,8 @@ var color_check = function (e) {
             }
         }
     }    
-    if (e.clientY > 203) {
-        if (e.clientY < 232) {    
+    if (e.clientY > 177) {
+        if (e.clientY < 201) {        
             if (e.clientX > 181) {
                 if (e.clientX < 205) {
                     console.log("1");
