@@ -146,22 +146,22 @@ var color_check = function (e) {
                 if (e.clientX < 205) {
                     console.log("5");
                     brush_num = 8;
-                    c.fillStyle = current_pallet[7];
+                    c.fillStyle = current_pallet[0];
                 }
                 else if (e.clientX < 239) {
                     console.log("6");
                     brush_num = 5;
-                    c.fillStyle = current_pallet[4];
+                    c.fillStyle = current_pallet[1];
                 }
                 else if (e.clientX < 265) {
                     console.log("7");
                     brush_num = 6;
-                    c.fillStyle = current_pallet[5];
+                    c.fillStyle = current_pallet[2];
                 }
                 else if (e.clientX < 300) {
                     console.log("8");
                     brush_num = 7;
-                    c.fillStyle = current_pallet[6];
+                    c.fillStyle = current_pallet[3];
                 }
             }
         }
@@ -172,22 +172,22 @@ var color_check = function (e) {
                 if (e.clientX < 205) {
                     console.log("1");
                     brush_num = 1;
-                    c.fillStyle = current_pallet[0];
+                    c.fillStyle = current_pallet[7];
                 }
                 else if (e.clientX < 239) {
                     console.log("2");
                     brush_num = 2;
-                    c.fillStyle = current_pallet[1];
+                    c.fillStyle = current_pallet[4];
                 }
                 else if (e.clientX < 265) {
                     console.log("3");
                     brush_num = 3;
-                    c.fillStyle = current_pallet[2];
+                    c.fillStyle = current_pallet[5];
                 }
                 else if (e.clientX < 300) {
                     console.log("4");
                     brush_num = 4;
-                    c.fillStyle = current_pallet[3];
+                    c.fillStyle = current_pallet[6];
                 }
             }
         }
