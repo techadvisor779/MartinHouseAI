@@ -83,10 +83,10 @@ const arr = new Uint8ClampedArray(40_000);
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {
     console.log( e.clientX, e.clientY);
     delta = (e.clientX * e.clientX) + (e.clientY * e.clientY);
-    if (e.clientX > 410) {
-        if (e.clientX < 1400) {
-            if (e.clientY > 90) {
-                if (e.clientY < 676 - radius) {
+    if (e.clientX > 400) {
+        if (e.clientX < 946) {
+            if (e.clientY > 120) {
+                if (e.clientY < 716 - radius) {
                     c.beginPath();
                     c.arc(e.clientX, e.clientY - 75, radius, 0, Math.PI * 2);
                     c.fill();
@@ -140,69 +140,69 @@ var dribble = function (e) {
 }
 
 var color_check = function (e){
-    if (e.clientY > 164) {
-        if (e.clientY < 196) {
-            if (e.clientX > 189) {
-                if (e.clientX < 216) {
+    if (e.clientY > 177) {
+        if (e.clientY < 201) {
+            if (e.clientX > 181) {
+                if (e.clientX < 205) {
                     brush_num = 8;
                     c.fillStyle = current_pallet[7]
                 }
-                else if (e.clientX < 246) {
+                else if (e.clientX < 236) {
                     brush_num = 5;
                     c.fillStyle = current_pallet[4]
                 }
-                else if (e.clientX < 275) {
+                else if (e.clientX < 268) {
                     brush_num = 6;
                     c.fillStyle = current_pallet[5]
                 }
-                else if (e.clientX < 307) {
+                else if (e.clientX < 300) {
                     brush_num = 7;
                     c.fillStyle = current_pallet[6]
                 }
             }
         }
     }
-    else if (e.clientY > 134) {
-        if (e.clientY < 164) {
-            if (e.clientX > 187) {
-                if (e.clientX < 217) {
+    else if (e.clientY > 203) {
+        if (e.clientY < 232) {
+            if (e.clientX > 181) {
+                if (e.clientX < 208) {
                     brush_num = 1;
                     c.fillStyle = current_pallet[0]
                 }
-                else if (e.clientX < 246) {
+                else if (e.clientX < 239) {
                     brush_num = 2;
                     c.fillStyle = current_pallet[1]
 
                 }
-                else if (e.clientX < 275) {
+                else if (e.clientX < 265) {
                     brush_num = 3;
                     c.fillStyle = current_pallet[2]
                 }
-                else if (e.clientX < 307) {
+                else if (e.clientX < 300) {
                     brush_num = 4;
                     c.fillStyle = current_pallet[3]
                 }
             }
         }
     }
-    if (e.clientY < 263) {
-        if (e.clientY > 239) {
-            if (e.clientX > 187) {
-                if (e.clientX < 216) {
+    if (e.clientY < 232) {
+        if (e.clientY > 203) {
+            if (e.clientX > 181) {
+                if (e.clientX < 208) {
                     bg_color = current_pallet[0]
                     change_bg()
                 }
-                else if (e.clientX < 246) {
+                else if (e.clientX < 239) {
                     bg_color = 5;
                     bg_color = current_pallet[1]
                     change_bg()
                 }
-                else if (e.clientX < 275) {
+                else if (e.clientX < 265) {
                     bg_color = 6;
                     bg_color = current_pallet[2]
                     change_bg()
                 }
-                else if (e.clientX < 307) {
+                else if (e.clientX < 300) {
                     bg_color = 7;
                     bg_color = current_pallet[3]
                     change_bg()
@@ -211,10 +211,10 @@ var color_check = function (e){
         }
     }
 
-    else if (e.clientY > 263) {
-        if (e.clientY < 292) {
-            if (e.clientX > 187) {
-                if (e.clientX < 216) {
+    else if (e.clientY > 277) {
+        if (e.clientY < 299) {
+            if (e.clientX > 181) {
+                if (e.clientX < 206) {
                     bg_color = 1;
                     bg_color = current_pallet[7]
                     change_bg()
@@ -237,10 +237,10 @@ var color_check = function (e){
             }
         }
     }
-    if (e.clientY > 321) {       
-        if (e.clientY < 397) {
-            if (e.clientX > 187) {
-                if (e.clientX < 320) {
+    if (e.clientY > 359) {       
+        if (e.clientY < 437) {
+            if (e.clientX > 180) {
+                if (e.clientX < 297) {
                     current_pallet = pallet0;
                     dribble_COLORS = pallet0;
                     change_pallet1()
@@ -249,10 +249,10 @@ var color_check = function (e){
             }
         }
     }
-    if (e.clientY > 420) {            
-        if (e.clientY < 499) {     
-            if (e.clientX > 188) {
-                if (e.clientX < 308) {
+    if (e.clientY > 459 {            
+        if (e.clientY < 536) {     
+            if (e.clientX > 180) {
+                if (e.clientX < 298) {
                     current_pallet = pallet1;
                     dribble_COLORS = pallet1;
                     change_pallet2()
@@ -260,10 +260,10 @@ var color_check = function (e){
             }
         }
     }
-    if (e.clientY > 520) {         
-        if (e.clientY < 599) {            
-            if (e.clientX > 188) {
-                if (e.clientX < 308) {
+    if (e.clientY > 560) {         
+        if (e.clientY < 635) {            
+            if (e.clientX > 180) {
+                if (e.clientX < 300) {
                     current_pallet = pallet2;
                     dribble_COLORS = pallet2;
                     change_pallet3()
@@ -280,18 +280,18 @@ var color_check = function (e){
             }
         }
     }*/
-    if (e.clientY > 620) {
-        if (e.clientY < 650) {
+    if (e.clientY > 660) {
+        if (e.clientY < 686) {
             if (e.clientX > 190) {
-                if (e.clientX < 284) {
+                if (e.clientX < 276) {
                     disengage();
-                    c.clearRect(400, 0, 1000, 600);
+                    c.clearRect(400, 120, 1000, 600);
                     change_bg();
                     //c.fillStyle = 'White';
                     //c.fillRect(400, 0, 1000, 600);
                     c.strokeStyle = 'Black';
                     c.strokeRect(400, 0, 1000, 600);
-                    c.fillStyle = current_pallet[brush_num - 1];
+                    c.fillStyle = current_pallet[brush_num - 1];   
                 }
             }
         }
