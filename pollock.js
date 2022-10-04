@@ -139,25 +139,25 @@ var dribble = function (e) {
     c.fillStyle = temp;
 }
 
-var color_check = function (e){
+var color_check = function (e) {
     if (e.clientY > 177) {
         if (e.clientY < 201) {
             if (e.clientX > 181) {
                 if (e.clientX < 205) {
                     brush_num = 8;
-                    c.fillStyle = current_pallet[7]
+                    c.fillStyle = current_pallet[7];
                 }
                 else if (e.clientX < 236) {
                     brush_num = 5;
-                    c.fillStyle = current_pallet[4]
+                    c.fillStyle = current_pallet[4];
                 }
                 else if (e.clientX < 268) {
                     brush_num = 6;
-                    c.fillStyle = current_pallet[5]
+                    c.fillStyle = current_pallet[5];
                 }
                 else if (e.clientX < 300) {
                     brush_num = 7;
-                    c.fillStyle = current_pallet[6]
+                    c.fillStyle = current_pallet[6];
                 }
             }
         }
@@ -167,20 +167,19 @@ var color_check = function (e){
             if (e.clientX > 181) {
                 if (e.clientX < 208) {
                     brush_num = 1;
-                    c.fillStyle = current_pallet[0]
+                    c.fillStyle = current_pallet[0];
                 }
                 else if (e.clientX < 239) {
                     brush_num = 2;
-                    c.fillStyle = current_pallet[1]
-
+                    c.fillStyle = current_pallet[1];
                 }
                 else if (e.clientX < 265) {
                     brush_num = 3;
-                    c.fillStyle = current_pallet[2]
+                    c.fillStyle = current_pallet[2];
                 }
                 else if (e.clientX < 300) {
                     brush_num = 4;
-                    c.fillStyle = current_pallet[3]
+                    c.fillStyle = current_pallet[3];
                 }
             }
         }
@@ -189,50 +188,49 @@ var color_check = function (e){
         if (e.clientY > 203) {
             if (e.clientX > 181) {
                 if (e.clientX < 208) {
-                    bg_color = current_pallet[0]
-                    change_bg()
+                    bg_color = current_pallet[0];
+                    change_bg();
                 }
                 else if (e.clientX < 239) {
                     bg_color = 5;
-                    bg_color = current_pallet[1]
-                    change_bg()
+                    bg_color = current_pallet[1];
+                    change_bg();
                 }
                 else if (e.clientX < 265) {
                     bg_color = 6;
-                    bg_color = current_pallet[2]
-                    change_bg()
+                    bg_color = current_pallet[2];
+                    change_bg();
                 }
                 else if (e.clientX < 300) {
                     bg_color = 7;
-                    bg_color = current_pallet[3]
-                    change_bg()
+                    bg_color = current_pallet[3];
+                    change_bg();
                 }
             }
         }
     }
-
     else if (e.clientY > 277) {
         if (e.clientY < 299) {
             if (e.clientX > 181) {
                 if (e.clientX < 206) {
                     bg_color = 1;
-                    bg_color = current_pallet[7]
-                    change_bg()
+                    bg_color = current_pallet[7];
+                    change_bg();
                 }
                 else if (e.clientX < 246) {
                     bg_color = 2;
-                    bg_color = current_pallet[4]
-                    change_bg()
+                    bg_color = current_pallet[4];
+                    change_bg();
                 }
                 else if (e.clientX < 277) {
                     bg_color = 3;
-                    bg_color = current_pallet[5]
-                    change_bg()
+                    bg_color = current_pallet[5];
+                    change_bg();
                 }
                 else if (e.clientX < 307) {
                     bg_color = 4;
-                    bg_color = current_pallet[6]
-                    change_bg()
+                    bg_color = current_pallet[6];
+                    change_bg();
                 }
             }
         }
@@ -243,8 +241,7 @@ var color_check = function (e){
                 if (e.clientX < 297) {
                     current_pallet = pallet0;
                     dribble_COLORS = pallet0;
-                    change_pallet1()
-
+                    change_pallet1();
                 }
             }
         }
@@ -255,7 +252,7 @@ var color_check = function (e){
                 if (e.clientX < 298) {
                     current_pallet = pallet1;
                     dribble_COLORS = pallet1;
-                    change_pallet2()
+                    change_pallet2();
                 }
             }
         }
@@ -266,20 +263,11 @@ var color_check = function (e){
                 if (e.clientX < 300) {
                     current_pallet = pallet2;
                     dribble_COLORS = pallet2;
-                    change_pallet3()
+                    change_pallet3();
                 }
             }
         }
     }
-/*    if (e.clientY > 613) {            
-        if (e.clientY < 636) {
-            if (e.clientX > 212) {
-                if (e.clientX < 291) {
-                    
-                }
-            }
-        }
-    }*/
     if (e.clientY > 660) {
         if (e.clientY < 686) {
             if (e.clientX > 190) {
