@@ -140,29 +140,7 @@ var dribble = function (e) {
 }
 
 var color_check = function (e) {
-//brush click detect
-    if (e.clientY > 177) {
-        if (e.clientY < 201) {
-            if (e.clientX > 181) {
-                if (e.clientX < 205) {
-                    brush_num = 8;
-                    c.fillStyle = current_pallet[7];
-                }
-                else if (e.clientX < 239) {
-                    brush_num = 5;
-                    c.fillStyle = current_pallet[4];
-                }
-                else if (e.clientX < 265) {
-                    brush_num = 6;
-                    c.fillStyle = current_pallet[5];
-                }
-                else if (e.clientX < 300) {
-                    brush_num = 7;
-                    c.fillStyle = current_pallet[6];
-                }
-            }
-        }
-    }
+//brush click detect    
     if (e.clientY > 203) {
         if (e.clientY < 232) {
             if (e.clientX > 181) {
@@ -181,6 +159,28 @@ var color_check = function (e) {
                 else if (e.clientX < 300) {
                     brush_num = 4;
                     c.fillStyle = current_pallet[3];
+                }
+            }
+        }
+    }
+    if (e.clientY > 177) {
+        if (e.clientY < 201) {
+            if (e.clientX > 181) {
+                if (e.clientX < 205) {
+                    brush_num = 8;
+                    c.fillStyle = current_pallet[7];
+                }
+                else if (e.clientX < 239) {
+                    brush_num = 5;
+                    c.fillStyle = current_pallet[4];
+                }
+                else if (e.clientX < 265) {
+                    brush_num = 6;
+                    c.fillStyle = current_pallet[5];
+                }
+                else if (e.clientX < 300) {
+                    brush_num = 7;
+                    c.fillStyle = current_pallet[6];
                 }
             }
         }
