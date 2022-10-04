@@ -491,7 +491,7 @@ var disengage = function (e) {
     //img.data = c.getImageData(400, 0, 1000, 600);
     
     window.sessionStorage;
-    session.setItem('imgData', dataUrl); 
+    sessionStorage.setItem('imgData', dataUrl); 
 }    
 
 function assignColors(COLORS) {    
