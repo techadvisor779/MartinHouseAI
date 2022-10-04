@@ -162,7 +162,7 @@ var color_check = function (e) {
             }
         }
     }
-    else if (e.clientY > 203) {
+    if (e.clientY > 203) {
         if (e.clientY < 232) {
             if (e.clientX > 181) {
                 if (e.clientX < 208) {
