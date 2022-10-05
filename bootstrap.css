@@ -572,6 +572,11 @@ h6,
   font-size: 12px;
 }
 
+h7,
+.h7 {
+  font-size: 24px;
+}
+
 h1 small,
 .h1 small {
   font-size: 24px;
