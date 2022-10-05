@@ -498,10 +498,10 @@ h6,
   text-align: left;
 }
 
-h7 {
+.h7 {
   font-family: papyrus, Helvetica, sans-serif;
   font-size: 24px;
-  font-weight: 180;
+  font-weight: 200;
   line-height: 2.0;
   text-shadow: 2px 3px 5px black;
   width: 220px;
