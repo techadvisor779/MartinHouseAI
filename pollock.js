@@ -83,7 +83,7 @@ const arr = new Uint8ClampedArray(40_000);
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {
     delta = (e.clientX * e.clientX) + (e.clientY * e.clientY);
     if (e.clientX > 400) {
-        if (e.clientX < 1000) {
+        if (e.clientX < 1800) {
             if (e.clientY > 120) {
                 if (e.clientY < 700 - radius) {
                     c.beginPath();
