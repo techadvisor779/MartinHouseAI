@@ -47,10 +47,12 @@ function customSlider() {
      thumb.style.left = val;     
 }
 
-slider.addEventListener("input", () => {
+console.log(slider);
+
+//slider.addEventListener("input", () => {
      //customSlider();   
-     pass;
-});
+//});
 
 customSlider();
 change_pallet1();
+
