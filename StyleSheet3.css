@@ -10,6 +10,10 @@ body {
     overflow: visible;
 }
 
+canvas {
+    padding-top: 40pt;
+}
+
 .container {
     padding-right: 65px;
     padding-left: 15px;
