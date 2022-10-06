@@ -90,7 +90,7 @@ var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 
                     c.beginPath();
                     c.arc(e.clientX, e.clientY - 125, radius, 0, Math.PI * 2);
                     c.fill();
-                    c.arc(1900 - e.clientX, 730 - e.clientY, radius, 0, Math.PI * 2);
+                    c.arc(1200 - e.clientX, 730 - e.clientY, radius, 0, Math.PI * 2);
                     c.fill();
                 }
                 else dragging = false;
@@ -118,7 +118,7 @@ var dribble = function (e) {
         ranR1 = Math.random() * 10;
         ranR2 = Math.random() * 10;
         if (e.clientX > 400 + ranX) {
-            if (e.clientX + ranX < 1000) {
+            if (e.clientX + ranX < 1400) {
                 if (e.clientY + ranY > 120) {
                     if (e.clientY + ranY < 700 - radius) {
                         c.beginPath();
@@ -128,7 +128,7 @@ var dribble = function (e) {
                         }
                         c.arc(e.clientX + ranX, e.clientY + ranY - 125, ranR1, 0, Math.PI * 2);
                         c.fill();
-                        c.arc(600 - e.clientX + ranX, 700 - e.clientY + ranY, ranR2, 0, Math.PI * 2);
+                        c.arc(1200 - e.clientX + ranX, 700 - e.clientY + ranY, ranR2, 0, Math.PI * 2);
                         c.fill();
                         dribble_count = 0;
                     }
