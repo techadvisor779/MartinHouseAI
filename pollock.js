@@ -1,11 +1,7 @@
 const canvas = document.getElementById('canvas1')
-canvas.width = 180;
-canvas.height = 600;
+canvas.width = innerWidth;
+canvas.height = innerHeight-135;
 var c = canvas.getContext('2d');
-
-canvas2.width = 1000;
-canvas2.height = 600;
-var c2 = canvas.getContext('2d');
 var dataUrl = canvas.toDataURL("image/png");
 
 var img = new Image();
