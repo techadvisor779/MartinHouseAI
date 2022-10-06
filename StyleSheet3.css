@@ -10,11 +10,6 @@ body {
     overflow: visible;
 }
 
-canvas {
-    border: 1px solid #bbb;
-    padding-left: 200px;
-}
-
 .container {
     padding-right: 65px;
     padding-left: 15px;
