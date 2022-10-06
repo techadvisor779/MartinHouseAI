@@ -83,7 +83,7 @@ const arr = new Uint8ClampedArray(40_000);
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 1000, 600);
     console.log( e.clientX, e.clientY);
     delta = (e.clientX * e.clientX) + (e.clientY * e.clientY);
-        if (e.clientX > 350) {
+    if (e.clientX > 500) {
         if (e.clientX < 1410) {
             if (e.clientY > 0) {
                 if (e.clientY < 730 - radius) {
@@ -117,7 +117,7 @@ var dribble = function (e) {
         ranY = (Math.random() * 160) - 80;
         ranR1 = Math.random() * 10;
         ranR2 = Math.random() * 10;
-        if (e.clientX - ranX > 401) {
+        if (e.clientX - ranX > 520) {
             if (e.clientX + ranX < 1410) {
                 if (e.clientY + ranY > 90) {
                     if (e.clientY + ranY < 676 - radius) {
