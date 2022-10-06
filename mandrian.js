@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas1')
-canvas.width = 1000;
-canvas.height = 600;
+canvas.width = innerWidth;
+canvas.height = innerHeight-135;
 var c = canvas.getContext('2d');
 
 const pallet0 = [
