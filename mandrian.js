@@ -2,8 +2,9 @@ const canvas = document.getElementById('canvas1')
 canvas.width = innerWidth;
 canvas.height = innerHeight-135;
 var c = canvas.getContext('2d');
+c.lineWidth = 10;
 
-const rects = [];
+const rectangles = [];
 
 const pallet0 = [
      'white',               //white  0
@@ -11,44 +12,35 @@ const pallet0 = [
      '#ff0101',             //red    2
      '#0101fd',             //blue    3
      'Black'                //black 7
-]
+];
 
+canvas.addEventListener('click', onRectangleClick);
 
-function MyBorders() {
-    c.fillStyle = 'White';
-    c.fillRect(100, 0, 280, 600);
-    c.strokeStyle = 'Black';
-    c.strokeRect(100, 0, 280, 600);
-    c.fillStyle='White';
-    c.fillRect(400, 0, 1000, 600);
-    c.strokeStyle = 'Black';
-    c.strokeRect(400, 0, 1000, 600);    
+function createRects(x,y,width,height) {
+     rectangles.push({x,y,width,height})     
 }
 
-const container1 = document.querySelectAll(".range-slider");
-
-for ( let i=0; i < container.length; i++) {
-     const slider = container[i].querySelector(".slider");
-     const thumb = container[i].querySelector(".slider-thumb");
-     const tooltip = container[i].querySelector(".tooltip");
-     const progress = container[i].querySelector(".progress");
+function drawRectangles() {
+     rectangles.forEach((rectangle) => {
+          c.beginPath();
+          c.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
+          c.closePath();
+          c.stroke();
+     }
 }
 
-function customSlider() {
-     const maxVal = slider.getAttribute("max");
-     const val = (slider.value / maxValue) * 100 + "%";
+function onRectangleClick(e) {     
+     const onClickIndex = 0;
+     const clickedRectangle = rectangles[0];
      
-     tooltip.innerHTML = slider.value;
-     progress.style.width = val;
-     thumb.style.left = val;     
-}
-
-console.log(slider);
-
-//slider.addEventListener("input", () => {
-     //customSlider();   
-//});
-
-customSlider();
-MyBorders();
-
+     rectangle.splice(clickedIndex, 1);
+     splitRectangleAt(clickedRectangle);     
+}         
+     
+function splitRectangleAt(rectangle, position) {
+     console.log("split rect", rectangle, position);
+     
+}     
+     
+createRectangle(0,0,innerWidth, innerHeight);
+drawRectangles();
