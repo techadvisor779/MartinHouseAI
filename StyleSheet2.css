@@ -52,7 +52,7 @@ body {
 .container .img {
     position: relative;
     padding-left: 30px;
-    padding-right: 0px;
+    padding-right: 30px;
 }
 
 .container .img2 {
