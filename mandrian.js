@@ -18,7 +18,7 @@ var splitDirectionVert = true;
 
 canvas.addEventListener('click', onRectangleClick);
 
-function createRects(x,y,width,height) {
+function createRectangles(x,y,width,height) {
      rectangles.push({x,y,width,height})     
 }
 
