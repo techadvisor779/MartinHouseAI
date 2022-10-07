@@ -1,10 +1,7 @@
 ﻿
 body {
     color: #fff;    
-    background-image: url("src/images/EdMartin.jpg");
-    background-size: 1200px 1400px;
-    background-repeat: no-repeat;
-    background-position: top;
+    columns: 2;
     padding-top: 40pt;
     padding-left: 100px;
     overflow: visible;
