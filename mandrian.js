@@ -26,7 +26,7 @@ function drawRectangles() {
           c.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
           c.closePath();
           c.stroke();
-     }
+     });
 }
 
 function onRectangleClick(e) {     
