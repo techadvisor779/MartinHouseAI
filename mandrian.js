@@ -14,6 +14,8 @@ const pallet0 = [
      'Black'                //black 7
 ];
 
+var splitDirectionVert = true;
+
 canvas.addEventListener('click', onRectangleClick);
 
 function createRects(x,y,width,height) {
@@ -38,17 +40,24 @@ function onRectangleClick(e) {
 }         
      
 function splitRectangleAt(rectangle, position) {
-     rectangles.push({
-          x: rectangle.x,
-          y: rectangle.y,
-          width: position.x,
-          height: rectangle.height
-     })
-     rectangle.push({
-          x: rectangle.x + position.x,
-          y: rectangle.y,
-          
-     })
+     if (splitDirectionVert) {          
+          rectangles.push({
+               x: rectangle.x,
+               y: rectangle.y,
+               width: position.x,
+               height: rectangle.height
+          });
+          rectangle.push({
+               x: rectangle.x + position.x,
+               y: rectangle.y,          
+          });
+     } else {
+          rectangles.push({
+               x: rectangle.x,
+               y: rectangle.y,
+               width: rectangle.width,
+               height: position.y
+          });
      drawRectangles();
 }     
 
