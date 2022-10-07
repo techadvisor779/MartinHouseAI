@@ -58,7 +58,7 @@ function splitRectangleAt(rectangle, position) {
                width: rectangle.width,
                height: position.y
           });
-     drawRectangles();
-}     
-
+     drawRectangles();     
+     }     
+}
 
