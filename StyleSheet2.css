@@ -28,8 +28,8 @@ body {
 
 .column {
     float: left;
-    width: auto;
-    display: grid;
+    width: 30%;
+    display: flex;
     height: fit-content;
 }
 
