@@ -38,9 +38,18 @@ function onRectangleClick(e) {
 }         
      
 function splitRectangleAt(rectangle, position) {
-     console.log("split rect", rectangle, position);
-     
+     rectangles.push({
+          x: rectangle.x,
+          y: rectangle.y,
+          width: position.x,
+          height: rectangle.height
+     })
+     rectangle.push({
+          x: rectangle.x + position.x,
+          y: rectangle.y,
+          
+     })
+     drawRectangles();
 }     
-     
-createRectangle(0,0,innerWidth, innerHeight);
-drawRectangles();
+
+
