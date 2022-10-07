@@ -124,8 +124,8 @@ body {
 
 h1 {
     padding-left: 0px;
-    width: 1200px;
-    
+    padding-bottom: 20px;
+    width: 100%;    
 }
 
 p {
