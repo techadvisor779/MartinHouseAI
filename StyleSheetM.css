@@ -36,6 +36,13 @@ body {
     padding-top: 210px;
 }
 
+h7 {
+    width: 200px;
+    font-size: 24px;    
+    color: white;
+    text-shadow: 2px 3px 5px black;
+}
+
 range-slider .slider {
     -webkit-appearance: none;
     width: 100%;
