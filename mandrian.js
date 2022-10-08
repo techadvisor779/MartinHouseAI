@@ -19,21 +19,19 @@ var squares = [{
 
 function splitSquaresWith(coordinates) {
     const { x, y } = coordinates;
-
     for (var i = squares.length - 1; i >= 0; i--) {
-    const square = squares[i];
-
-    if (x && x > square.x && x < square.x + square.width) {
-        if(Math.random() > 0.5) {
-            squares.splice(i, 1);
-            splitOnX(square, x); 
+        const square = squares[i];
+        if (x && x > square.x && x < square.x + square.width) {
+            if(Math.random() > 0.5) {
+                squares.splice(i, 1);
+                splitOnX(square, x); 
+            }
         }
-    }
-
-    if (y && y > square.y && y < square.y + square.height) {
-        if(Math.random() > 0.5) {
-            squares.splice(i, 1);
-            splitOnY(square, y); 
+        if (y && y > square.y && y < square.y + square.height) {
+            if(Math.random() > 0.5) {
+                squares.splice(i, 1);
+                splitOnY(square, y); 
+            }
         }
     }
 }
@@ -47,10 +45,10 @@ function splitOnX(square, splitAt) {
     };
 
     var squareB = {
-    x: splitAt,
-    y: square.y,
-    width: square.width - splitAt + square.x,
-    height: square.height
+        x: splitAt,
+        y: square.y,
+        width: square.width - splitAt + square.x,
+        height: square.height
     };
     squares.push(squareA);
     squares.push(squareB);
@@ -65,10 +63,10 @@ function splitOnY(square, splitAt) {
     };
 
     var squareB = {
-    x: square.x,
-    y: splitAt,
-    width: square.width,
-    height: square.height - splitAt + square.y
+        x: square.x,
+        y: splitAt,
+        width: square.width,
+        height: square.height - splitAt + square.y
     };
     squares.push(squareA);
     squares.push(squareB);
@@ -89,7 +87,7 @@ function draw() {
         if(squares[i].color) {
             c.fillStyle = squares[i].color;
         } else {
-        c.fillStyle = white
+            c.fillStyle = white
         }
         c.fill()
         c.stroke();
