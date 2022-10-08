@@ -72,8 +72,8 @@ canvas {
     margin-left: 250px;
     border-color: black;
     border-width: 2px;
-    width: 700px;
-    height: 500px;
+    width: 600px;
+    height: 450px;
 }
 
 range-slider .slider-thumb::before {
