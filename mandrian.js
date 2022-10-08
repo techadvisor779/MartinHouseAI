@@ -36,7 +36,6 @@ function splitSquaresWith(coordinates) {
             splitOnY(square, y); 
         }
     }
-    }
 }
 
 function splitOnX(square, splitAt) {
@@ -53,7 +52,6 @@ function splitOnX(square, splitAt) {
     width: square.width - splitAt + square.x,
     height: square.height
     };
-
     squares.push(squareA);
     squares.push(squareB);
 }
@@ -72,7 +70,6 @@ function splitOnY(square, splitAt) {
     width: square.width,
     height: square.height - splitAt + square.y
     };
-
     squares.push(squareA);
     squares.push(squareB);
 }
@@ -99,17 +96,10 @@ function draw() {
     }
 }
 
-canvas.addEventListener('resize', function () {
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
-});
-
 canvas.addEventListener('mousedown', function() {
     draw();
     for (var i = 0; i < size; i += step) {
         splitSquaresWith({ y: i });
         splitSquaresWith({ x: i });
     }
-}  
-};
-
+}); 
