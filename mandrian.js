@@ -14,93 +14,93 @@ var squares = [{
     y: 0,
     width: size,
     height: size
-  }];
+}];
 
 function splitSquaresWith(coordinates) {
-  const { x, y } = coordinates;
+    const { x, y } = coordinates;
 
-  for (var i = squares.length - 1; i >= 0; i--) {
-  const square = squares[i];
+    for (var i = squares.length - 1; i >= 0; i--) {
+    const square = squares[i];
 
-  if (x && x > square.x && x < square.x + square.width) {
-      if(Math.random() > 0.5) {
-        squares.splice(i, 1);
-        splitOnX(square, x); 
-      }
-  }
+    if (x && x > square.x && x < square.x + square.width) {
+        if(Math.random() > 0.5) {
+            squares.splice(i, 1);
+            splitOnX(square, x); 
+        }
+    }
 
-  if (y && y > square.y && y < square.y + square.height) {
-      if(Math.random() > 0.5) {
-        squares.splice(i, 1);
-        splitOnY(square, y); 
-      }
-  }
-  }
+    if (y && y > square.y && y < square.y + square.height) {
+        if(Math.random() > 0.5) {
+            squares.splice(i, 1);
+            splitOnY(square, y); 
+        }
+    }
+    }
 }
 
 function splitOnX(square, splitAt) {
-  var squareA = {
-    x: square.x,
+    var squareA = {
+        x: square.x,
+        y: square.y,
+        width: square.width - (square.width - splitAt + square.x),
+        height: square.height
+    };
+
+    var squareB = {
+    x: splitAt,
     y: square.y,
-    width: square.width - (square.width - splitAt + square.x),
+    width: square.width - splitAt + square.x,
     height: square.height
-  };
+    };
 
-  var squareB = {
-  x: splitAt,
-  y: square.y,
-  width: square.width - splitAt + square.x,
-  height: square.height
-  };
-
-  squares.push(squareA);
-  squares.push(squareB);
+    squares.push(squareA);
+    squares.push(squareB);
 }
 
 function splitOnY(square, splitAt) {
-  var squareA = {
+    var squareA = {
+        x: square.x,
+        y: square.y,
+        width: square.width,
+        height: square.height - (square.height - splitAt + square.y)
+    };
+
+    var squareB = {
     x: square.x,
-    y: square.y,
+    y: splitAt,
     width: square.width,
-    height: square.height - (square.height - splitAt + square.y)
-  };
+    height: square.height - splitAt + square.y
+    };
 
-  var squareB = {
-  x: square.x,
-  y: splitAt,
-  width: square.width,
-  height: square.height - splitAt + square.y
-  };
-
-  squares.push(squareA);
-  squares.push(squareB);
+    squares.push(squareA);
+    squares.push(squareB);
 }
 
 for (var i = 0; i < size; i += step) {
-  splitSquaresWith({ y: i });
-  splitSquaresWith({ x: i });
+    splitSquaresWith({ y: i });
+    splitSquaresWith({ x: i });
 }
 
 function draw() {
-  for (var i = 0; i < colors.length; i++) {
-    squares[Math.floor(Math.random() * squares.length)].color = colors[i];
-  }
-  for (var i = 0; i < squares.length; i++) {
-    context.beginPath();
-    context.rect(
-      squares[i].x,
-      squares[i].y,
-      squares[i].width,
-      squares[i].height
-    );
-    if(squares[i].color) {
-      context.fillStyle = squares[i].color;
-    } else {
-      context.fillStyle = white
+    for (var i = 0; i < colors.length; i++) {
+        squares[Math.floor(Math.random() * squares.length)].color = colors[i];
     }
-    context.fill()
-    context.stroke();
-  }
+    for (var i = 0; i < squares.length; i++) {
+        context.beginPath();
+        context.rect(
+            squares[i].x,
+            squares[i].y,
+            squares[i].width,
+            squares[i].height
+        );
+        if(squares[i].color) {
+            context.fillStyle = squares[i].color;
+        } else {
+        context.fillStyle = white
+        }
+        context.fill()
+        context.stroke();
+    }
 }
 
 canvas.addEventListener('mousedown', draw());
