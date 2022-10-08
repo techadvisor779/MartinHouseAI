@@ -104,7 +104,7 @@ canvas.addEventListener('resize', function () {
     canvas.height = innerHeight;
 });
 
-canvas.addEventListener('mousedown', ) {
+canvas.addEventListener('mousedown', function()) {
     draw();
     for (var i = 0; i < size; i += step) {
         splitSquaresWith({ y: i });
