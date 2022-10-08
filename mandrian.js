@@ -37,7 +37,7 @@ function onRectangleClick(e) {
                                                
      const clickedRectangle = rectangles[ClickedIndex];
      
-     rectangle.splice(clickedIndex, 1);
+     rectangles.splice(clickedIndex, 1);
      splitRectangleAt(clickedRectangle, {
           x: e.x - clickedRectangle.x,
           y: e.y - clickedRectangle.y,
