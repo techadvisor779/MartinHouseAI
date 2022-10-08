@@ -6,14 +6,6 @@ c.lineWidth = 10;
 
 const rectangles = [];
 
-const pallet0 = [
-     'white',               //white  0
-     '#fff001',             //yellow   1
-     '#ff0101',             //red    2
-     '#0101fd',             //blue    3
-     'Black'                //black 7
-];
-
 var splitDirectionVert = true;
 
 canvas.addEventListener('click', onRectangleClick);
@@ -32,14 +24,27 @@ function drawRectangles() {
 }
 
 function onRectangleClick(e) {     
-     const onClickIndex = 0;
+     const ClickedIndex = rectangles.findIndex((rectange) => {
+          if(
+               e.x > rectangle.x &&
+               e.x < rectangle.x + rectangle.width &&
+               e.y > rectangle.y &&
+               e.y < rectangle.y + rectangle.height               
+          ) {
+          return true;
+          }
+     });                                              }
+                                               
      const clickedRectangle = rectangles[0];
      
      rectangle.splice(clickedIndex, 1);
-     splitRectangleAt(clickedRectangle);     
+     splitRectangleAt(clickedRectangle, {
+          x: e.x - clickedRectangle.x,
+          y: e.y - clickedRectangle.y,
+     });     
 }         
-     
-function splitRectangleAt(rectangle, position) {
+
+function splitRectangleAt( clickedRectangle, position) {
      if (splitDirectionVert) {          
           rectangles.push({
                x: rectangle.x,
