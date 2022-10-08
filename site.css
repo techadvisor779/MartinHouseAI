@@ -12,6 +12,14 @@ h1 {
     text-shadow: 2px 3px 5px black;
 }
 
+h9 {
+    font-family: papyrus, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: white;
+    text-shadow: 2px 3px 5px black;
+}
+
 button {
     position: page;
 }
@@ -45,7 +53,7 @@ img2 {
     justify-items:flex-start;
 }    
 
-h1 {
+h1, h9 {
     text-align: center;
     padding-top: 20px;
 }
