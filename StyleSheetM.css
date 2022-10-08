@@ -7,13 +7,6 @@ body {
     overflow: visible;
 }
 
-.canvas {
-    padding-top: 200px;
-    padding-left: 400px;
-    color: black;
-    border: 2px;
-}
-
 .range-slider {
     max-width: 30em;
     margin: 2em auto;
@@ -71,6 +64,13 @@ range-slider .slider::-webkit-slider-thumb {
     transform: translate(-50%, -50%);
     z-index: 2;
     box-shadow: inset 0px 1px 2px #090909;
+}
+
+canvas {
+    padding-top: 200px;
+    padding-left: 400px;
+    color: black;
+    border: 2px;
 }
 
 range-slider .slider-thumb::before {
