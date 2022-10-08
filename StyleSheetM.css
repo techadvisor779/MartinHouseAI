@@ -27,6 +27,7 @@ body {
 }
 
 .column4 {
+    column-count: 1;
     width: 200px;
     float: left;
     display: block;
