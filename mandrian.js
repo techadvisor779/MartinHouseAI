@@ -94,12 +94,12 @@ function draw() {
     }
 }
 
-canvas.addEventListener('mousedown', function() {
-    draw();
+canvas.addEventListener('mousedown', function() {    
     for (var i = 0; i < w; i += step) {
         splitSquaresWith({ x: i });
     }
     for (var i = 0; i < h; i += step) {
         splitSquaresWith({ y: i });
     }
+    draw();
 }); 
