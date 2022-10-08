@@ -3,10 +3,10 @@ var context = canvas.getContext('2d');
 
 var size = 320;
 var dpr = window.devicePixelRatio;
-canvas.width = size * dpr;
-canvas.height = size * dpr;
+canvas.width = size * dpr * 2;
+canvas.height = size * dpr * 3;
 context.scale(dpr, dpr);
-context.lineWidth = 8;
+context.lineWidth = 4;
 var step = size / 7;
 var white = '#F2F5F1';
 var colors = ['#D40920', '#1356A2', '#F7D842']
