@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas1')
-canvas.width = innerWidth;
-canvas.height = innerHeight-135;
+canvas.width = 800;
+canvas.height = 600;
 var c = canvas.getContext('2d');
 c.lineWidth = 10;
 
