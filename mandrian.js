@@ -30,12 +30,12 @@ function onRectangleClick(e) {
                e.x < rectangle.x + rectangle.width &&
                e.y > rectangle.y &&
                e.y < rectangle.y + rectangle.height               
-          ) {
-          return true;
+            ) {
+               return true;
           }
-     });                                              }
+     });
                                                
-     const clickedRectangle = rectangles[0];
+     const clickedRectangle = rectangles[ClickedIndex];
      
      rectangle.splice(clickedIndex, 1);
      splitRectangleAt(clickedRectangle, {
@@ -50,20 +50,32 @@ function splitRectangleAt( clickedRectangle, position) {
                x: rectangle.x,
                y: rectangle.y,
                width: position.x,
-               height: rectangle.height
+               height: rectangle.height,
+               color: getColor()
           });
-          rectangle.push({
+          rectangles.push({
                x: rectangle.x + position.x,
-               y: rectangle.y,          
+               y: rectangle.y,      
+               width: rectangle.width -position.x,
+               height: rectangle.height,
+               color: getColor()
           });
      } else {
           rectangles.push({
                x: rectangle.x,
                y: rectangle.y,
                width: rectangle.width,
-               height: position.y
+               height: position.y,
+               color: getColor()
           });
-     drawRectangles();     
-     }     
+          rectangles.push({
+               x: rectangle.x,
+               y: rectangle.y,
+               width: rectangle.width,
+               height: rectangle.height - position.y,
+          });
+     } 
+     splitDirectionVertical = !splitDirectionVertical;
+     drawRectangles();        
 }
 
