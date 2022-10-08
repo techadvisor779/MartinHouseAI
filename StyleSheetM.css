@@ -4,7 +4,6 @@ body {
     background-size: 100% 1400px;
     padding: 1em;
     margin-top: 40pt;
-    padding-left: 40pt;
     overflow: visible;
 }
 
@@ -20,7 +19,7 @@ body {
 
 .column {
     width: 900px;
-    padding-left: 220px;
+    padding-left: 40px;
     float: left;
     display: flex;
     color: black;
