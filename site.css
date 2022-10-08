@@ -16,10 +16,13 @@ h9 {
     font-family: papyrus, Helvetica, sans-serif;
     font-size: 36px;
     font-weight: 500;
-    line-height: 2;
+    line-height: 4;
     color: white;
     text-shadow: 2px 3px 5px black;
+    padding-top: 20px;
     padding-left: 40px;
+    padding-bottom: 40px;
+    text-align: center;    
 }
 
 button {
@@ -57,11 +60,6 @@ img2 {
 
 h1 {
     text-align: center;
-}
-
-h9 {
-    text-align: center;
-    padding-top: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
