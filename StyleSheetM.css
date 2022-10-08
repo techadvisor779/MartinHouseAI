@@ -3,7 +3,7 @@ body {
     background: linear-gradient(0deg, #dd9804b9 0%, #414141 100%);
     padding: 1em;
     margin-top: 40pt;
-    padding-left: 0pt;
+    padding-left: 40pt;
     overflow: visible;
 }
 
@@ -70,10 +70,10 @@ canvas {
     background-color: white;
     margin-top: 20px;
     margin-left: 250px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     border-color: black;
-    border-width: 2px;
-    width: 600px;
+    border-width: 4px;
+    width: 650px;
     height: 450px;
 }
 
