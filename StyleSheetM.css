@@ -73,7 +73,7 @@ canvas {
     border-color: black;
     border-width: 2px;
     width: 700px;
-    height: 550px;
+    height: 500px;
 }
 
 range-slider .slider-thumb::before {
