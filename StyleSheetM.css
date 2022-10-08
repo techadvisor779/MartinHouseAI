@@ -70,11 +70,12 @@ canvas {
     background-color: white;
     margin-top: 20px;
     margin-left: 250px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     border-color: black;
     border-width: 4px;
     width: 650px;
     height: 450px;
+    padding-bottom: 80px;
 }
 
 range-slider .slider-thumb::before {
