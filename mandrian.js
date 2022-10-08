@@ -1,19 +1,20 @@
 var canvas = document.querySelector('canvas');
-var context = canvas.getContext('2d');
+var c = canvas.getContext('2d');
 
-var size = 320;
+var w = 600;
+var h = 450;
 var dpr = window.devicePixelRatio;
-context.scale(dpr, dpr);
-context.lineWidth = 4;
-var step = size / 7;
+c.scale(dpr, dpr);
+c.lineWidth = 4;
+var step = w / 7;
 var white = '#F2F5F1';
 var colors = ['#D40920', '#1356A2', '#F7D842']
 
 var squares = [{
     x: 0,
     y: 0,
-    width: size,
-    height: size
+    width: w,
+    height: h
 }];
 
 function splitSquaresWith(coordinates) {
@@ -76,32 +77,39 @@ function splitOnY(square, splitAt) {
     squares.push(squareB);
 }
 
-for (var i = 0; i < size; i += step) {
-    splitSquaresWith({ y: i });
-    splitSquaresWith({ x: i });
-}
-
 function draw() {
     for (var i = 0; i < colors.length; i++) {
         squares[Math.floor(Math.random() * squares.length)].color = colors[i];
     }
     for (var i = 0; i < squares.length; i++) {
-        context.beginPath();
-        context.rect(
+        c.beginPath();
+        c.rect(
             squares[i].x,
             squares[i].y,
             squares[i].width,
             squares[i].height
         );
         if(squares[i].color) {
-            context.fillStyle = squares[i].color;
+            c.fillStyle = squares[i].color;
         } else {
-        context.fillStyle = white
+        c.fillStyle = white
         }
-        context.fill()
-        context.stroke();
+        c.fill()
+        c.stroke();
     }
 }
 
-canvas.addEventListener('mousedown', draw());
+canvas.addEventListener('resize', function () {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+});
+
+canvas.addEventListener('mousedown', ) {
+    draw();
+    for (var i = 0; i < size; i += step) {
+        splitSquaresWith({ y: i });
+        splitSquaresWith({ x: i });
+    }
+}  
+};
 
