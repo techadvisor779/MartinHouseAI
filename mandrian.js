@@ -103,4 +103,5 @@ function draw() {
   }
 }
 
-draw()
+canvas.addEventListener('mousedown', draw());
+
