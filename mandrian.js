@@ -1,8 +1,8 @@
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
 
-var w = 600;
-var h = 450;
+var w = canvas.width;
+var h = canvas.height;
 var dpr = window.devicePixelRatio;
 c.scale(dpr, dpr);
 c.lineWidth = 4;
