@@ -19,6 +19,7 @@ body {
 
 .column {
     width: 900px;
+    padding-left: 220px;
     float: left;
     display: flex;
     color: black;
