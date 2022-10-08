@@ -96,8 +96,10 @@ function draw() {
 
 canvas.addEventListener('mousedown', function() {
     draw();
-    for (var i = 0; i < size; i += step) {
-        splitSquaresWith({ y: i });
+    for (var i = 0; i < w; i += step) {
         splitSquaresWith({ x: i });
+    }
+    for (var i = 0; i < h; i += step) {
+        splitSquaresWith({ y: i });
     }
 }); 
