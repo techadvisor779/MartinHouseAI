@@ -6,7 +6,8 @@ var h = 500;
 var dpr = window.devicePixelRatio;
 c.scale(dpr, dpr);
 c.lineWidth = 4;
-var step = w / 7;
+var stepW = w / 7;
+var stepH = h / 7;
 var white = '#F2F5F1';
 var colors = ['#D40920', '#1356A2', '#F7D842']
 
@@ -40,15 +41,15 @@ function splitOnX(square, splitAt) {
     var squareA = {
         x: square.x,
         y: square.y,
-        width: square.width - (square.width - splitAt + square.x),
-        height: square.height
+        w: square.width - (square.width - splitAt + square.x),
+        h: square.height
     };
 
     var squareB = {
         x: splitAt,
         y: square.y,
-        width: square.width - splitAt + square.x,
-        height: square.height
+        w: square.width - splitAt + square.x,
+        h: square.height
     };
     squares.push(squareA);
     squares.push(squareB);
@@ -58,15 +59,15 @@ function splitOnY(square, splitAt) {
     var squareA = {
         x: square.x,
         y: square.y,
-        width: square.width,
-        height: square.height - (square.height - splitAt + square.y)
+        w: square.width,
+        h: square.height - (square.height - splitAt + square.y)
     };
 
     var squareB = {
         x: square.x,
         y: splitAt,
-        width: square.width,
-        height: square.height - splitAt + square.y
+        w: square.width,
+        h: square.height - splitAt + square.y
     };
     squares.push(squareA);
     squares.push(squareB);
