@@ -105,13 +105,13 @@ for (const radio of radios) {
 }
 
 const LineBtn = document.getElementById("LineID").value
-if (LineBtn == 'on') {
-    document.getElementById("PaintID").value = 'off';
+if (LineBtn == on) {
+    document.getElementById("PaintID").value = off;
 }
 
 const PaintBtn = document.getElementById("PaintID").value
-if (PaintBtn == 'on') {
-    document.getElementById("LineID").value = 'off';
+if (PaintBtn == on) {
+    document.getElementById("LineID").value = off;
 }
 
 canvas.addEventListener('mousedown', function() {    
