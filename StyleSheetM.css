@@ -37,7 +37,8 @@ body {
 }
 
 form {
-    border: 4mm ridge rgba(211, 220, 50, .5);    
+    border: 4mm ridge rgba(211, 220, 50, .5);  
+    outline: 4px;
 }
 
 h7 {
