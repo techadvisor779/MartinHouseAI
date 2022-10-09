@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background: linear-gradient(0deg, #dd9804b9 0%, #414141 100%);
-    background-size: 100% 1400px;
+    background-size: 100% 1450px;
     padding: 1em;
     margin-top: 30pt;
     overflow: visible;
@@ -20,7 +20,7 @@ body {
 
 .column {
     width: 900px;
-    padding-left: 40px;
+    padding-left: 20px;
     float: left;
     display: flex;
     color: black;
