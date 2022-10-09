@@ -7,10 +7,6 @@ body {
     overflow: visible;
 }
 
-.form {
-    border: 4mm ridge rgba(211, 220, 50, .5);    
-}
-
 .range-slider {
     max-width: 30em;
     margin: 2em auto;
@@ -38,6 +34,10 @@ body {
     color: white;
     text-shadow: 2px 3px 5px black;
     padding-top: 210px;
+}
+
+form {
+    border: 4mm ridge rgba(211, 220, 50, .5);    
 }
 
 h7 {
