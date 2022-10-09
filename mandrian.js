@@ -106,14 +106,15 @@ for (const radio of radios) {
 
 const LineBtn = document.getElementById("LineID").value;
 const PaintBtn = document.getElementById("PaintID").value;
-if (LineBtn.checked) {
-    document.getElementById("PaintID").setAttribute("value", " ");
+if (LineBtn.value == "on") {
+    document.getElementById("PaintID").setAttribute("value", "off");
     //PaintBtn.checked = false;
-    console.log(LineBtn, PaintBtn);
+    console.log(LineBtn.checked);
 }
-if (PaintBtn.checked) {
-    LineBtn.checked = false;
-    console.log(LineBtn, PaintBtn);
+if (PaintID.value == "on") {
+    document.getElementById("PaintID").setAttribute("value", "off");
+    //PaintBtn.checked = false;
+    console.log(PaintID.checked);
 }
 
 canvas.addEventListener('mousedown', function() {    
