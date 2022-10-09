@@ -107,7 +107,7 @@ var Pastel = document.getElementById('Pastel').value;
 
 LineID.addEventListener('click', function() {
     document.getElementById('LineID').value = 'true');
-    document.getElementById('PaintID').value 'false');  
+    document.getElementById('PaintID').value = 'false');  
     console.log(LineID);
 });
 
