@@ -36,11 +36,6 @@ body {
     padding-top: 210px;
 }
 
-form {
-    border: 1px ridge rgba(170, 50, 220, .6);
-    border-radius: 2rem;
-}
-
 h7 {
     width: 200px;
     font-size: 24px;    
