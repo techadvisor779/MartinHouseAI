@@ -3,7 +3,7 @@ body {
     background: linear-gradient(0deg, #dd9804b9 0%, #414141 100%);
     background-size: 100% 1400px;
     padding: 1em;
-    margin-top: 40pt;
+    margin-top: 30pt;
     overflow: visible;
 }
 
@@ -11,7 +11,7 @@ body {
     max-width: 30em;
     margin: 2em auto;
     float: left;
-    width: 220px;
+    width: 240px;
     max-height: 20px;
     padding-left: 20px;
     padding-right: 30px;
