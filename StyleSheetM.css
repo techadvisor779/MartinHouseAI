@@ -45,6 +45,16 @@ h7 {
     padding-left: 0px;
 }
 
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
 range-slider .slider {
     -webkit-appearance: none;
     width: 100%;
