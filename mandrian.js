@@ -7,7 +7,7 @@ var dpr = window.devicePixelRatio;
 c.scale(dpr, dpr);
 c.lineWidth = 4;
 var stepW = w / 7;
-var stepH = h / 9;
+var stepH = h / 7;
 var white = '#F2F5F1';
 var colors = ['#D40920', '#1356A2', '#F7D842']
 
