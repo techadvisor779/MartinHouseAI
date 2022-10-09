@@ -104,6 +104,16 @@ for (const radio of radios) {
   }
 }
 
+const HLineBtn = document.getElementById("LineID").value
+if (HLineBtn == 'on') {
+    document.getElementById("PaintID").value = 'off';
+}
+
+const VLineBtn = document.getElementById("PaintID").value
+if (HLineBtn == 'on') {
+    document.getElementById("LineID").value = 'off';
+}
+
 canvas.addEventListener('mousedown', function() {    
     for (var i = 0; i < w; i += stepW) {
         splitSquaresWith({ x: i });
