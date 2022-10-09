@@ -102,16 +102,18 @@ var PaintID = document.getElementById('PaintID').value;
 var Trad = document.getElementById('Traditional').value;
 var Pastel = document.getElementById('Pastel').value;
 
-if(LineID) {
-    button.setAttribute('PaintID', false);
+LineID.addEventListener('click', function() {
+    if(LineID) {
+        PaintID.setAttribute('PaintID', false);
+    }    
 }
 
 if(H_Line) {
-    button.setAttribute('PaintID', false);
+    V_Line.setAttribute('V_Line', false);
 }
 
 if(V_Line) {
-    button.setAttribute('PaintID', false);
+    H_Line.setAttribute('H_Line', false);
 }
 
 if(PaintID) {
