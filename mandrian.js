@@ -104,15 +104,15 @@ for (const radio of radios) {
   }
 }
 
-const LineBtn = document.getElementById("LineID").value
-if (LineBtn == "on") {
-    document.getElementById("PaintID").value = "off";
-    console.log(LineBtn);
-}
-
+const LineBtn = document.getElementById("LineID").value;
 const PaintBtn = document.getElementById("PaintID").value
-if (PaintBtn == on) {
-    document.getElementById("LineID").value = off;
+if (LineBtn == "on") {
+    PaintBtn.value = "off";
+    console.log(LineBtn, PaintBtn);
+}
+if (PaintBtn == "on") {
+    LineBtn.value = "off";
+    console.log(LineBtn, PaintBtn);
 }
 
 canvas.addEventListener('mousedown', function() {    
