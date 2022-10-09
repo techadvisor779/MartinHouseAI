@@ -78,12 +78,12 @@ range-slider .slider::-webkit-slider-thumb {
 
 canvas {
     background-color: white;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 40px;
     border-color: black;
     border-width: 4px;
-    width: 650px;
-    height: 450px;
+    width: 800px;
+    height: 600px;
 }
 
 range-slider .slider-thumb::before {
