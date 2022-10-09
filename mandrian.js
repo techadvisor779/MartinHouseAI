@@ -106,8 +106,8 @@ var Trad = document.getElementById('Traditional').value;
 var Pastel = document.getElementById('Pastel').value;
 
 LineID.addEventListener('click', function() {
-    LineID.setAttribute('value', true);
-    PaintID.setAttribute('value', false);  
+    document.getElementById('LineID').value = 'true');
+    document.getElementById('PaintID').value 'false');  
     console.log(LineID);
 });
 
