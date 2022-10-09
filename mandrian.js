@@ -105,12 +105,12 @@ for (const radio of radios) {
 }
 
 const LineBtn = document.getElementById("LineID").value;
-const PaintBtn = document.getElementById("PaintID").value
-if (LineBtn.checked == true) {
+const PaintBtn = document.getElementById("PaintID").value;
+if (LineBtn.checked) {
     PaintBtn.checked = false;
     console.log(LineBtn, PaintBtn);
 }
-if (PaintBtn.checked == true) {
+if (PaintBtn.checked) {
     LineBtn.checked = false;
     console.log(LineBtn, PaintBtn);
 }
