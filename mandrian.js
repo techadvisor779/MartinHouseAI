@@ -97,19 +97,12 @@ function draw() {
     }
 }
 
-var LineID = document.getElementById('LineID').value;
-console.log(LineID);
-var H_Line = document.getElementById('H_Line').value;
-var V_Line = document.getElementById('V_Line').value;
-var PaintID = document.getElementById('PaintID').value;
-var Trad = document.getElementById('Traditional').value;
-var Pastel = document.getElementById('Pastel').value;
-
-LineID.addEventListener('click', function() {
-//    document.getElementById('LineID').value = 'true';
-//    document.getElementById('PaintID').value = 'false';  
-    console.log("LogID = " + LineID);
-});
+const radios = document.querySelectorAll('input')
+for (const radio of radios) {
+  radio.onclick = (e) => {
+    console.log(e.target.value);
+  }
+}
 
 canvas.addEventListener('mousedown', function() {    
     for (var i = 0; i < w; i += stepW) {
