@@ -107,7 +107,8 @@ for (const radio of radios) {
 const LineBtn = document.getElementById("LineID").value;
 const PaintBtn = document.getElementById("PaintID").value;
 if (LineBtn.checked) {
-    PaintBtn.checked = false;
+    document.getElementById("PaintID").setAttribute("value", " ");
+    //PaintBtn.checked = false;
     console.log(LineBtn, PaintBtn);
 }
 if (PaintBtn.checked) {
