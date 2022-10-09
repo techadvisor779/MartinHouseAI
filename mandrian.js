@@ -109,27 +109,7 @@ LineID.addEventListener('click', function() {
     LineID.setAttribute('LineID', true);
     PaintID.setAttribute('PaintID', false);  
     console.log(LineID);
-}
-
-if(H_Line) {
-    V_Line.setAttribute('V_Line', false);
-}
-
-if(V_Line) {
-    H_Line.setAttribute('H_Line', false);
-}
-
-if(PaintID) {
-    button.setAttribute('LineID', false);
-}
-
-if(Trad) {
-    button.setAttribute('Pastel', false);
-}
-
-if(Pastel) {
-    button.setAttribute('Traditional', false);
-}
+});
 
 canvas.addEventListener('mousedown', function() {    
     for (var i = 0; i < w; i += stepW) {
