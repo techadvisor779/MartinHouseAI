@@ -7,9 +7,11 @@ var dpr = window.devicePixelRatio;
 c.scale(dpr, dpr);
 c.lineWidth = 4;
 var stepW = w / 7;
-var stepH = h / 6;
+var stepH = h / 10;
 var white = '#F2F5F1';
-var colors = ['#D40920', '#1356A2', '#F7D842']
+var colorsT = ['#D40920', '#1356A2', '#F7D842'];
+var colorsP = ['#8BD3E6', '#FF6D6A', '#E9EC6B'];
+var colors = colorsT;
 
 var squares = [{
     x: 0,
@@ -96,6 +98,7 @@ function draw() {
 }
 
 var LineID = document.getElementById('LineID').value;
+console.log(LineID);
 var H_Line = document.getElementById('H_Line').value;
 var V_Line = document.getElementById('V_Line').value;
 var PaintID = document.getElementById('PaintID').value;
@@ -103,9 +106,9 @@ var Trad = document.getElementById('Traditional').value;
 var Pastel = document.getElementById('Pastel').value;
 
 LineID.addEventListener('click', function() {
-    if(LineID) {
-        PaintID.setAttribute('PaintID', false);
-    }    
+    LineID.setAttribute('LineID', true);
+    PaintID.setAttribute('PaintID', false);  
+    console.log(LineID);
 }
 
 if(H_Line) {
