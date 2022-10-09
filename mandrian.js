@@ -7,7 +7,7 @@ var dpr = window.devicePixelRatio;
 c.scale(dpr, dpr);
 c.lineWidth = 4;
 var stepW = w / 7;
-var stepH = h / 7;
+var stepH = h / 9;
 var white = '#F2F5F1';
 var colors = ['#D40920', '#1356A2', '#F7D842']
 
@@ -96,10 +96,10 @@ function draw() {
 }
 
 canvas.addEventListener('mousedown', function() {    
-    for (var i = 0; i < w; i += step) {
+    for (var i = 0; i < w; i += stepW) {
         splitSquaresWith({ x: i });
     }
-    for (var i = 0; i < h; i += step) {
+    for (var i = 0; i < h; i += stepH) {
         splitSquaresWith({ y: i });
     }
     draw();
