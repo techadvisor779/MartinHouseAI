@@ -95,6 +95,37 @@ function draw() {
     }
 }
 
+var LineID = document.getElementById('LineID').value;
+var H_Line = document.getElementById('H_Line').value;
+var V_Line = document.getElementById('V_Line').value;
+var PaintID = document.getElementById('PaintID').value;
+var Trad = document.getElementById('Traditional').value;
+var Pastel = document.getElementById('Pastel').value;
+
+if(LineID) {
+    document.setAttribute('PaintID', false);
+}
+
+if(H_Line) {
+    document.setAttribute('PaintID', false);
+}
+
+if(V_Line) {
+    document.setAttribute('PaintID', false);
+}
+
+if(PaintID) {
+    document.setAttribute('LineID', false);
+}
+
+if(Trad) {
+    document.setAttribute('Pastel', false);
+}
+
+if(Pastel) {
+    document.setAttribute('Traditional', false);
+}
+
 canvas.addEventListener('mousedown', function() {    
     for (var i = 0; i < w; i += stepW) {
         splitSquaresWith({ x: i });
