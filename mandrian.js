@@ -103,27 +103,27 @@ var Trad = document.getElementById('Traditional').value;
 var Pastel = document.getElementById('Pastel').value;
 
 if(LineID) {
-    document.setAttribute('PaintID', false);
+    button.setAttribute('PaintID', false);
 }
 
 if(H_Line) {
-    document.setAttribute('PaintID', false);
+    button.setAttribute('PaintID', false);
 }
 
 if(V_Line) {
-    document.setAttribute('PaintID', false);
+    button.setAttribute('PaintID', false);
 }
 
 if(PaintID) {
-    document.setAttribute('LineID', false);
+    button.setAttribute('LineID', false);
 }
 
 if(Trad) {
-    document.setAttribute('Pastel', false);
+    button.setAttribute('Pastel', false);
 }
 
 if(Pastel) {
-    document.setAttribute('Traditional', false);
+    button.setAttribute('Traditional', false);
 }
 
 canvas.addEventListener('mousedown', function() {    
