@@ -39,6 +39,7 @@ body {
 form {
     outline: 8px ridge rgba(170, 50, 220, .6);
     border-radius: 2rem;
+    box-sizing: border-box;
 }
 
 h7 {
