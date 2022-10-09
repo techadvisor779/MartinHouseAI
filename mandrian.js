@@ -100,7 +100,7 @@ function draw() {
 const radios = document.querySelectorAll('input')
 for (const radio of radios) {
   radio.onclick = (e) => {
-    console.log(e.target.value);
+    console.log(e.target + " = " + e.target.value);
   }
 }
 
