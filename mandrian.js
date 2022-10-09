@@ -97,17 +97,17 @@ function draw() {
     }
 }
 
-var LineID = document.getElementById('LineID').value;
+var LineID = document.getElementById('LineID');
 console.log(LineID);
-var H_Line = document.getElementById('H_Line').value;
+var H_Line = document.getElementById('H_Line');
 var V_Line = document.getElementById('V_Line').value;
 var PaintID = document.getElementById('PaintID').value;
 var Trad = document.getElementById('Traditional').value;
 var Pastel = document.getElementById('Pastel').value;
 
 LineID.addEventListener('click', function() {
-    LineID.setAttribute('LineID', true);
-    PaintID.setAttribute('PaintID', false);  
+    LineID.setAttribute('value', true);
+    PaintID.setAttribute('value', false);  
     console.log(LineID);
 });
 
