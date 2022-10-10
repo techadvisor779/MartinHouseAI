@@ -108,7 +108,7 @@ function handlePaint() {
     if (document.getElementById('LineID').value = "on") {
         document.getElementById('LineID').value = "off";
     }
-    console.log("here at paint btn", elem.value);
+    console.log("here at paint btn", document.getElementById('LineID').value);
 }
 
 function handleLine() {
@@ -116,7 +116,7 @@ function handleLine() {
     if (elem.value = "on") {
         elem.value = "off";
     }
-    console.log("here at line btn", elem.value);
+    console.log("here at line btn", document.getElementById('LineID').value);
 }
 
 document.addEventListener('click', function() {    
