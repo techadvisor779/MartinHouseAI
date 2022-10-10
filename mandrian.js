@@ -104,21 +104,21 @@ for (const radio of radios) {
   }
 }
 
+function handleLine() {
+    document.getElementById('PaintID').setAttribute("value", "off");
+    console.log("here at line btn");
+}
+
+function handlePaint() {
+    document.getElementById('LineID').setAttribute("value", "off");
+    console.log("here at paint btn");
+}
+
 var LineBtn = document.getElementByID('LineID');
 LineBtn.value = "on";
 var PaintBtn = document.getElementById('PaintID');
 PaintBtn.value = "off";
 console.log(LineBtn, PaintBtn);
-if (LineBtn.value == "on") {
-    document.getElementById('PaintID').setAttribute("value", "off");
-    //PaintBtn.checked = false;
-    console.log("here at line btn");
-}
-if (PaintBtn.value == "on") {
-    document.getElementById('LineBtn').setAttribute("value", "off");
-    //PaintBtn.checked = false;
-    console.log("here at paint btn");
-}
 
 canvas.addEventListener('mousedown', function() {    
     for (var i = 0; i < w; i += stepW) {
