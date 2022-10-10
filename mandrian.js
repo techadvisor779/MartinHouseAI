@@ -106,15 +106,16 @@ for (const radio of radios) {
 
 function handlePaint() {
     if (document.getElementById('LineID').value = "on") {
-        document.getElementById('LineID').value = "off";
+        document.getElementById('LineID').checked = " ";
     }
     console.log("here at paint btn", document.getElementById('LineID').value);
 }
 
 function handleLine() {
     const elem = document.getElementById('PaintID');
-    if (elem.value = "on") {
-        elem.value = "off";
+    if (document.getElementById('PaintID').value = "on") {
+        document.getElementById('PaintID').value = "off";
+        document.getElementById('PaintID').checked = " ";
     }
     console.log("here at line btn", document.getElementById('LineID').value);
 }
