@@ -108,12 +108,12 @@ const LineBtn = document.getElementById("LineID").value;
 const PaintBtn = document.getElementById("PaintID").value;
 
 if (LineBtn.value == 'on') {
-    document.getElementById("PaintID").setAttribute("value", "off");
+    document.getElementById("PaintID").setAttribute("value", 'off');
     //PaintBtn.checked = false;
     console.log("here at line btn");
 }
 if (PaintID.value == 'on') {
-    document.getElementById("LineID").setAttribute("value", "off");
+    document.getElementById("LineID").setAttribute("value", 'off');
     //PaintBtn.checked = false;
     console.log("here at paint btn");
 }
