@@ -109,7 +109,7 @@ function handlePaint() {
     if (elem.value = "on") {
         elem.value = "off";
     }
-    console.log("here at paint btn");
+    console.log("here at paint btn", elem.value);
 }
 
 function handleLine() {
@@ -117,10 +117,10 @@ function handleLine() {
     if (elem.value = "on") {
         elem.value = "off";
     }
-    console.log("here at line btn");
+    console.log("here at line btn", elem.value);
 }
 
-canvas.addEventListener('mousedown', function() {    
+document.addEventListener('mousedown', function() {    
     handlePaint();
     handleLine();
 }); 
