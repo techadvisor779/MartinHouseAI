@@ -119,7 +119,7 @@ function handleLine() {
     console.log("here at line btn", document.getElementById('LineID').value);
 }
 
-document.addEventListener('click', function() {    
+window.addEventListener("click", function() {    
     handlePaint();
     handleLine();
 }); 
