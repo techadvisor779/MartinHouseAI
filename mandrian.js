@@ -105,7 +105,9 @@ for (const radio of radios) {
 }
 
 var LineBtn = document.getElementByID('LineID');
+LineBtn.value = "on";
 var PaintBtn = document.getElementById('PaintID');
+PaintBtn.value = "off";
 console.log(LineBtn, PaintBtn);
 if (LineBtn.value == "on") {
     document.getElementById('PaintID').setAttribute("value", "off");
