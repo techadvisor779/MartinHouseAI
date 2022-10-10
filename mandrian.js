@@ -105,12 +105,14 @@ for (const radio of radios) {
 }
 
 function handleLine() {
-    document.getElementById('PaintID').setAttribute("value", "off");
+    const elem = document.getElementById('PaintID');
+    elem.value = "off";
     console.log("here at line btn");
 }
 
 function handlePaint() {
-    document.getElementById('LineID').setAttribute("value", "off");
+    const elem = document.getElementById('LineID');
+    elem.value = "off";
     console.log("here at paint btn");
 }
 
