@@ -106,7 +106,7 @@ for (const radio of radios) {
 
 var LineBtn = document.getElementById("LineID");
 var PaintBtn = document.getElementById("PaintID");
-
+console.log(LineBtn.checked);
 if (LineBtn.checked) {
     PaintID.setAttribute("value", "off");
     //PaintBtn.checked = false;
