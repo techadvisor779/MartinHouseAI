@@ -104,7 +104,7 @@ for (const radio of radios) {
   }
 }
 
-var LineBtn = document.querySelector('#btn');
+var LineBtn = document.querySelector('#radio');
 //var LineBtn = document.getElementById("LineID");
 var PaintBtn = document.getElementById("PaintID");
 console.log(LineBtn);
