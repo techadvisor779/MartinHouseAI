@@ -105,9 +105,8 @@ for (const radio of radios) {
 }
 
 function handlePaint() {
-    const elem = document.getElementById('LineID');
-    if (elem.value = "on") {
-        elem.value = "off";
+    if (document.getElementById('LineID').value = "on") {
+        document.getElementById('LineID').value = "off";
     }
     console.log("here at paint btn", elem.value);
 }
@@ -120,7 +119,7 @@ function handleLine() {
     console.log("here at line btn", elem.value);
 }
 
-document.addEventListener('mousedown', function() {    
+document.addEventListener('click', function() {    
     handlePaint();
     handleLine();
 }); 
