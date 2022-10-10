@@ -104,16 +104,16 @@ for (const radio of radios) {
   }
 }
 
-var LineBtn = document.getElementById("LineID").value;
-var PaintBtn = document.getElementById("PaintID").value;
+var LineBtn = document.getElementById("LineID");
+var PaintBtn = document.getElementById("PaintID");
 
-if (LineBtn == 'on') {
-    document.getElementById('PaintID').setAttribute("value", 'off');
+if (LineBtn.checked) {
+    PaintID.setAttribute("value", "off");
     //PaintBtn.checked = false;
     console.log("here at line btn");
 }
-if (PaintID == 'on') {
-    document.getElementById('LineID').setAttribute("value", 'off');
+if (PaintBtn.checked) {
+    LineID.setAttribute("value", "off");
     //PaintBtn.checked = false;
     console.log("here at paint btn");
 }
