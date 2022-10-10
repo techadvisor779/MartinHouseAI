@@ -104,19 +104,23 @@ for (const radio of radios) {
   }
 }
 
-
 function handlePaint() {
     const elem = document.getElementById('LineID');
-    elem.value = "off";
+    if (elem.value = "on") {
+        elem.value = "off";
+    }
     console.log("here at paint btn");
 }
 
+function handleLine() {
+    const elem = document.getElementById('PaintID');
+    if (elem.value = "on") {
+        elem.value = "off";
+    }
+    console.log("here at line btn");
+}
+
 canvas.addEventListener('mousedown', function() {    
-    for (var i = 0; i < w; i += stepW) {
-        splitSquaresWith({ x: i });
-    }
-    for (var i = 0; i < h; i += stepH) {
-        splitSquaresWith({ y: i });
-    }
-    draw();
+    handlePaint();
+    handleLine();
 }); 
