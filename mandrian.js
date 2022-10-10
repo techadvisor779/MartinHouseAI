@@ -116,12 +116,6 @@ function handlePaint() {
     console.log("here at paint btn");
 }
 
-var LineBtn = document.getElementByID('LineID');
-LineBtn.value = "on";
-var PaintBtn = document.getElementById('PaintID');
-PaintBtn.value = "off";
-console.log(LineBtn, PaintBtn);
-
 canvas.addEventListener('mousedown', function() {    
     for (var i = 0; i < w; i += stepW) {
         splitSquaresWith({ x: i });
