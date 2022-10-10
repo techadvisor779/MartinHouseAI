@@ -104,9 +104,10 @@ for (const radio of radios) {
   }
 }
 
-var LineBtn = document.getElementById("LineID");
+var LineBtn = document.querySelector('#btn');
+//var LineBtn = document.getElementById("LineID");
 var PaintBtn = document.getElementById("PaintID");
-console.log(LineBtn.checked);
+console.log(LineBtn);
 if (LineBtn.checked) {
     PaintID.setAttribute("value", "off");
     //PaintBtn.checked = false;
