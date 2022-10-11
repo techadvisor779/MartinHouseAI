@@ -104,14 +104,13 @@ function draw() {
 //  }
 //}
 
-function myPaint() {
-    document.getElementById('LineID').checked = " ";
-    console.log("here at paint btn", document.getElementById('LineID').value);
-}
+const buttonL = document.getElementById("LineID");
 
-function myLine() {
-    document.getElementById('PaintID').checked = " ";
-    console.log("here at line btn", document.getElementById('LineID').value);
+buttonL.onclick = () => {
+    if (button.checked) {
+        button.checked = !button.checked;
+        console.log("finally")
+    }
 }
 
 canvas.addEventListener("click", function() {    
