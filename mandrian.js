@@ -99,6 +99,7 @@ function draw() {
         }
         c.fill()
         c.stroke();
+        createRectangles();
     }
 }
 
@@ -144,7 +145,7 @@ function splitRectangleAt(rectangle, position) {
 
 canvas.addEventListener('mousedown', function () {
     draw();
-    //onRectangleClick();
+    onRectangleClick();
     
     for (var i = 0; i < w; i += stepW) {
         splitSquaresWith({ x: i });
