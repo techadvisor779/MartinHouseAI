@@ -107,9 +107,9 @@ function draw() {
 const buttonL = document.getElementById("LineID");
 
 buttonL.onclick = () => {
-    if (button.checked) {
-        button.checked = !button.checked;
-        console.log("finally")
+    if (buttonL.checked) {
+        buttonL.checked = !buttonL.checked;
+        console.log("finally", buttonL, buttonL.checked)
     }
 }
 
