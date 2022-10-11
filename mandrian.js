@@ -21,6 +21,13 @@ var squares = [{
     height: h
 }];
 
+canvas.addEventListener('click', onRectangleClick);
+
+function createRectangles(x, y, width, height) {
+    rectangles.push({ x, y, width, height })
+} var canvas = document.querySelector('canvas');
+var c = canvas.getContext('2d');
+
 function splitSquaresWith(coordinates) {
     const { x, y } = coordinates;
     for (var i = squares.length - 1; i >= 0; i--) {
