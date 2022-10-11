@@ -90,19 +90,19 @@ function draw() {
         if(squares[i].color) {
             c.fillStyle = squares[i].color;
         } else {
-            c.fillStyle = white
+            c.fillStyle = white;
         }
-        c.fill()
+        c.fill();
         c.stroke();
     }
 }
 
-const radios = document.querySelectorAll('input')
-for (const radio of radios) {
-  radio.onclick = (e) => {
-    console.log(e.target + " = " + e.target.value);
-  }
-}
+//const radios = document.querySelectorAll('input')
+//for (const radio of radios) {
+//  radio.onclick = (e) => {
+//    console.log(e.target + " = " + e.target.value);
+//  }
+//}
 
 function handlePaint() {
     if (document.getElementById('LineID').value = "on") {
@@ -120,7 +120,6 @@ function handleLine() {
     console.log("here at line btn", document.getElementById('LineID').value);
 }
 
-window.addEventListener("click", function() {    
-    handlePaint();
-    handleLine();
+canvas.addEventListener("click", function() {    
+    draw();
 }); 
