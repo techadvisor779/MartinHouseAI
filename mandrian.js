@@ -97,13 +97,6 @@ function draw() {
     }
 }
 
-//const radios = document.querySelectorAll('input')
-//for (const radio of radios) {
-//  radio.onclick = (e) => {
-//    console.log(e.target + " = " + e.target.value);
-//  }
-//}
-
 const buttonL = document.getElementById("LineID");
 const buttonH = document.getElementById("H_Line");
 const buttonV = document.getElementById("V_Line");
@@ -148,6 +141,52 @@ buttonPP.onclick = () => {
     }
 }
 
-canvas.addEventListener("click", function() {    
+canvas.addEventListener('mousedown', function () {
+    for (var i = 0; i < w; i += stepW) {
+        splitSquaresWith({ x: i });
+    }
+    for (var i = 0; i < h; i += stepH) {
+        splitSquaresWith({ y: i });
+    }
     draw();
 }); 
+
+function drawRectangles() {
+    rectangles.forEach((rectangle) => {
+        c.beginPath();
+        c.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
+        c.closePath();
+        c.stroke();
+    });
+}
+
+function onRectangleClick(e) {
+    const onClickIndex = 0;
+    const clickedRectangle = rectangles[0];
+
+    rectangle.splice(clickedIndex, 1);
+    splitRectangleAt(clickedRectangle);
+}
+
+function splitRectangleAt(rectangle, position) {
+    if (splitDirectionVert) {
+        rectangles.push({
+            x: rectangle.x,
+            y: rectangle.y,
+            width: position.x,
+            height: rectangle.height
+        });
+        rectangle.push({
+            x: rectangle.x + position.x,
+            y: rectangle.y,
+        });
+    } else {
+        rectangles.push({
+            x: rectangle.x,
+            y: rectangle.y,
+            width: rectangle.width,
+            height: position.y
+        });
+        drawRectangles();
+    }
+}
