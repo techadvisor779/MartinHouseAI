@@ -105,7 +105,11 @@ function draw() {
 //}
 
 const buttonL = document.getElementById("LineID");
+const buttonH = document.getElementById("H_Line");
+const buttonV = document.getElementById("V_Line");
 const buttonP = document.getElementById("PaintID");
+const buttonT = document.getElementById("Traditional");
+const buttonPP = document.getElementById("Pastel");
 
 buttonL.onclick = () => {
     if (buttonL.checked) {
@@ -113,9 +117,32 @@ buttonL.onclick = () => {
     }
 }
 
+buttonH.onclick = () => {
+    if (buttonH.checked) {
+        buttonV.checked = false;
+    }
+}
+
+buttonV.onclick = () => {
+    if (buttonV.checked) {
+        buttonH.checked = false;
+    }
+}
+
 buttonP.onclick = () => {
     if (buttonP.checked) {
         buttonL.checked = false;
+    }
+}
+buttonT.onclick = () => {
+    if (buttonT.checked) {
+        buttonPP.checked = false;
+    }
+}
+
+buttonPP.onclick = () => {
+    if (buttonP.checked) {
+        buttonT.checked = false;
     }
 }
 
