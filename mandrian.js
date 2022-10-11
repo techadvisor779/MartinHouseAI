@@ -105,11 +105,17 @@ function draw() {
 //}
 
 const buttonL = document.getElementById("LineID");
+const buttonP = document.getElementById("PaintID");
 
 buttonL.onclick = () => {
     if (buttonL.checked) {
-        buttonL.checked = !buttonL.checked;
-        console.log("finally", buttonL, buttonL.checked)
+        buttonP.checked = false;
+    }
+}
+
+buttonP.onclick = () => {
+    if (buttonP.checked) {
+        buttonL.checked = false;
     }
 }
 
