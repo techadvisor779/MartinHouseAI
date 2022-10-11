@@ -13,7 +13,7 @@ var colorsT = ['#D40920', '#1356A2', '#F7D842'];
 var colorsP = ['#8BD3E6', '#FF6D6A', '#E9EC6B'];
 var colors = colorsT;
 var splitDirectionVert = true;
-const rectangles = [];
+var rectangles = [];
 
 var squares = [{
     x: 0,
@@ -24,8 +24,7 @@ var squares = [{
 
 function createRectangles(x, y, width, height) {
     rectangles.push({ x, y, width, height })
-} var canvas = document.querySelector('canvas');
-var c = canvas.getContext('2d');
+}
 
 function splitSquaresWith(coordinates) {
     const { x, y } = coordinates;
@@ -53,7 +52,6 @@ function splitOnX(square, splitAt) {
         w: square.width - (square.width - splitAt + square.x),
         h: square.height
     };
-
     var squareB = {
         x: splitAt,
         y: square.y,
@@ -94,12 +92,12 @@ function draw() {
             squares[i].width,
             squares[i].height
         );
-        if(squares[i].color) {
+        if (squares[i].color) {
             c.fillStyle = squares[i].color;
         } else {
-            c.fillStyle = white;
+            c.fillStyle = white
         }
-        c.fill();
+        c.fill()
         c.stroke();
     }
 }
@@ -144,16 +142,15 @@ function splitRectangleAt(rectangle, position) {
     }
 }
 
-canvas.addEventListener('click', onRectangleClick);
-
 canvas.addEventListener('mousedown', function () {
+    onRectangleClick();
+    draw();
     for (var i = 0; i < w; i += stepW) {
         splitSquaresWith({ x: i });
     }
     for (var i = 0; i < h; i += stepH) {
         splitSquaresWith({ y: i });
     }
-    draw();
 }); 
 
 const buttonL = document.getElementById("LineID");
