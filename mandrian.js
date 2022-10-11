@@ -99,7 +99,7 @@ function draw() {
         }
         c.fill()
         c.stroke();
-        createRectangles();
+        createRectangles(x, y, width, height);
     }
 }
 
