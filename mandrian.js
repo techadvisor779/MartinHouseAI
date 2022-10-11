@@ -12,6 +12,7 @@ var white = '#F2F5F1';
 var colorsT = ['#D40920', '#1356A2', '#F7D842'];
 var colorsP = ['#8BD3E6', '#FF6D6A', '#E9EC6B'];
 var colors = colorsT;
+var splitDirectionVert = true;
 
 var squares = [{
     x: 0,
