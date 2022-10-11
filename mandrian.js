@@ -137,12 +137,14 @@ buttonP.onclick = () => {
 buttonT.onclick = () => {
     if (buttonT.checked) {
         buttonPP.checked = false;
+        colors = colorsT;
     }
 }
 
 buttonPP.onclick = () => {
     if (buttonP.checked) {
         buttonT.checked = false;
+        colors = colorsP;
     }
 }
 
