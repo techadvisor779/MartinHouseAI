@@ -349,10 +349,10 @@ var change_pallet1 = function () {
     c.strokeRect(179, 239, 121, 81)
     c.strokeStyle = 'Black';
     c.drawImage(img_pollock, 180, 240, 120, 80)
-    c.drawImage(img_pollock2, 180, 340, 120, 80)
-    c.drawImage(img_pollock3, 180, 440, 120, 80)
+    c.drawImage(img_pollock2, 180, 320, 120, 80)
+    c.drawImage(img_pollock3, 180, 400, 120, 80)
 
-    c.drawImage(document.getElementById('undo'), 190, 540, 90, 30)
+    c.drawImage(document.getElementById('undo'), 190, 550, 90, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
 }
 
@@ -402,10 +402,10 @@ var change_pallet2 = function () {
     c.strokeRect(179, 239, 121, 81)
     c.strokeStyle = 'Black'
     c.drawImage(img_pollock, 180, 240, 120, 80)
-    c.drawImage(img_pollock2, 180, 340, 120, 80)
-    c.drawImage(img_pollock3, 180, 440, 120, 80)
+    c.drawImage(img_pollock2, 180, 320, 120, 80)
+    c.drawImage(img_pollock3, 180, 400, 120, 80)
 
-    c.drawImage(document.getElementById('clear'), 190, 540, 90, 30)
+    c.drawImage(document.getElementById('undo'), 190, 550, 90, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
 }
 
@@ -455,10 +455,10 @@ var change_pallet3 = function () {
     c.strokeRect(179, 239, 121, 81)
     c.strokeStyle = 'Black'
     c.drawImage(img_pollock, 180, 240, 120, 80)
-    c.drawImage(img_pollock2, 180, 340, 120, 80)
-    c.drawImage(img_pollock3, 180, 440, 120, 80)
+    c.drawImage(img_pollock2, 180, 320, 120, 80)
+    c.drawImage(img_pollock3, 180, 400, 120, 80)
 
-    c.drawImage(document.getElementById('clear'), 190, 540, 90, 30);
+    c.drawImage(document.getElementById('undo'), 190, 550, 90, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
 }
 
