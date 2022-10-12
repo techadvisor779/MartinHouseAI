@@ -86,7 +86,7 @@ var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 
     if (e.clientX > 401 - radius) {
         if (e.clientX < 1410) {
             if (e.clientY > 0) {
-                if (e.clientY < 730 - radius) {
+                if (e.clientY < 750 - radius) {
                     c.beginPath();
                     c.arc(e.clientX, e.clientY - 125, radius, 0, Math.PI * 2);
                     c.fill();
