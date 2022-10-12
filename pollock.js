@@ -133,6 +133,7 @@ var dribble = function (e) {
 
 var color_check = function (e) {
 //brush click detect   
+     console.log(e.clientX, e.clientY )
      if (e.clientY > 203) {
        if (e.clientY < 232) {                     
             if (e.clientX > 181) {
