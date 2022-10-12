@@ -83,7 +83,7 @@ const arr = new Uint8ClampedArray(40_000);
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 1000, 600);
     console.log( e.clientX, e.clientY);
     delta = (e.clientX * e.clientX) + (e.clientY * e.clientY);
-    if (e.clientX > 390 - radius) {
+    if (e.clientX > 420 - radius) {
         if (e.clientX < 1400) {
             if (e.clientY > 0) {
                 if (e.clientY < 750 - radius) {
@@ -92,6 +92,7 @@ var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 
                     c.fill();
                     c.arc(1800 - e.clientX, 750 - e.clientY, radius, 0, Math.PI * 2);
                     c.fill();
+                    dribble(e, dribble_COLORS);
                 }
                 else dragging = false;
             }
@@ -106,35 +107,26 @@ var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 
     }
     oldX = e.clientX;
     oldY = e.clientY;
-    dribble(e, dribble_COLORS);
+    
 }
 
 var dribble = function (e) {
     temp = c.fillStyle;
     dribble_count += 1;
     if (dribble_count > 1) {
-        ranX = (Math.random() * 160) - 80;
-        ranY = (Math.random() * 160) - 80;
-        ranR1 = Math.random() * 10;
-        ranR2 = Math.random() * 10;
-        if (e.clientX - ranX > 520) {
-            if (e.clientX + ranX < 1410) {
-                if (e.clientY + ranY > 90) {
-                    if (e.clientY + ranY < 750 - radius) {
-                        c.beginPath();
-                        if (randColor_Opt) {
-                            ranC = Math.round(Math.random() * 7);
-                            c.fillStyle = dribble_COLORS[ranC];
-                        }
-                        c.arc(e.clientX + ranX, e.clientY + ranY - 75, ranR1, 0, Math.PI * 2);
-                        c.arc(1800 - e.clientX + ranX, 670 - e.clientY + ranY, ranR2, 0, Math.PI * 2);
-                        c.fill();
-                        dribble_count = 0;
-                    }
-                }
-            }
-        }
-
+         ranX = (Math.random() * 160) - 80;
+         ranY = (Math.random() * 160) - 80;
+         ranR1 = Math.random() * 10;
+         ranR2 = Math.random() * 10;
+         c.beginPath();
+         if (randColor_Opt) {
+             ranC = Math.round(Math.random() * 7);
+             c.fillStyle = dribble_COLORS[ranC];
+         }
+         c.arc(e.clientX + ranX, e.clientY + ranY - 75, ranR1, 0, Math.PI * 2);
+         c.arc(1800 - e.clientX + ranX, 690 - e.clientY + ranY, ranR2, 0, Math.PI * 2);
+         c.fill();
+         dribble_count = 0;
     }
     c.fillStyle = temp;
 }
