@@ -120,7 +120,7 @@ var dribble = function (e) {
         if (e.clientX - ranX > 520) {
             if (e.clientX + ranX < 1410) {
                 if (e.clientY + ranY > 90) {
-                    if (e.clientY + ranY < 676 - radius) {
+                    if (e.clientY + ranY < 750 - radius) {
                         c.beginPath();
                         if (randColor_Opt) {
                             ranC = Math.round(Math.random() * 7);
