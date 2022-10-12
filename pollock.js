@@ -353,13 +353,13 @@ var change_pallet1 = function () {
     c.drawImage(img_pollock3, 180, 400, 120, 60)
     
     c.fillStyle = 'Black';
-    c.fillText("Random Splatter", 180, 440);
+    c.fillText("Random Splatter", 180, 490);
     c.beginPath();
-    c.strokeStyle = black;
-    c.arc(200, 460, 10, 0, Math.PI * 2);
+    c.strokeStyle = 'Black';
+    c.arc(200, 500, 10, 0, Math.PI * 2);
     c.fill();
 
-    c.drawImage(document.getElementById('undo'), 200, 550, 80, 30)
+    c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
 }
 
@@ -413,13 +413,13 @@ var change_pallet2 = function () {
     c.drawImage(img_pollock3, 180, 400, 120, 60)
     
     c.fillStyle = 'Black';
-    c.fillText("Random Splatter", 180, 440);
+    c.fillText("Random Splatter", 180, 490);
     c.beginPath();
-    c.strokeStyle = black;
-    c.arc(200, 460, 10, 0, Math.PI * 2);
+    c.strokeStyle = 'Black';
+    c.arc(200, 500, 10, 0, Math.PI * 2);
     c.fill();
 
-    c.drawImage(document.getElementById('undo'), 200, 550, 80, 30)
+    c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
 }
 
@@ -467,19 +467,19 @@ var change_pallet3 = function () {
 
     c.strokeStyle = 'White'
     c.strokeRect(179, 239, 121, 81)
-    c.strokeStyle = 'Black'
+    c.strokeStyle = 'Black';
     c.drawImage(img_pollock, 180, 240, 120, 60)
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)
     
     c.fillStyle = 'Black';
-    c.fillText("Random Splatter", 180, 440);
+    c.fillText("Random Splatter", 180, 490);
     c.beginPath();
-    c.strokeStyle = black;
-    c.arc(200, 460, 10, 0, Math.PI * 2);
+    c.strokeStyle = 'Black';
+    c.arc(200, 500, 10, 0, Math.PI * 2);
     c.fill();
 
-    c.drawImage(document.getElementById('undo'), 200, 550, 80, 30)
+    c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
 }
 
