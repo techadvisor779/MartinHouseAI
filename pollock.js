@@ -246,10 +246,10 @@ var color_check = function (e) {
         }
     }
  // pallet change click detect
-    if (e.clientY > 359) {       
-        if (e.clientY < 437) {
+    if (e.clientY > 359) {       //180, 240, 120, 60)
+        if (e.clientY < 417) {
             if (e.clientX > 180) {
-                if (e.clientX < 297) {
+                if (e.clientX < 240) {
                     current_pallet = pallet0;
                     dribble_COLORS = pallet0;
                     change_pallet1();
@@ -258,7 +258,7 @@ var color_check = function (e) {
         }
     }
     if (e.clientY > 459) {            
-        if (e.clientY < 536) {     
+        if (e.clientY < 516) {     
             if (e.clientX > 180) {
                 if (e.clientX < 298) {
                     current_pallet = pallet1;
@@ -269,7 +269,7 @@ var color_check = function (e) {
         }
     }
     if (e.clientY > 560) {         
-        if (e.clientY < 635) {            
+        if (e.clientY < 615) {            
             if (e.clientX > 180) {
                 if (e.clientX < 300) {
                     current_pallet = pallet2;
