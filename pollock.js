@@ -247,8 +247,8 @@ var color_check = function (e) {
         }
     }
  // pallet change click detect
-    if (e.clientY > 359) {       //180, 240, 120, 60)
-        if (e.clientY < 417) {
+    if (e.clientY > 345) {       //180, 240, 120, 60)
+        if (e.clientY < 405) {
             if (e.clientX > 180) {
                 if (e.clientX < 240) {
                     current_pallet = pallet0;
@@ -258,8 +258,8 @@ var color_check = function (e) {
             }
         }
     }
-    if (e.clientY > 459) {            
-        if (e.clientY < 516) {     
+    if (e.clientY > 425) {            
+        if (e.clientY < 500) {     
             if (e.clientX > 180) {
                 if (e.clientX < 298) {
                     current_pallet = pallet1;
@@ -269,8 +269,8 @@ var color_check = function (e) {
             }
         }
     }
-    if (e.clientY > 560) {         
-        if (e.clientY < 615) {            
+    if (e.clientY > 530) {         
+        if (e.clientY < 600) {            
             if (e.clientX > 180) {
                 if (e.clientX < 300) {
                     current_pallet = pallet2;
