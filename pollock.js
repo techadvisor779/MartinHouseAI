@@ -270,7 +270,7 @@ var color_check = function (e) {
         }
     }
     if (e.clientY > 530) {         
-        if (e.clientY < 600) {            
+        if (e.clientY < 590) {            
             if (e.clientX > 180) {
                 if (e.clientX < 300) {
                     current_pallet = pallet2;
@@ -299,7 +299,8 @@ var color_check = function (e) {
     if (e.clientY > 605) {
         if (e.clientY < 625) {
             if (e.clientX > 250) {
-                if (e.clientX < 260) {                    
+                if (e.clientX < 260) {    
+                    disengage();
                     console.log("here in click", randColor_Opt);
                      if (randColor_Opt == true) {
                           randColor_Opt = false;
@@ -307,14 +308,14 @@ var color_check = function (e) {
                      if (randColor_Opt == false) {
                           randColor_Opt = true;
                      }  
-                     RandomChk(randColor_Opt);
+                     RandomChk();
                 }
             }
         }
     }    
 }
 
-var RandomChk = function (randColor_Opt) {
+var RandomChk = function () {
      console.log("here in randChk", randColor_Opt);
      c.strokeStyle = 'Black';
      c.fillStyle = 'Black';
