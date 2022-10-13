@@ -353,12 +353,12 @@ var change_pallet1 = function () {
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)
     
-    c.fillStyle = 'Black';
+    c.fillStyle = 'white';
+    c.strokeStyle = 'Black';
     c.fillText("Random Splatter", 180, 490);
     c.beginPath();
-    c.lineWidth = 2;
-    c.strokeStyle = 'Black';
-    c.arc(230, 510, 10, 0, Math.PI * 2);
+    c.lineWidth = 2;    
+    c.arc(240, 510, 10, 0, Math.PI * 2);
     c.fill();
 
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
