@@ -301,7 +301,7 @@ var color_check = function (e) {
             if (e.clientX > 250) {
                 if (e.clientX < 260) {    
                     console.log("here in click", randColor_Opt);
-                    if (randColor_Opt) {
+                    if (randColor_Opt == true) {
                          console.log("green")
                          randColor_Opt = false;
                      }
