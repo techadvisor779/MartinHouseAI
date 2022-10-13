@@ -76,8 +76,8 @@ var delta = 0;
 var dribble_count = 0;
 var brush_num = 4;
 var randColor_Opt;
-randColor_Opt = false;
-color_choice = 0;
+var randColor_Opt = true;
+var color_choice = 0;
 const arr = new Uint8ClampedArray(40_000);
 
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 1000, 600);
