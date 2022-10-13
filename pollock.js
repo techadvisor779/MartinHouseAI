@@ -318,14 +318,14 @@ var RandomChk = function () {
      console.log("here in randChk", randColor_Opt);
      c.strokeStyle = 'Black';
      //c.fillStyle = 'Black';
-     if (randColor_Opt == true) {           
+     if (randColor_Opt) {           
           c.fillText("Random Splatter on", 180, 490);
           c.beginPath();                       
           c.arc(245, 510, 8, 0, Math.PI * 2);   
           c.lineWidth = 5; 
           c.stroke();
      }
-     if (randColor_Opt == false) {
+     else {
           c.fillText("Random Splatter off", 180, 490);
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2);   
