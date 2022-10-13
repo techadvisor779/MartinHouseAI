@@ -76,7 +76,7 @@ var delta = 0;
 var dribble_count = 0;
 var brush_num = 4;
 var randColor_Opt;
-var randColor_Opt = true;
+var randColor_Opt;
 var color_choice = 0;
 const arr = new Uint8ClampedArray(40_000);
 
