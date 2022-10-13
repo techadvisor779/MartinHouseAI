@@ -296,8 +296,8 @@ var color_check = function (e) {
             }
         }
     }
-    if (e.clientY > 515) {
-        if (e.clientY < 525) {
+    if (e.clientY > 535) {
+        if (e.clientY < 545) {
             if (e.clientX > 250) {
                 if (e.clientX < 260) {
                     console.log("here in click", randColor_Opt);
@@ -315,19 +315,20 @@ var color_check = function (e) {
 
 var RandomChk = function () {
      console.log("here in randChk", randColor_Opt)
-     if (randColor_Opt) {       
-          c.fillText("Random Splatter", 180, 490);
-          c.beginPath();    
-          c.lineWidth = 5;
+     if (randColor_Opt == true) {       
           c.strokeStyle = 'Black';
+          c.fillText("Random Splatter on", 180, 490);
+          c.beginPath();    
+          c.lineWidth = 5;          
           c.arc(245, 510, 8, 0, Math.PI * 2);          
           c.stroke();
-     } else {
-          c.fillText("Random Splatter", 180, 490);
+     }
+     if (randColor_Opt == false) {
+          c.strokeStyle = 'Black';
+          c.fillText("Random Splatter off", 180, 490);
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2);   
           c.lineWidth = 2; 
-          c.strokeStyle = 'Black';
           c.stroke();
      }
 }
