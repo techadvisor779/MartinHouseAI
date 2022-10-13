@@ -296,15 +296,16 @@ var color_check = function (e) {
             }
         }
     }
-    if (e.clientY > 565) {
-        if (e.clientY < 575) {
+    if (e.clientY > 585) {
+        if (e.clientY < 605) {
             if (e.clientX > 250) {
                 if (e.clientX < 260) {
                     RandomChk();
                     console.log("here in click", randColor_Opt);
                      if (randColor_Opt == true) {
                           randColor_Opt = false;
-                     } else {
+                     }
+                     if (randColor_Opt == false) {
                           randColor_Opt = true;
                      }                    
                 }
