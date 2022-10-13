@@ -298,8 +298,9 @@ var color_check = function (e) {
     }
     if (e.clientY > 505) {
         if (e.clientY < 515) {
-            if (e.clientX > 235) {
-                if (e.clientX < 245) {
+            if (e.clientX > 240) {
+                if (e.clientX < 250) {
+                     console.log("here in click");
                     if (randColor_Opt) {
                          randColor_Opt = false;
                     } else {
@@ -313,17 +314,18 @@ var color_check = function (e) {
 }
 
 var RandomChk = function () {
+     console.log("here in randChk", randColor_Opt)
      if (randColor_Opt) {          
           c.fillText("Random Splatter", 180, 490);
           c.beginPath();              
-          c.arc(240, 510, 8, 0, Math.PI * 2);
+          c.arc(245, 510, 8, 0, Math.PI * 2);
           c.lineWidth = 5;
           c.strokeStyle = 'Black';
           c.fill();
      } else {
           c.fillText("Random Splatter", 180, 490);
           c.beginPath();             
-          c.arc(240, 510, 8, 0, Math.PI * 2);
+          c.arc(245, 510, 8, 0, Math.PI * 2);
           c.lineWidth = 2; 
           c.strokeStyle = 'Black';
           c.fill();
@@ -385,13 +387,7 @@ var change_pallet1 = function () {
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)
     
-    c.fillStyle = 'white';
-    c.strokeStyle = 'Black';
-    c.fillText("Random Splatter", 180, 490);
-    c.beginPath();
-    c.lineWidth = 2;    
-    c.arc(240, 510, 10, 0, Math.PI * 2);
-    c.fill();
+    RandomChk();
 
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
@@ -446,13 +442,7 @@ var change_pallet2 = function () {
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)
     
-    c.fillStyle = 'Black';
-    c.fillText("Random Splatter", 180, 490);
-    c.beginPath();
-    c.lineWidth = 2;
-    c.strokeStyle = 'Black';
-    c.arc(230, 510, 10, 0, Math.PI * 2);
-    c.fill();
+    RandomChk();
 
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
@@ -507,13 +497,7 @@ var change_pallet3 = function () {
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)
     
-    c.fillStyle = 'Black';
-    c.fillText("Random Splatter", 180, 490);
-    c.beginPath();
-    c.lineWidth = 2;
-    c.strokeStyle = 'Black';
-    c.arc(230, 510, 10, 0, Math.PI * 2);
-    c.fill();
+    RandomChk();
 
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
