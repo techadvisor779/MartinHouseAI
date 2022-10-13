@@ -300,12 +300,11 @@ var color_check = function (e) {
         if (e.clientY < 625) {
             if (e.clientX > 250) {
                 if (e.clientX < 260) {    
-                    disengage();
                     console.log("here in click", randColor_Opt);
-                     if (randColor_Opt == true) {
+                     if (randColor_Opt) {
                           randColor_Opt = false;
                      }
-                     if (randColor_Opt == false) {
+                     else {
                           randColor_Opt = true;
                      }  
                      RandomChk();
