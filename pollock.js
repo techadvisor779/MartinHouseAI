@@ -296,6 +296,38 @@ var color_check = function (e) {
             }
         }
     }
+    if (e.clientY > 505) {
+        if (e.clientY < 515) {
+            if (e.clientX > 235) {
+                if (e.clientX < 245) {
+                    if (randColor_Opt) {
+                         randColor_Opt = false;
+                    } else {
+                         randColor_Opt = true;
+                    }
+                    RandomChk();
+                }
+            }
+        }
+    }    
+}
+
+var RandomChk = function () {
+     if (randColor_Opt) {          
+          c.fillText("Random Splatter", 180, 490);
+          c.beginPath();              
+          c.arc(240, 510, 8, 0, Math.PI * 2);
+          c.lineWidth = 5;
+          c.strokeStyle = 'Black';
+          c.fill();
+     } else {
+          c.fillText("Random Splatter", 180, 490);
+          c.beginPath();             
+          c.arc(240, 510, 8, 0, Math.PI * 2);
+          c.lineWidth = 2; 
+          c.strokeStyle = 'Black';
+          c.fill();
+     }
 }
 
 var change_pallet1 = function () {
