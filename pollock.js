@@ -296,10 +296,10 @@ var color_check = function (e) {
             }
         }
     }
-    if (e.clientY > 505) {
-        if (e.clientY < 515) {
-            if (e.clientX > 240) {
-                if (e.clientX < 250) {
+    if (e.clientY > 490) {
+        if (e.clientY < 505) {
+            if (e.clientX > 250) {
+                if (e.clientX < 260) {
                      console.log("here in click");
                     if (randColor_Opt) {
                          randColor_Opt = false;
@@ -326,7 +326,7 @@ var RandomChk = function () {
           c.fillText("Random Splatter", 180, 490);
           c.beginPath();             
           c.arc(245, 510, 8, 0, Math.PI * 2);
-          c.lineWidth = 2; 
+          c.lineWidth = 3; 
           c.strokeStyle = 'Black';
           c.fill();
      }
