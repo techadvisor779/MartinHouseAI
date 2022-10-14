@@ -282,10 +282,10 @@ var color_check = function (e) {
             }
         }
     }
-    if (e.clientY > 605) {
-        if (e.clientY < 625) {
-            if (e.clientX > 250) {
-                if (e.clientX < 260) {    
+    if (e.clientY > 500) {
+        if (e.clientY < 520) {
+            if (e.clientX > 235) {
+                if (e.clientX < 255) {    
                     if (randColor_Opt == true) {
                          console.log("green")
                          randColor_Opt = false;
@@ -303,16 +303,13 @@ var color_check = function (e) {
 
 var RandomChk = function () {
      c.strokeStyle = 'Black';
-     c.fillStyle = 'white';
+     c.fillStyle = 'Black';
      c.fillText("Random Splatter", 180, 490);
-     c.beginPath();                       
-     c.arc(245, 510, 8, 0, Math.PI * 2);   
-     c.stroke();
      if (randColor_Opt) {  
           c.strokeStyle = 'Black';
           c.fillStyle = 'Black';
           c.beginPath();          
-          c.arc(245, 510, 6, 0, Math.PI * 2);   
+          c.arc(245, 510, 8, 0, Math.PI * 2);   
           c.fillStyle = 'Black';
           c.stroke();
      } else {
@@ -323,6 +320,7 @@ var RandomChk = function () {
           c.linewidth = 8;
           c.stroke();
           c.strokeStyle = 'Black';
+          c.fillStyle = 'Black';
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2);  
           c.linewidth = 2;
