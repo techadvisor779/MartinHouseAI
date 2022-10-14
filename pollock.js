@@ -310,7 +310,8 @@ var RandomChk = function () {
           c.strokeStyle = 'Black';
           c.fillStyle = 'Black';
           c.beginPath();          
-          c.arc(245, 510, 8, 0, Math.PI * 2);   
+          c.arc(245, 510, 8, 0, Math.PI * 2); 
+          c.linewidth = 10;
           c.fillStyle = 'Black';
           c.stroke();
      } else {
