@@ -311,10 +311,10 @@ var RandomChk = function () {
           c.fillStyle = 'Black';
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2); 
-          c.linewidth = 8;
-          c.stroke(); 
           c.fill();
      } else {
+          c.strokeStyle = 'Black';
+          c.fillStyle = 'white';
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2);  
           c.linewidth = 2;
