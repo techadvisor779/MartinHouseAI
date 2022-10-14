@@ -313,16 +313,10 @@ var RandomChk = function () {
           c.arc(245, 510, 8, 0, Math.PI * 2); 
           c.fill();
      } else {
-          c.strokeStyle = 'Black';
+          c.strokeStyle = 'white';
           c.fillStyle = 'white';
           c.beginPath();          
-          c.arc(245, 510, 8, 0, Math.PI * 2);  
-          c.linewidth = 2;
-          c.stroke();  
-          c.fillStyle = 'white';
-          c.beginPath();          
-          c.arc(245, 510, 8, 0, Math.PI * 2);  
-          c.linewidth = 2;
+          c.arc(245, 510, 6, 0, Math.PI * 2); 
           c.fill(); 
      }
 }
