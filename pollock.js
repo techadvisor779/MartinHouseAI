@@ -277,13 +277,13 @@ var color_check = function (e) {
                     //c.fillRect(400, 0, 1000, 600);
                     c.strokeStyle = 'Black';
                     c.strokeRect(400, 0, 1000, 600);
-                    c.fillStyle = current_pallet[brush_num - 1];   
+                    //c.fillStyle = current_pallet[brush_num - 1];   
                 }
             }
         }
     }
-    if (e.clientY > 500) {
-        if (e.clientY < 520) {
+    if (e.clientY > 620) {
+        if (e.clientY < 630) {
             if (e.clientX > 235) {
                 if (e.clientX < 255) {    
                     if (randColor_Opt == true) {
@@ -305,6 +305,7 @@ var RandomChk = function () {
      c.strokeStyle = 'Black';
      c.fillStyle = 'Black';
      c.fillText("Random Splatter", 180, 490);
+     c.stroke();
      if (randColor_Opt) {  
           c.strokeStyle = 'Black';
           c.fillStyle = 'Black';
