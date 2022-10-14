@@ -303,17 +303,30 @@ var color_check = function (e) {
 
 var RandomChk = function () {
      c.strokeStyle = 'Black';
-     c.fillStyle = 'Black';
+     c.fillStyle = 'white';
      c.fillText("Random Splatter", 180, 490);
      c.beginPath();                       
      c.arc(245, 510, 8, 0, Math.PI * 2);   
-     c.lineWidth = 2; 
      c.stroke();
-     if (randColor_Opt) {           
+     if (randColor_Opt) {  
+          c.strokeStyle = 'Black';
+          c.fillStyle = 'Black';
           c.beginPath();          
           c.arc(245, 510, 6, 0, Math.PI * 2);   
-          c.lineWidth = 4; 
+          c.fillStyle = 'Black';
           c.stroke();
+     } else {
+          c.strokeStyle = 'white';
+          c.fillStyle = 'white';
+          c.beginPath();          
+          c.arc(245, 510, 6, 0, Math.PI * 2);  
+          c.linewidth = 8;
+          c.stroke();
+          c.strokeStyle = 'Black';
+          c.beginPath();          
+          c.arc(245, 510, 8, 0, Math.PI * 2);  
+          c.linewidth = 2;
+          c.stroke();  
      }
 }
 
