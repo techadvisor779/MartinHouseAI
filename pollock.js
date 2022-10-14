@@ -307,22 +307,10 @@ var RandomChk = function () {
      c.fillText("Random Splatter", 180, 490);
      c.stroke();
      if (randColor_Opt) {  
-          c.strokeStyle = 'Black';
-          c.fillStyle = 'Black';
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2); 
-          c.linewidth = 10;
-          c.fillStyle = 'Black';
-          c.stroke();
+          c.fill();
      } else {
-          c.strokeStyle = 'white';
-          c.fillStyle = 'white';
-          c.beginPath();          
-          c.arc(245, 510, 6, 0, Math.PI * 2);  
-          c.linewidth = 8;
-          c.stroke();
-          c.strokeStyle = 'Black';
-          c.fillStyle = 'Black';
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2);  
           c.linewidth = 2;
