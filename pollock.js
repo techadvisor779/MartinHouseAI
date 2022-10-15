@@ -299,16 +299,17 @@ var color_check = function (e) {
 
 var RandomChk = function () {
      tempStroke = c.strokeStyle;
-     tempFill = c.fillStyle;
+     tempFill = c.fillStyle;   
      c.strokeStyle = 'Black';
-     c.fillStyle = 'Black';
      if (randColor_Opt) {  
           c.beginPath();          
-          c.arc(245, 510, 8, 0, Math.PI * 2); 
+          c.arc(245, 510, 8, 0, Math.PI * 2);
+          c.fillStyle = 'Black';
           c.fill();
      } else {
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2); 
+          c.fillStyle = 'Black';
           c.fill();          
           c.beginPath();          
           c.arc(245, 510, 6, 0, Math.PI * 2); 
