@@ -300,7 +300,6 @@ var RandomChk = function () {
      c.strokeStyle = 'Black';
      c.fillStyle = 'Black';
      c.fillText("Random Splatter", 180, 490);
-     c.stroke();
      if (randColor_Opt) {  
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2); 
