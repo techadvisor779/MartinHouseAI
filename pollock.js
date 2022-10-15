@@ -376,7 +376,8 @@ var change_pallet1 = function () {
     c.drawImage(img_pollock, 180, 240, 120, 60)
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)    
-
+    
+    c.strokeStyle = 'Black';
     c.fillText("Random Splatter", 180, 490);
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
@@ -432,6 +433,7 @@ var change_pallet2 = function () {
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)
      
+    c.strokeStyle = 'Black';
     c.fillText("Random Splatter", 180, 490);
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
@@ -487,6 +489,7 @@ var change_pallet3 = function () {
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)
 
+    c.strokeStyle = 'Black';
     c.fillText("Random Splatter", 180, 490);
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
