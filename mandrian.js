@@ -63,11 +63,12 @@ function splitOnY(e) {
 function splitOnX(e) {
     console.log("here X")
     c.beginPath();  
-    c.strokeStyle = 'Black';
-    ranC = Math.round(Math.random() * 7);
-    c.fillStyle = colors[ranC];
     console.log(c.fillStyle,  e.clientX, c.width, c.height);
     c.strokeRect( e.clientX, 0, c.width, c.height);
+    ranC = Math.round(Math.random() * 7);
+    c.fillStyle = colors[ranC];
+    c.strokeStyle = 'Black';
+    c.lineWidth = 4;
     c.fill();
 }
 
@@ -75,10 +76,10 @@ var draw = function (e) {
     console.log("here inside")
     if (buttonL.checked) {
         if (buttonH.checked) {
-            splitOnY(e)
+            splitOnX(e)
         }
         if (buttonV.checked) {
-            splitOnX(e)
+            splitOnY(e)
         }
     }    
 }
