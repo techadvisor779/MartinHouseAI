@@ -83,7 +83,7 @@ var initCanvas = true;
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 1000, 600);
     console.log( e.clientX, e.clientY);
     delta = (e.clientX * e.clientX) + (e.clientY * e.clientY);
-    if (e.clientX > 440 - radius) {
+    if (e.clientX > 430 - radius) {
         if (e.clientX < 1395) {
             if (e.clientY > 0) {
                 if (e.clientY < 750 - radius) {
@@ -518,6 +518,7 @@ var change_bg = function () {
     c.fillStyle = bg_color;
     c.fillRect(400, 1, 1000, 599);
     c.fill();
+    assignColors(COLORS);
 }
 
 var engage = function (e) {
