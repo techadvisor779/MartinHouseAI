@@ -1,7 +1,6 @@
 var canvas = document.querySelector('canvas');
 var w = 550;
 var h = 400;
-var size = 550;
 var c = canvas.getContext('2d');
 var dpr = window.devicePixelRatio;
 //c.scale(dpr, dpr);
@@ -22,7 +21,7 @@ const buttonV = document.getElementById("V_Line");
 const buttonP = document.getElementById("PaintID");
 const buttonT = document.getElementById("Traditional");
 const buttonPP = document.getElementById("Pastel");
-
+var size = 550;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
 context.scale(dpr, dpr);
