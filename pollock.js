@@ -538,10 +538,10 @@ var moving_clicked = function (e) {
 
 var disengage = function (e) {
     dragging = false;     
-    const canvas2 = document.getElementById('canvas1')
-    var c2 = canvas.getContext('2d');
+    //const canvas2 = document.getElementById('canvas1')
+    //var c2 = canvas.getContext('2d');
 
-    img.data = c2.getImageData(400, 0, 1000, 600);    
+    //img.data = c2.getImageData(400, 0, 1000, 600);    
     window.sessionStorage;
     sessionStorage.setItem('imgData', img); 
 }    
