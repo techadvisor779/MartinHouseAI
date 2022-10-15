@@ -328,6 +328,7 @@ var RandomChk = function () {
      }
      c.strokeStyle = temp1;
      c.fillStyle = temp2;
+     c.linewidth = 0;
 }
 
 var change_pallet1 = function () {
