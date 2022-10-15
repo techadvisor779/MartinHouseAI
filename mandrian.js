@@ -53,6 +53,7 @@ function splitSquaresWith(coordinates) {
 }
 
 function splitOnY(e) {
+    console.log("here Y")
     c.beginPath();  
     c.strokeStyle = 'Black';
     c.rect(0, e.clientY, c.width, c.height);
@@ -60,6 +61,7 @@ function splitOnY(e) {
 }
 
 function splitOnX(e) {
+    console.log("here X")
     c.beginPath();  
     c.strokeStyle = 'Black';
     ranC = Math.round(Math.random() * 7);
@@ -69,6 +71,7 @@ function splitOnX(e) {
 }
 
 var draw = function (e) {
+    console.log("here inside")
     if (buttonL.checked) {
         if (buttonH.checked) {
             splitOnY(e)
