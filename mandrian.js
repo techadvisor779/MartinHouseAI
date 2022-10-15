@@ -45,115 +45,32 @@ function splitSquaresWith(coordinates) {
     }
 }
 
-function splitOnX(square, splitAt) {
-    var squareA = {
-        x: square.x,
-        y: square.y,
-        w: square.width - (square.width - splitAt + square.x),
-        h: square.height
-    };
-    var squareB = {
-        x: splitAt,
-        y: square.y,
-        w: square.width - splitAt + square.x,
-        h: square.height
-    };
-    squares.push(squareA);
-    squares.push(squareB);
+function splitOnY(e) {
+    c.beginPath();  
+    c.strokeStyle = 'Black';
+    c.strokeRect(0, e.clientY, c.width, c.height);
+    c.strokeRect();
+    c.fill(); 
 }
 
-function splitOnY(square, splitAt) {
-    var squareA = {
-        x: square.x,
-        y: square.y,
-        w: square.width,
-        h: square.height - (square.height - splitAt + square.y)
-    };
-
-    var squareB = {
-        x: square.x,
-        y: splitAt,
-        w: square.width,
-        h: square.height - splitAt + square.y
-    };
-    squares.push(squareA);
-    squares.push(squareB);
+function splitOnX(e) {
+    c.beginPath();  
+    c.strokeStyle = 'Black';
+    c.strokeRect(e.clientX, 0, c.width, c.height);
+    c.strokeRect();
+    c.fill();
 }
 
 function draw() {
-    for (var i = 0; i < colors.length; i++) {
-        squares[Math.floor(Math.random() * squares.length)].color = colors[i];
-    }
-    for (var i = 0; i < squares.length; i++) {
-        c.beginPath();
-        c.rect(
-            squares[i].x,
-            squares[i].y,
-            squares[i].width,
-            squares[i].height
-        );
-        if (squares[i].color) {
-            c.fillStyle = squares[i].color;
-        } else {
-            c.fillStyle = white
+    if (buttonL.checked) {
+        if (buttonH.checked) {
+            splitOnY()
         }
-        c.fill()
-        c.stroke();
-        createRectangles(x, y, width, height);
-    }
+        if (buttonV.checked) {
+            splitOnX()
+        }
+    }    
 }
-
-function drawRectangles() {
-    rectangles.forEach((rectangle) => {
-        c.beginPath();
-        c.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
-        c.closePath();
-        c.stroke();
-    });
-}
-
-function onRectangleClick(e) {
-    const onClickIndex = 0;
-    const clickedRectangle = rectangles[0];
-
-    rectangle.splice(clickedIndex, 1);
-    splitRectangleAt(clickedRectangle);
-}
-
-function splitRectangleAt(rectangle, position) {
-    if (splitDirectionVert) {
-        rectangles.push({
-            x: rectangle.x,
-            y: rectangle.y,
-            width: position.x,
-            height: rectangle.height
-        });
-        rectangle.push({
-            x: rectangle.x + position.x,
-            y: rectangle.y,
-        });
-    } else {
-        rectangles.push({
-            x: rectangle.x,
-            y: rectangle.y,
-            width: rectangle.width,
-            height: position.y
-        });
-        drawRectangles();
-    }
-}
-
-canvas.addEventListener('mousedown', function () {
-    draw();
-    onRectangleClick();
-    
-    for (var i = 0; i < w; i += stepW) {
-        splitSquaresWith({ x: i });
-    }
-    for (var i = 0; i < h; i += stepH) {
-        splitSquaresWith({ y: i });
-    }
-}); 
 
 const buttonL = document.getElementById("LineID");
 const buttonH = document.getElementById("H_Line");
@@ -199,3 +116,7 @@ buttonPP.onclick = () => {
     }
 }
 
+canvas.addEventListener('mousedown', function () {
+    draw();
+    onRectangleClick();
+}); 
