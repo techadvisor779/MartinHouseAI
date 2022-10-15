@@ -370,9 +370,6 @@ var change_pallet1 = function () {
     c.fillStyle = 'DarkCyan';
     c.fillRect(270, 185, 30, 30)
 
-    c.strokeStyle = 'White';
-    c.strokeRect(179, 239, 121, 81)
-    c.strokeStyle = 'Black';
     c.drawImage(img_pollock, 180, 240, 120, 60)
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)    
@@ -426,9 +423,6 @@ var change_pallet2 = function () {
     c.fillStyle = 'MediumBlue'
     c.fillRect(270, 185, 30, 30)
 
-    c.strokeStyle = 'White'
-    c.strokeRect(179, 239, 121, 81)
-    c.strokeStyle = 'Black'
     c.drawImage(img_pollock, 180, 240, 120, 60)
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)
@@ -482,9 +476,6 @@ var change_pallet3 = function () {
     c.fillStyle = 'Cyan'
     c.fillRect(270, 185, 30, 30)
 
-    c.fillStyle = 'White'
-    c.strokeRect(179, 239, 121, 81)
-    c.strokeStyle = 'Black';
     c.drawImage(img_pollock, 180, 240, 120, 60)
     c.drawImage(img_pollock2, 180, 320, 120, 60)
     c.drawImage(img_pollock3, 180, 400, 120, 60)
