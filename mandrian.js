@@ -5,7 +5,7 @@ var h = 400;
 var stepW = w / 3;
 var stepH = h / 3;
 var white = 'white';
-var black = 'Black'
+var black = 'Black';
 var colorsT = ['#D40920', '#1356A2', '#F7D842'];
 var colorsP = ['#8BD3E6', '#FF6D6A', '#E9EC6B'];
 var colors = colorsT;
@@ -24,7 +24,7 @@ var squares = [{
     y: 0,
     width: w,
     height: h
-  }];
+}];
 
 canvas.width = w;
 canvas.height = h;
@@ -72,22 +72,22 @@ function splitOnX(square, splitAt) {
 }
 
 function splitOnY(square, splitAt) {
-  var squareA = {
-      x: square.x,
-      y: square.y,
-      width: square.width,
-      height: square.height - (square.height - splitAt + square.y)
-  };
+    var squareA = {
+        x: square.x,
+        y: square.y,
+        width: square.width,
+        height: square.height - (square.height - splitAt + square.y)
+    };
 
-  var squareB = {
-      x: square.x,
-      y: splitAt,
-      width: square.width,
-      height: square.height - splitAt + square.y
-  };
-
-  squares.push(squareA);
-  squares.push(squareB);
+    var squareB = {
+        x: square.x,
+        y: splitAt,
+        width: square.width,
+        height: square.height - splitAt + square.y
+    };
+    squares.push(squareA);
+    squares.push(squareB);
+    
 }
 
 function draw() {
