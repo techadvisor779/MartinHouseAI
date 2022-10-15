@@ -74,7 +74,7 @@ function splitOnX(e) {
 
 var draw = function (e) {
     c.beginPath();  
-    c.strokeRect( 0, 0, 400, 300);
+    c.strokeRect( 0, 0, 100, 100);
     c.fillStyle = 'white';
     c.strokeStyle = 'Black';
     c.lineWidth = 4;
