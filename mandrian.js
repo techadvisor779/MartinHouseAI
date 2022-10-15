@@ -73,6 +73,12 @@ function splitOnX(e) {
 }
 
 var draw = function (e) {
+    c.beginPath();  
+    c.strokeRect( 0, 0, 700, 400);
+    c.fillStyle = 'white';
+    c.strokeStyle = 'Black';
+    c.lineWidth = 4;
+    c.fill();
     console.log("here inside")
     if (buttonL.checked) {
         if (buttonH.checked) {
