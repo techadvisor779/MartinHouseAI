@@ -15,6 +15,13 @@ var colors = colorsT;
 var splitDirectionVert = true;
 var rectangles = [];
 
+const buttonL = document.getElementById("LineID");
+const buttonH = document.getElementById("H_Line");
+const buttonV = document.getElementById("V_Line");
+const buttonP = document.getElementById("PaintID");
+const buttonT = document.getElementById("Traditional");
+const buttonPP = document.getElementById("Pastel");
+
 var squares = [{
     x: 0,
     y: 0,
@@ -72,13 +79,6 @@ function draw() {
     }    
 }
 
-const buttonL = document.getElementById("LineID");
-const buttonH = document.getElementById("H_Line");
-const buttonV = document.getElementById("V_Line");
-const buttonP = document.getElementById("PaintID");
-const buttonT = document.getElementById("Traditional");
-const buttonPP = document.getElementById("Pastel");
-
 buttonL.onclick = () => {
     if (buttonL.checked) {
         buttonP.checked = false;
@@ -117,6 +117,6 @@ buttonPP.onclick = () => {
 }
 
 canvas.addEventListener('mousedown', function () {
-    draw();
-    onRectangleClick();
+    draw(e);
+    //onRectangleClick();
 }); 
