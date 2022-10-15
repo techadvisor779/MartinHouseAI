@@ -297,6 +297,7 @@ var color_check = function (e) {
 }
 
 var RandomChk = function () {
+     tempStroke = c.strokeStyle;
      c.strokeStyle = 'Black';
      c.fillStyle = 'Black';
      c.fillText("Random Splatter", 180, 490);
@@ -314,6 +315,7 @@ var RandomChk = function () {
           c.fillStyle = 'white';
           c.fill(); 
      }
+     c.strokeStyle = tempStroke;
 }
 
 var change_pallet1 = function () {
