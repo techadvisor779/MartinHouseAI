@@ -83,8 +83,8 @@ var initCanvas = true;
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 1000, 600);
     console.log( e.clientX, e.clientY);
     delta = (e.clientX * e.clientX) + (e.clientY * e.clientY);
-    if (e.clientX > 450 - radius) {
-        if (e.clientX < 1400) {
+    if (e.clientX > 440 - radius) {
+        if (e.clientX < 1395) {
             if (e.clientY > 0) {
                 if (e.clientY < 750 - radius) {
                     c.beginPath();
