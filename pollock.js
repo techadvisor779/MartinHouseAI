@@ -273,11 +273,8 @@ var color_check = function (e) {
                     disengage();
                     c.clearRect(400, 120, 1000, 600);
                     change_bg();
-                    //c.fillStyle = 'White';
-                    //c.fillRect(400, 0, 1000, 600);
                     c.strokeStyle = 'Black';
                     c.strokeRect(400, 0, 1000, 600);
-                    //c.fillStyle = current_pallet[brush_num - 1];   
                 }
             }
         }
@@ -287,12 +284,10 @@ var color_check = function (e) {
             if (e.clientX > 235) {
                 if (e.clientX < 255) {    
                     if (randColor_Opt == true) {
-                         console.log("green")
                          randColor_Opt = false;
                      }
                      else {
                          randColor_Opt = true;
-                         console.log("red")
                      }  
                      RandomChk();
                 }
@@ -309,21 +304,17 @@ var RandomChk = function () {
      c.fillText("Random Splatter", 180, 490);
      c.stroke();
      if (randColor_Opt) {  
-          c.strokeStyle = 'Black';
-          c.fillStyle = 'Black';
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2); 
           c.fill();
      } else {
-          c.strokeStyle = 'Black';
-          c.fillStyle = 'Black';
           c.beginPath();          
           c.arc(245, 510, 8, 0, Math.PI * 2); 
-          c.fill();
-          c.strokeStyle = 'white';
-          c.fillStyle = 'white';
+          c.fill();          
           c.beginPath();          
           c.arc(245, 510, 6, 0, Math.PI * 2); 
+          c.strokeStyle = 'white';
+          c.fillStyle = 'white';
           c.fill(); 
      }
      c.strokeStyle = temp1;
