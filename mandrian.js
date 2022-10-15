@@ -22,10 +22,10 @@ const buttonP = document.getElementById("PaintID");
 const buttonT = document.getElementById("Traditional");
 const buttonPP = document.getElementById("Pastel");
 var size = 550;
-canvas.width = size * dpr;
-canvas.height = size * dpr;
-context.scale(dpr, dpr);
-context.lineWidth = 8;
+canvas.width = w * dpr;
+canvas.height = h * dpr;
+c.scale(dpr, dpr);
+c.lineWidth = 8;
 var step = size / 6;
 
 var squares = [{
@@ -105,14 +105,14 @@ function draw() {
     squares[Math.floor(Math.random() * squares.length)].color = colors[i];
   }
   for (var i = 0; i < squares.length; i++) {
-    context.beginPath();
-    context.rect(
+    c.beginPath();
+    c.rect(
       squares[i].x,
       squares[i].y,
       squares[i].width,
       squares[i].height
     );
-    context.stroke();
+    c.stroke();
   }
 }
 
