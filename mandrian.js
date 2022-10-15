@@ -1,8 +1,6 @@
 var canvas = document.querySelector('canvas');
 var w = 750;
 var h = 500;
-canvas.width = w;
-canvas.height = h;
 var c = canvas.getContext('2d');
 var dpr = window.devicePixelRatio;
 c.scale(dpr, dpr);
@@ -64,9 +62,9 @@ function splitOnY(e) {
 function splitOnX(e) {
     console.log("here X")
     c.beginPath();  
-    console.log(c.fillStyle,  e.clientX, c.width, c.height);
+    console.log(c.fillStyle,  e.clientX, w, h);
     c.strokeRect( e.clientX, 0, c.width, c.height);
-    ranC = Math.round(Math.random() * 7);
+    ranC = Math.round(Math.random() * 2);
     c.fillStyle = colors[ranC];
     c.strokeStyle = 'Black';
     c.lineWidth = 4;
