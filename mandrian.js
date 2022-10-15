@@ -68,13 +68,13 @@ function splitOnX(e) {
     c.fill();
 }
 
-function draw() {
+var draw = function (e) {
     if (buttonL.checked) {
         if (buttonH.checked) {
-            splitOnY()
+            splitOnY(e)
         }
         if (buttonV.checked) {
-            splitOnX()
+            splitOnX(e)
         }
     }    
 }
@@ -116,7 +116,4 @@ buttonPP.onclick = () => {
     }
 }
 
-canvas.addEventListener('mousedown', function () {
-    draw(e);
-    //onRectangleClick();
-}); 
+canvas.addEventListener('mousedown', draw)
