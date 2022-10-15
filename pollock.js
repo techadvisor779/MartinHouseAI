@@ -123,8 +123,8 @@ var dribble = function (e) {
              ranC = Math.round(Math.random() * 7);
              c.fillStyle = dribble_COLORS[ranC];
          }
-         c.arc(e.clientX + ranX, e.clientY + ranY - 75, ranR1, 0, Math.PI * 2);
-         c.arc(1800 - e.clientX + ranX, 690 - e.clientY + ranY, ranR2, 0, Math.PI * 2);
+         c.arc(e.clientX + ranX, e.clientY + ranY - 95, ranR1, 0, Math.PI * 2);
+         c.arc(1800 - e.clientX + ranX, 710 - e.clientY + ranY, ranR2, 0, Math.PI * 2);
          c.fill();
          dribble_count = 0;
     }
