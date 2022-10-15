@@ -22,110 +22,98 @@ const buttonP = document.getElementById("PaintID");
 const buttonT = document.getElementById("Traditional");
 const buttonPP = document.getElementById("Pastel");
 
+canvas.width = size * dpr;
+canvas.height = size * dpr;
+context.scale(dpr, dpr);
+context.lineWidth = 8;
+var step = size / 6;
+
 var squares = [{
     x: 0,
     y: 0,
-    width: w,
-    height: h
-}];
-
-function createRectangles(x, y, width, height) {
-    rectangles.push({ x, y, width, height })
-}
+    width: size,
+    height: size
+  }];
 
 function splitSquaresWith(coordinates) {
-    const { x, y } = coordinates;
-    for (var i = squares.length - 1; i >= 0; i--) {
-        const square = squares[i];
-        if (x && x > square.x && x < square.x + square.width) {
-            if(Math.random() > 0.5) {
-                squares.splice(i, 1);
-                splitOnX(square, x); 
-            }
-        }
-        if (y && y > square.y && y < square.y + square.height) {
-            if(Math.random() > 0.5) {
-                squares.splice(i, 1);
-                splitOnY(square, y); 
-            }
-        }
-    }
+  const { x, y } = coordinates;
+
+  for (var i = squares.length - 1; i >= 0; i--) {
+  const square = squares[i];
+
+  if (x && x > square.x && x < square.x + square.width) {
+      if(Math.random() > 0.5) {
+        squares.splice(i, 1);
+        splitOnX(square, x); 
+      }
+  }
+
+  if (y && y > square.y && y < square.y + square.height) {
+      if(Math.random() > 0.5) {
+        squares.splice(i, 1);
+        splitOnY(square, y); 
+      }
+  }
+  }
 }
 
-function splitOnY(e) {
-    console.log("here Y")
-    c.beginPath();  
-    c.strokeStyle = 'Black';
-    c.rect(0, e.clientY, c.width, c.height);
-    c.fill(); 
+function splitOnX(square, splitAt) {
+  var squareA = {
+    x: square.x,
+    y: square.y,
+    width: square.width - (square.width - splitAt + square.x),
+    height: square.height
+  };
+
+  var squareB = {
+  x: splitAt,
+  y: square.y,
+  width: square.width - splitAt + square.x,
+  height: square.height
+  };
+
+  squares.push(squareA);
+  squares.push(squareB);
 }
 
-function splitOnX(e) {
-    console.log("here X")
-    c.beginPath();  
-    console.log(c.fillStyle,  e.clientX, w, h);
-    c.strokeRect( 0, 0, e.clientX, 300);
-    c.strokeRect( e.clientX, 0, 500, 300);
-    c.fillStyle = 'white';
-    c.strokeStyle = 'Black';
-    c.lineWidth = 4;
-    c.fill();
+function splitOnY(square, splitAt) {
+  var squareA = {
+    x: square.x,
+    y: square.y,
+    width: square.width,
+    height: square.height - (square.height - splitAt + square.y)
+  };
+
+  var squareB = {
+  x: square.x,
+  y: splitAt,
+  width: square.width,
+  height: square.height - splitAt + square.y
+  };
+
+  squares.push(squareA);
+  squares.push(squareB);
 }
 
-var draw = function (e) {
-    c.beginPath();  
-    c.strokeRect( 0, 0, 100, 100);
-    c.fillStyle = 'white';
-    c.strokeStyle = 'Black';
-    c.lineWidth = 4;
-    c.fill();
-    console.log("here inside")
-    if (buttonL.checked) {
-        if (buttonH.checked) {
-            splitOnX(e)
-        }
-        if (buttonV.checked) {
-            splitOnY(e)
-        }
-    }    
+for (var i = 0; i < size; i += step) {
+  splitSquaresWith({ y: i });
+  splitSquaresWith({ x: i });
 }
 
-buttonL.onclick = () => {
-    if (buttonL.checked) {
-        buttonP.checked = false;
-    }
+function draw() {
+  for (var i = 0; i < colors.length; i++) {
+    squares[Math.floor(Math.random() * squares.length)].color = colors[i];
+  }
+  for (var i = 0; i < squares.length; i++) {
+    context.beginPath();
+    context.rect(
+      squares[i].x,
+      squares[i].y,
+      squares[i].width,
+      squares[i].height
+    );
+    context.stroke();
+  }
 }
 
-buttonH.onclick = () => {
-    if (buttonH.checked) {
-        buttonV.checked = false;
-    }
-}
-
-buttonV.onclick = () => {
-    if (buttonV.checked) {
-        buttonH.checked = false;
-    }
-}
-
-buttonP.onclick = () => {
-    if (buttonP.checked) {
-        buttonL.checked = false;
-    }
-}
-buttonT.onclick = () => {
-    if (buttonT.checked) {
-        buttonPP.checked = false;
-        colors = colorsT;
-    }
-}
-
-buttonPP.onclick = () => {
-    if (buttonP.checked) {
-        buttonT.checked = false;
-        colors = colorsP;
-    }
-}
-
-canvas.addEventListener('mousedown', draw);
-
+draw()
