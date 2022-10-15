@@ -321,6 +321,7 @@ var RandomChk = function () {
 }
 
 var change_pallet1 = function () {
+     c.beginPath();  
      if (initCanvas) {
           c.fillStyle = 'White';
           c.fillRect(100, 0, 280, 600);
@@ -369,13 +370,17 @@ var change_pallet1 = function () {
     c.fillRect(240, 185, 30, 30)
     c.fillStyle = 'DarkCyan';
     c.fillRect(270, 185, 30, 30)
-
+    c.fill();  
+     
     c.drawImage(img_pollock, 180, 240, 120, 60)
     c.drawImage(img_pollock2, 180, 320, 120, 60)
-    c.drawImage(img_pollock3, 180, 400, 120, 60)    
+    c.drawImage(img_pollock3, 180, 400, 120, 60)  
+     
+    c.beginPath();  
     c.strokeStyle = 'Black';
     c.fillStyle = 'Black';
     c.fillText("Random Splatter", 180, 490);
+    c.fill();  
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
     RandomChk();
@@ -422,13 +427,17 @@ var change_pallet2 = function () {
     c.fillRect(240, 185, 30, 30)
     c.fillStyle = 'MediumBlue'
     c.fillRect(270, 185, 30, 30)
-
+    c.fill();  
+     
     c.drawImage(img_pollock, 180, 240, 120, 60)
     c.drawImage(img_pollock2, 180, 320, 120, 60)
-    c.drawImage(img_pollock3, 180, 400, 120, 60)
+    c.drawImage(img_pollock3, 180, 400, 120, 60)  
+     
+    c.beginPath();  
     c.strokeStyle = 'Black';
     c.fillStyle = 'Black';
     c.fillText("Random Splatter", 180, 490);
+    c.fill();  
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
     RandomChk();
@@ -475,16 +484,19 @@ var change_pallet3 = function () {
     c.fillRect(240, 185, 30, 30)
     c.fillStyle = 'Cyan'
     c.fillRect(270, 185, 30, 30)
-
+    c.fill();
+     
     c.drawImage(img_pollock, 180, 240, 120, 60)
     c.drawImage(img_pollock2, 180, 320, 120, 60)
-    c.drawImage(img_pollock3, 180, 400, 120, 60)
+    c.drawImage(img_pollock3, 180, 400, 120, 60)  
+    
+    c.beginPath();  
     c.strokeStyle = 'Black';
     c.fillStyle = 'Black';
     c.fillText("Random Splatter", 180, 490);
+    c.fill();  
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
-        
     RandomChk();
 }
 
