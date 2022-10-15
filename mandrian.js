@@ -56,7 +56,6 @@ function splitOnY(e) {
     c.beginPath();  
     c.strokeStyle = 'Black';
     c.strokeRect(0, e.clientY, c.width, c.height);
-    c.strokeRect();
     c.fill(); 
 }
 
@@ -116,4 +115,4 @@ buttonPP.onclick = () => {
     }
 }
 
-canvas.addEventListener('mousedown', draw)
+canvas.addEventListener('click', draw)
