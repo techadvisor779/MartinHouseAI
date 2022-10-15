@@ -78,6 +78,7 @@ var brush_num = 4;
 var randColor_Opt = false;
 var color_choice = 0;
 const arr = new Uint8ClampedArray(40_000);
+var initCanvas = true;
 
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 1000, 600);
     console.log( e.clientX, e.clientY);
@@ -320,15 +321,17 @@ var RandomChk = function () {
 }
 
 var change_pallet1 = function () {
-    c.fillStyle = 'White';
-    c.fillRect(100, 0, 280, 600);
-    c.strokeStyle = 'Black';
-    c.strokeRect(100, 0, 280, 600);
-    c.fillStyle='White';
-    c.fillRect(400, 0, 1000, 600);
-    c.strokeStyle = 'Black';
-    c.strokeRect(400, 0, 1000, 600);
-
+     if (initCanvas) {
+          c.fillStyle = 'White';
+          c.fillRect(100, 0, 280, 600);
+          c.strokeStyle = 'Black';
+          c.strokeRect(100, 0, 280, 600);
+          c.fillStyle='White';
+          c.fillRect(400, 0, 1000, 600);
+          c.strokeStyle = 'Black';
+          c.strokeRect(400, 0, 1000, 600);
+          initCanvas = false;
+    }
     c.fillStyle = 'Black';
     c.font = "16px Georgia";
     c.fillText("Paint Brush", 200, 46);
