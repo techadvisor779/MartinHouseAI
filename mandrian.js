@@ -55,15 +55,16 @@ function splitSquaresWith(coordinates) {
 function splitOnY(e) {
     c.beginPath();  
     c.strokeStyle = 'Black';
-    c.strokeRect(0, e.clientY, c.width, c.height);
+    c.rect(0, e.clientY, c.width, c.height);
     c.fill(); 
 }
 
 function splitOnX(e) {
     c.beginPath();  
     c.strokeStyle = 'Black';
-    c.strokeRect(e.clientX, 0, c.width, c.height);
-    c.strokeRect();
+    ranC = Math.round(Math.random() * 7);
+    c.fillStyle = colors[ranC];
+    c.strokeRect( e.clientX, 0, c.width, c.height);
     c.fill();
 }
 
