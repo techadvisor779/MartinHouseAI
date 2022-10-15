@@ -4,8 +4,6 @@ var w = 550;
 var h = 400;
 
 var dpr = window.devicePixelRatio;
-//c.scale(dpr, dpr);
-c.lineWidth = 4;
 var stepW = w / 3;
 var stepH = h / 3;
 var white = 'white';
