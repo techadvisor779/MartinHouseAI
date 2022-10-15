@@ -119,4 +119,4 @@ buttonPP.onclick = () => {
     }
 }
 
-canvas.addEventListener('click', draw)
+canvas.addEventListener("click", draw)
