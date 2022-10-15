@@ -3,7 +3,7 @@ var w = 550;
 var h = 400;
 var c = canvas.getContext('2d');
 var dpr = window.devicePixelRatio;
-c.scale(dpr, dpr);
+//c.scale(dpr, dpr);
 c.lineWidth = 4;
 var stepW = w / 3;
 var stepH = h / 3;
