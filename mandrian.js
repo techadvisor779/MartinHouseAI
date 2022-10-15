@@ -1,14 +1,15 @@
 var canvas = document.querySelector('canvas');
+var c = canvas.getContext('2d');
 var w = 550;
 var h = 400;
-var c = canvas.getContext('2d');
+
 var dpr = window.devicePixelRatio;
 //c.scale(dpr, dpr);
 c.lineWidth = 4;
 var stepW = w / 3;
 var stepH = h / 3;
 var white = 'white';
-var black = 'B;ack'
+var black = 'Black'
 var colorsT = ['#D40920', '#1356A2', '#F7D842'];
 var colorsP = ['#8BD3E6', '#FF6D6A', '#E9EC6B'];
 var colors = colorsT;
