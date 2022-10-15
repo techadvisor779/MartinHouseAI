@@ -54,46 +54,23 @@ function splitSquaresWith(coordinates) {
 }
 
 function splitOnX(square, splitAt) {
-    var squareA = {
-        x: square.x,
-        y: square.y,
-        width: square.width - (square.width - splitAt + square.x),
-        height: square.height
-    };
-
-    var squareB = {
-        x: splitAt,
-        y: square.y,
-        width: square.width - splitAt + square.x,
-        height: square.height
-    };
+    var squareA = { x: square.x, y: square.y, width: square.width - (square.width - splitAt + square.x), height: square.height};
+    var squareB = { x: splitAt,  y: square.y, width: square.width - splitAt + square.x, height: square.height};
     squares.push(squareA);
     squares.push(squareB);
 }
 
 function splitOnY(square, splitAt) {
-    var squareA = {
-        x: square.x,
-        y: square.y,
-        width: square.width,
-        height: square.height - (square.height - splitAt + square.y)
-    };
+    var squareA = { x: square.x, y: square.y, width: square.width, height: square.height - (square.height - splitAt + square.y)};
 
-    var squareB = {
-        x: square.x,
-        y: splitAt,
-        width: square.width,
-        height: square.height - splitAt + square.y
-    };
+    var squareB = { x: square.x, y: splitAt, width: square.width, height: square.height - splitAt + square.y};
     squares.push(squareA);
     squares.push(squareB);
     
 }
 
 function draw() {
-    for (var i = 0; i < colors.length; i++) {
-        squares[Math.floor(Math.random() * squares.length)].color = colors[i];
-    };
+    for (var i = 0; i < colors.length; i++) { squares[Math.floor(Math.random() * squares.length)].color = colors[i];};
     for (var i = 0; i < squares.length; i++) {
         c.beginPath();
         c.rect(
@@ -101,7 +78,7 @@ function draw() {
         squares[i].y,
         squares[i].width,
         squares[i].height
-    );
+    );}
     c.stroke();
 }
 
