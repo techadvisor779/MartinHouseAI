@@ -297,8 +297,6 @@ var color_check = function (e) {
 }
 
 var RandomChk = function () {
-     temp1 = c.strokeStyle;
-     temp2 = c.fillStyle;
      c.strokeStyle = 'Black';
      c.fillStyle = 'Black';
      c.fillText("Random Splatter", 180, 490);
@@ -317,8 +315,6 @@ var RandomChk = function () {
           c.fillStyle = 'white';
           c.fill(); 
      }
-     c.strokeStyle = temp1;
-     c.fillStyle = temp2;
 }
 
 var change_pallet1 = function () {
@@ -540,6 +536,8 @@ canvas.addEventListener('resize', function () {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
 });
+
 canvas.addEventListener('mousedown', engage)
 canvas.addEventListener('mousemove', moving_clicked)
 canvas.addEventListener('mouseup', disengage)
+
