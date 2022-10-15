@@ -280,7 +280,7 @@ var color_check = function (e) {
         }
     }
     if (e.clientY > 620) {
-        if (e.clientY < 640) {
+        if (e.clientY < 642) {
             if (e.clientX > 235) {
                 if (e.clientX < 255) {    
                     if (randColor_Opt == true) {
