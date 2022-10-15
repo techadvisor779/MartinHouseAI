@@ -7,7 +7,8 @@ c.scale(dpr, dpr);
 c.lineWidth = 4;
 var stepW = w / 3;
 var stepH = h / 3;
-var white = '#F2F5F1';
+var white = 'white';
+var black = 'B;ack'
 var colorsT = ['#D40920', '#1356A2', '#F7D842'];
 var colorsP = ['#8BD3E6', '#FF6D6A', '#E9EC6B'];
 var colors = colorsT;
@@ -63,9 +64,9 @@ function splitOnX(e) {
     console.log("here X")
     c.beginPath();  
     console.log(c.fillStyle,  e.clientX, w, h);
-    c.strokeRect( e.clientX, 0, c.width, c.height);
-    ranC = Math.round(Math.random() * 2);
-    c.fillStyle = colors[ranC];
+    c.strokeRect( 0, 0, e.clientX, h);
+    c.strokeRect( e.clientX, 0, 700, 500);
+    c.fillStyle = 'white';
     c.strokeStyle = 'Black';
     c.lineWidth = 4;
     c.fill();
