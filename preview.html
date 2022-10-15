@@ -48,11 +48,12 @@
         canvas.width = innerWidth;
         canvas.height = innerHeight;
         var c = canvas.getContext('2d');
-        var recentImageURI = sessionStorage.getItem('imgData');
+        var recentImg = sessionStorage.getItem('imgData');
         //var myImage = new Image();
         //myImage.src = recentImageURI;
-        document.querySelector("canvas1").setAttribute("src", recentImageURI);
-        document.appendChild(canvas, recentImageURI)
+        console.log(recentImg);
+        //document.querySelector("canvas1").setAttribute("src", recentImg);
+        document.appendChild(canvas, recentImg)
         c.strokeStyle = 'Black';
         c.strokeRect(300, 0, 900, 600);
     </script>
