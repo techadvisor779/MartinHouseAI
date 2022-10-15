@@ -322,6 +322,8 @@ var RandomChk = function () {
 }
 
 var change_pallet1 = function () {
+     tempStroke = c.strokeStyle;
+     tempFill = c.fillStyle;  
      c.beginPath();  
      if (initCanvas) {
           c.fillStyle = 'White';
@@ -385,9 +387,13 @@ var change_pallet1 = function () {
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
     RandomChk();
+    c.strokeStyle = tempStroke;
+    c.fillStyle = tempFill;
 }
 
 var change_pallet2 = function () {
+    tempStroke = c.strokeStyle;
+    tempFill = c.fillStyle;  
     c.strokeRect(100, 0, 280, 600);
     c.strokeRect(400, 0, 1000, 600);
 
@@ -442,9 +448,13 @@ var change_pallet2 = function () {
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
     RandomChk();
+    c.strokeStyle = tempStroke;
+    c.fillStyle = tempFill;
 }
 
 var change_pallet3 = function () {
+    tempStroke = c.strokeStyle;
+    tempFill = c.fillStyle;  
     c.strokeRect(100, 0, 280, 600);
     c.strokeRect(400, 0, 1000, 600);
 
@@ -499,6 +509,8 @@ var change_pallet3 = function () {
     c.drawImage(document.getElementById('undo'), 200, 530, 80, 30)
     //c.drawImage(document.getElementById('clear'), 240, 540, 90, 30)
     RandomChk();
+    c.strokeStyle = tempStroke;
+    c.fillStyle = tempFill;
 }
 
 var change_bg = function () {
