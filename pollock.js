@@ -280,7 +280,7 @@ var color_check = function (e) {
         }
     }
     if (e.clientY > 620) {
-        if (e.clientY < 630) {
+        if (e.clientY < 640) {
             if (e.clientX > 235) {
                 if (e.clientX < 255) {    
                     if (randColor_Opt == true) {
@@ -298,6 +298,7 @@ var color_check = function (e) {
 
 var RandomChk = function () {
      tempStroke = c.strokeStyle;
+     tempFill = c.fillStyle;
      c.strokeStyle = 'Black';
      c.fillStyle = 'Black';
      c.fillText("Random Splatter", 180, 490);
@@ -316,6 +317,7 @@ var RandomChk = function () {
           c.fill(); 
      }
      c.strokeStyle = tempStroke;
+     c.fillStyle = tempFill;
 }
 
 var change_pallet1 = function () {
