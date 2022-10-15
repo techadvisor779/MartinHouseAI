@@ -124,7 +124,7 @@ var dribble = function (e) {
              c.fillStyle = dribble_COLORS[ranC];
          }
          c.arc(e.clientX + ranX, e.clientY + ranY - 95, ranR1, 0, Math.PI * 2);
-         c.arc(1800 - e.clientX + ranX, 710 - e.clientY + ranY, ranR2, 0, Math.PI * 2);
+         c.arc(1800 - e.clientX + ranX, 720 - e.clientY + ranY, ranR2, 0, Math.PI * 2);
          c.fill();
          dribble_count = 0;
     }
