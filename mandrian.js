@@ -66,6 +66,7 @@ function splitOnX(e) {
     c.strokeStyle = 'Black';
     ranC = Math.round(Math.random() * 7);
     c.fillStyle = colors[ranC];
+    console.log(c.fillStyle,  e.clientX, c.width, c.height);
     c.strokeRect( e.clientX, 0, c.width, c.height);
     c.fill();
 }
