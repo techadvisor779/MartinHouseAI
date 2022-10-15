@@ -64,8 +64,8 @@ function splitOnX(e) {
     console.log("here X")
     c.beginPath();  
     console.log(c.fillStyle,  e.clientX, w, h);
-    c.strokeRect( 0, 0, e.clientX, h);
-    c.strokeRect( e.clientX, 0, 700, 500);
+    c.strokeRect( 0, 0, e.clientX, 300);
+    c.strokeRect( e.clientX, 0, 500, 300);
     c.fillStyle = 'white';
     c.strokeStyle = 'Black';
     c.lineWidth = 4;
