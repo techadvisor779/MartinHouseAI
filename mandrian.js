@@ -3,8 +3,8 @@ var canvas = document.querySelector(
 var c = canvas.getContext('2d');
 var w = 550;
 var h = 400;
-var stepW = w / 3;
-var stepH = h / 3;
+var stepW = w / 8;
+var stepH = h / 8;
 var white = 'white';
 var black = 'Black';
 var colorsT = ['#D40920', '#1356A2', '#F7D842'];
@@ -155,3 +155,5 @@ var PClick = function() {
 
 draw();
 canvas.addEventListener('mousedown', draw);
+
+
