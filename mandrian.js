@@ -27,41 +27,40 @@ function splitSquaresWith(coordinates) {
   const { x, y } = coordinates;
 
   for (var i = squares.length - 1; i >= 0; i--) {
-    const square = squares[i];
+  const square = squares[i];
 
-    if (x && x > square.x && x < square.x + square.width) {
-        if(Math.random() > 0.5) {
-            squares.splice(i, 1);
-            splitOnX(square, x); 
-        }
-    }
+  if (x && x > square.x && x < square.x + square.width) {
+      if(Math.random() > 0.5) {
+        squares.splice(i, 1);
+        splitOnX(square, x); 
+      }
+  }
 
-    if (y && y > square.y && y < square.y + square.height) {
-        if(Math.random() > 0.5) {
-            squares.splice(i, 1);
-            splitOnY(square, y); 
-        }
-    }
+  if (y && y > square.y && y < square.y + square.height) {
+      if(Math.random() > 0.5) {
+        squares.splice(i, 1);
+        splitOnY(square, y); 
+      }
+  }
   }
 }
 
 function splitOnX(square, splitAt) {
-    var squareA = {
-        x: square.x,
-        y: square.y,
-        width: square.width - (square.width - splitAt + square.x),
-        height: square.height
-    };
+  var squareA = {
+    x: square.x,
+    y: square.y,
+    width: square.width - (square.width - splitAt + square.x),
+    height: square.height
+  };
 
-    var squareB = {
-        x: splitAt,
-        y: square.y,
-        width: square.width - splitAt + square.x,
-        height: square.height
-    };
-
-    squares.push(squareA);
-    squares.push(squareB);
+  var squareB = {
+  x: splitAt,
+  y: square.y,
+  width: square.width - splitAt + square.x,
+  height: square.height
+  };
+  squares.push(squareA);
+  squares.push(squareB);
 }
 
 function splitOnY(square, splitAt) {
@@ -71,14 +70,12 @@ function splitOnY(square, splitAt) {
         width: square.width,
         height: square.height - (square.height - splitAt + square.y)
     };
-
     var squareB = {
         x: square.x,
         y: splitAt,
         width: square.width,
         height: square.height - splitAt + square.y
     };
-
     squares.push(squareA);
     squares.push(squareB);
 }
@@ -89,26 +86,27 @@ for (var i = 0; i < size; i += step) {
 }
 
 function draw() {
-    for (var i = 0; i < colors.length; i++) {
-        squares[Math.floor(Math.random() * squares.length)].color = colors[i];
-    }
-    for (var i = 0; i < squares.length; i++) {
-        c.beginPath();
-        c.rect(
-        squares[i].x,
-        squares[i].y,
-        squares[i].width,
-        squares[i].height
+  for (var i = 0; i < colors.length; i++) {
+    squares[Math.floor(Math.random() * squares.length)].color = colors[i];
+  }
+  for (var i = 0; i < squares.length; i++) {
+    c.beginPath();
+    c.rect(
+      squares[i].x,
+      squares[i].y,
+      squares[i].width,
+      squares[i].height
     );
     if(squares[i].color) {
-        c.fillStyle = squares[i].color;
+      c.fillStyle = squares[i].color;
     } else {
-        c.fillStyle = white
+      c.fillStyle = white
     }
     c.fill()
     c.stroke();
   }
 }
+
 
 var lineClick = function() {
     if (LineID.checked) {
