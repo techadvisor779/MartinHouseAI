@@ -9,7 +9,9 @@ c.scale(dpr, dpr);
 c.lineWidth = 6;
 var step = size / 7;
 var white = '#F2F5F1';
-var colors = ['#D40920', '#1356A2', '#F7D842']
+var colorsP = ['#f6cdd2', '#cfddec', '#fdf7d9']
+var colorsT = ['#D40920', '#1356A2', '#F7D842']
+var colors = colorsT;
 const buttonL = document.getElementById("LineID");
 const buttonH = document.getElementById("H_Line");
 const buttonV = document.getElementById("V_Line");
@@ -134,12 +136,14 @@ var TClick = function() {
     if (Traditional.checked) {
         PaintID.checked = false;
         Traditional.checked = true;
+        colors = colorsT;
     }
 }
 var PClick = function() {
     if (Pastel.checked) {
         Traditional.checked = false;
         Pastel.checked = true;
+        colors = colorsP;
     }
 }
 
