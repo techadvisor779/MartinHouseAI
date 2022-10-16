@@ -85,7 +85,7 @@ for (var i = 0; i < size; i += step) {
     splitSquaresWith({ x: i });
 }
 
-function draw() {
+var draw = function() {
   for (var i = 0; i < colors.length; i++) {
     squares[Math.floor(Math.random() * squares.length)].color = colors[i];
   }
