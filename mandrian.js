@@ -24,7 +24,8 @@ var squares = [{
     x: 0,
     y: 0,
     width: w,
-    height: h
+    height: h,
+    color: white
 }];
 
 canvas.width = w;
@@ -104,7 +105,8 @@ function draw() {
             squares[i].x,
             squares[i].y,
             squares[i].width,
-            squares[i].height
+            squares[i].height,
+            squares[i].color
         )
     };
     c.stroke();
@@ -115,14 +117,12 @@ function draw() {
 }
 
 var lineClick = function() {
-    console.log(LineID);
     if (LineID.checked) {
         PaintID.checked = false;
         LineID.checked = true;
     }
 }
 var paintClick = function() {
-    console.log(LineID);
     if (PaintID.checked) {
         LineID.checked = false;
         PaintID.checked = true;
