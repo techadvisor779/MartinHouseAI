@@ -84,14 +84,14 @@ function splitOnY(square, splitAt) {
 }
 
 var draw = function() {    
+  step = document.getElementById("lineRange").innerHTML = value;
+  console.log(step)
   squares = [{
       x: 0,    
       y: 0,
       width: size,
       height: size
   }];
-  step = document.getElementById("lineRange").innerHTML = value;
-  console.log(step)
   for (var i = 0; i < size; i += step) {
     splitSquaresWith({ y: i });
     splitSquaresWith({ x: i });
