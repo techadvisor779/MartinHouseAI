@@ -115,28 +115,28 @@ function draw() {
 
 function handleClick() {
     if (LineID.checked) {
-        PaintID.value = false;
-        LineID.value = true;
+        PaintID.checked = false;
+        LineID.checked = true;
     }
     if (LineID.checked) {
-        PaintID.value = false;
-        LineID.value = true;
+        PaintID.checked = false;
+        LineID.checked = true;
     }
     if (H_Line.checked) {
-        V_Line.value = false;
-        H_Line.value = true;
+        V_Line.checked = false;
+        H_Line.checked = true;
     }
     if (V_Line.checked) {
-        H_Line.value = false;
-        V_Line.value = true;
+        H_Line.checked = false;
+        V_Line.checked = true;
     }
     if (Traditional.checked) {
-        PaintID.value = false;
-        Traditional.value = true;
+        PaintID.checked = false;
+        Traditional.checked = true;
     }
     if (Pastel.checked) {
-        Traditional.value = false;
-        Pastel.value = true;
+        Traditional.checked = false;
+        Pastel.checked = true;
     }
     console.log(colors);
     draw();
