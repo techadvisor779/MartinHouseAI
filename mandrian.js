@@ -84,10 +84,10 @@ function splitOnY(square, splitAt) {
 
 var draw = function() {  
   squares = [{
-    x: 0,
-    y: 0,
-    width: size,
-    height: size
+      x: 0,    
+      y: 0,
+      width: size,
+      height: size
   }];
   for (var i = 0; i < size; i += step) {
     splitSquaresWith({ y: i });
