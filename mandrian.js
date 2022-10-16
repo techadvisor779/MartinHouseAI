@@ -7,7 +7,8 @@ canvas.width = size * dpr;
 canvas.height = size * dpr;
 c.scale(dpr, dpr);
 c.lineWidth = 6;
-var step = size / 7;
+var inputDiv = 7;
+var step = size / inputDiv;
 var white = '#F2F5F1';
 var colorsP = ['#f6cdd2', '#cfddec', '#fdf7d9', '#f6cdd2', '#cfddec', '#fdf7d9', '#000000']
 var colorsT = ['#D40920', '#1356A2', '#F7D842', '#D40920', '#1356A2', '#F7D842', '#000000']
@@ -85,8 +86,8 @@ function splitOnY(square, splitAt) {
 }
 
 var draw = function() {    
-  step = document.getElementById("lineRange").value;
-  console.log(step, document.getElementById("lineRange"))
+  inputDiv = document.getElementById("lineRange").value;
+  step = size / inputDiv;
   squares = [{
       x: 0,    
       y: 0,
