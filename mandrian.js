@@ -19,6 +19,7 @@ const buttonP = document.getElementById("PaintID");
 const buttonT = document.getElementById("Traditional");
 const buttonPP = document.getElementById("Pastel");
 var slider = document.getElementById("lineRange");
+var stepVal = 0;
 var squares = [{
     x: 0,
     y: 0,
@@ -84,7 +85,7 @@ function splitOnY(square, splitAt) {
 }
 
 var draw = function() {    
-  var stepVal = document.getElementById("lineRange");
+  stepVal = document.getElementById("lineRange");
   console.log(stepVal)
   squares = [{
       x: 0,    
