@@ -83,8 +83,7 @@ function splitOnY(square, splitAt) {
     squares.push(squareB);
 }
 
-var draw = function() {  
-  size = slider.value;
+var draw = function() {    
   squares = [{
       x: 0,    
       y: 0,
@@ -92,6 +91,7 @@ var draw = function() {
       height: size
   }];
   console.log(slider, size)
+  step = size / slider.value;
   for (var i = 0; i < size; i += step) {
     splitSquaresWith({ y: i });
     splitSquaresWith({ x: i });
