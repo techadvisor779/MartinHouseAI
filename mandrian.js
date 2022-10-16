@@ -148,3 +148,4 @@ var PClick = function() {
 }
 
 draw()
+canvas.addEventListener('mousedown', draw)
