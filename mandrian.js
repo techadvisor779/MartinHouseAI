@@ -110,8 +110,6 @@ function draw() {
   }
 }
 
-draw()
-
 var lineClick = function() {
     if (LineID.checked) {
         PaintID.checked = false;
@@ -149,3 +147,4 @@ var PClick = function() {
     }
 }
 
+draw()
