@@ -123,9 +123,9 @@ var lineClick = function() {
 }
 var paintClick = function() {
     console.log(LineID);
-    if (LineID.checked) {
-        PaintID.checked = false;
-        LineID.checked = true;
+    if (PaintID.checked) {
+        LineID.checked = false;
+        PaintID.checked = true;
     }
 }
 var HClick = function() {
