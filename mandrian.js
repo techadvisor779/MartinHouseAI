@@ -112,7 +112,36 @@ function draw() {
         splitSquaresWith({ x: i });
     }
 }
-draw();
-canvas.addEventListener('mousedown', draw)
 
+function handleClick() {
+    if (LineID.checked) {
+        PaintID.value = false;
+        LineID.value = true;
+    }
+    if (LineID.checked) {
+        PaintID.value = false;
+        LineID.value = true;
+    }
+    if (H_Line.checked) {
+        V_Line.value = false;
+        H_Line.value = true;
+    }
+    if (V_Line.checked) {
+        H_Line.value = false;
+        V_Line.value = true;
+    }
+    if (Traditional.checked) {
+        PaintID.value = false;
+        Traditional.value = true;
+    }
+    if (Pastel.checked) {
+        Traditional.value = false;
+        Pastel.value = true;
+    }
+    console.log(colors);
+    draw();
+}
+
+draw();
+canvas.addEventListener('mousedown', handleClick);
 
