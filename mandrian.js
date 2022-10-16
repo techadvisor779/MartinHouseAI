@@ -27,21 +27,21 @@ function splitSquaresWith(coordinates) {
   const { x, y } = coordinates;
 
   for (var i = squares.length - 1; i >= 0; i--) {
-  const square = squares[i];
+    const square = squares[i];
 
-  if (x && x > square.x && x < square.x + square.width) {
+    if (x && x > square.x && x < square.x + square.width) {
       if(Math.random() > 0.5) {
         squares.splice(i, 1);
         splitOnX(square, x); 
       }
-  }
+    }
 
-  if (y && y > square.y && y < square.y + square.height) {
+    if (y && y > square.y && y < square.y + square.height) {
       if(Math.random() > 0.5) {
         squares.splice(i, 1);
         splitOnY(square, y); 
       }
-  }
+    }
   }
 }
 
