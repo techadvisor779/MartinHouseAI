@@ -19,7 +19,7 @@ const buttonV = document.getElementById("V_Line");
 const buttonP = document.getElementById("PaintID");
 const buttonT = document.getElementById("Traditional");
 const buttonPP = document.getElementById("Pastel");
-var size = 550;
+var size = w;
 var squares = [{
     x: 0,
     y: 0,
@@ -30,9 +30,10 @@ var squares = [{
 
 canvas.width = w;
 canvas.height = h;
-c.scale(w, h);
+//c.scale(w, h);
 c.lineWidth = 8;
-var step = size / 6;
+var step = size / 4;
+
 
 function splitSquaresWith(coordinates) {
     const { x, y } = coordinates;
