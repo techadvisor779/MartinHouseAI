@@ -6,11 +6,16 @@ var dpr = window.devicePixelRatio;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
 context.scale(dpr, dpr);
-context.lineWidth = 8;
+context.lineWidth = 6;
 var step = size / 7;
 var white = '#F2F5F1';
 var colors = ['#D40920', '#1356A2', '#F7D842']
-
+const buttonL = document.getElementById("LineID");
+const buttonH = document.getElementById("H_Line");
+const buttonV = document.getElementById("V_Line");
+const buttonP = document.getElementById("PaintID");
+const buttonT = document.getElementById("Traditional");
+const buttonPP = document.getElementById("Pastel");
 var squares = [{
     x: 0,
     y: 0,
@@ -106,3 +111,41 @@ function draw() {
 }
 
 draw()
+
+var lineClick = function() {
+    if (LineID.checked) {
+        PaintID.checked = false;
+        LineID.checked = true;
+    }
+}
+var paintClick = function() {
+    if (PaintID.checked) {
+        LineID.checked = false;
+        PaintID.checked = true;
+    }
+}
+var HClick = function() {
+    if (H_Line.checked) {
+        V_Line.checked = false;
+        H_Line.checked = true;
+    }
+}
+var VClick = function() {
+    if (V_Line.checked) {
+        H_Line.checked = false;
+        V_Line.checked = true;
+    }
+}
+var TClick = function() {
+    if (Traditional.checked) {
+        PaintID.checked = false;
+        Traditional.checked = true;
+    }
+}
+var PClick = function() {
+    if (Pastel.checked) {
+        Traditional.checked = false;
+        Pastel.checked = true;
+    }
+}
+
