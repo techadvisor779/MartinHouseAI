@@ -27,7 +27,7 @@ function splitSquaresWith(coordinates) {
   const { x, y } = coordinates;
 
   for (var i = squares.length - 1; i >= 0; i--) {
-  const square = squares[i];
+    const square = squares[i];
 
     if (x && x > square.x && x < square.x + square.width) {
         if(Math.random() > 0.5) {
@@ -42,6 +42,7 @@ function splitSquaresWith(coordinates) {
             splitOnY(square, y); 
         }
     }
+  }
 }
 
 function splitOnX(square, splitAt) {
