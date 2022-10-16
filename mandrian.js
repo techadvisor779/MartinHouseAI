@@ -140,7 +140,7 @@ var VClick = function() {
 }
 var TClick = function() {
     if (Traditional.checked) {
-        PaintID.checked = false;
+        Pastel.checked = false;
         Traditional.checked = true;
         colors = colorsT;
     }
