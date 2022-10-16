@@ -5,7 +5,7 @@ var size = 320;
 var dpr = window.devicePixelRatio;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
-context.scale(dpr, dpr);
+c.scale(dpr, dpr);
 c.lineWidth = 6;
 var step = size / 7;
 var white = '#F2F5F1';
