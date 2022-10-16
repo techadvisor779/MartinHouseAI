@@ -85,7 +85,7 @@ function splitOnY(square, splitAt) {
 }
 
 var draw = function() {    
-  stepVal = document.getElementById("lineRange");
+  stepVal = document.getElementById("lineRange").innerHTML;
   console.log(stepVal)
   squares = [{
       x: 0,    
