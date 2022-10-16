@@ -9,8 +9,8 @@ c.scale(dpr, dpr);
 c.lineWidth = 6;
 var step = size / 7;
 var white = '#F2F5F1';
-var colorsP = ['#f6cdd2', '#cfddec', '#fdf7d9']
-var colorsT = ['#D40920', '#1356A2', '#F7D842']
+var colorsP = ['#f6cdd2', '#cfddec', '#fdf7d9', '#f6cdd2', '#cfddec', '#fdf7d9', '#000000']
+var colorsT = ['#D40920', '#1356A2', '#F7D842', '#D40920', '#1356A2', '#F7D842', '#000000']
 var colors = colorsT;
 const buttonL = document.getElementById("LineID");
 const buttonH = document.getElementById("H_Line");
