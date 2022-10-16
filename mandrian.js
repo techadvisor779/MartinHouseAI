@@ -97,6 +97,7 @@ function draw() {
     for (var i = 0; i < colors.length; i++) {
         squares[Math.floor(Math.random() * squares.length)].color = colors[i]
     };
+    console.log(squares);
     for (var i = 0; i < squares.length; i++) {
         c.beginPath();
         c.rect(
@@ -114,6 +115,7 @@ function draw() {
 }
 
 function handleClick() {
+    console.log(LineID);
     if (LineID.checked) {
         PaintID.checked = false;
         LineID.checked = true;
@@ -138,7 +140,6 @@ function handleClick() {
         Traditional.checked = false;
         Pastel.checked = true;
     }
-    console.log(colors);
     draw();
 }
 
