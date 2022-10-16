@@ -80,12 +80,11 @@ function splitOnY(square, splitAt) {
     squares.push(squareB);
 }
 
-for (var i = 0; i < size; i += step) {
+var draw = function() {  
+  for (var i = 0; i < size; i += step) {
     splitSquaresWith({ y: i });
     splitSquaresWith({ x: i });
-}
-
-var draw = function() {
+  }
   for (var i = 0; i < colors.length; i++) {
     squares[Math.floor(Math.random() * squares.length)].color = colors[i];
   }
@@ -106,7 +105,6 @@ var draw = function() {
     c.stroke();
   }
 }
-
 
 var lineClick = function() {
     if (LineID.checked) {
