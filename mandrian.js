@@ -90,7 +90,8 @@ var draw = function() {
       width: size,
       height: size
   }];
-  console.log(slider, size)
+  step = document.getElementById("lineRange").innerHTML = value;
+  console.log(step)
   for (var i = 0; i < size; i += step) {
     splitSquaresWith({ y: i });
     splitSquaresWith({ x: i });
