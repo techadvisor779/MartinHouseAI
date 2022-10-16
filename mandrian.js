@@ -91,7 +91,6 @@ var draw = function() {
       height: size
   }];
   console.log(slider, size)
-  step = size / slider.value;
   for (var i = 0; i < size; i += step) {
     splitSquaresWith({ y: i });
     splitSquaresWith({ x: i });
