@@ -18,6 +18,7 @@ const buttonV = document.getElementById("V_Line");
 const buttonP = document.getElementById("PaintID");
 const buttonT = document.getElementById("Traditional");
 const buttonPP = document.getElementById("Pastel");
+var slider = document.getElementById("lineRange");
 var squares = [{
     x: 0,
     y: 0,
@@ -89,6 +90,7 @@ var draw = function() {
       width: size,
       height: size
   }];
+  size = slider.value;
   for (var i = 0; i < size; i += step) {
     splitSquaresWith({ y: i });
     splitSquaresWith({ x: i });
