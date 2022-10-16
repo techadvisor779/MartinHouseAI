@@ -114,39 +114,39 @@ function draw() {
     }
 }
 
-var lineClick() = function() {
+var lineClick = function() {
     console.log(LineID);
     if (LineID.checked) {
         PaintID.checked = false;
         LineID.checked = true;
     }
 }
-var paintClick() = function() {
+var paintClick = function() {
     console.log(LineID);
     if (LineID.checked) {
         PaintID.checked = false;
         LineID.checked = true;
     }
 }
-var HClick() = function() {
+var HClick = function() {
     if (H_Line.checked) {
         V_Line.checked = false;
         H_Line.checked = true;
     }
 }
-var VClick() = function() {
+var VClick = function() {
     if (V_Line.checked) {
         H_Line.checked = false;
         V_Line.checked = true;
     }
 }
-var TClick() = function() {
+var TClick = function() {
     if (Traditional.checked) {
         PaintID.checked = false;
         Traditional.checked = true;
     }
 }
-var PClick() = function() {
+var PClick = function() {
     if (Pastel.checked) {
         Traditional.checked = false;
         Pastel.checked = true;
