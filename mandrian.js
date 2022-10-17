@@ -117,7 +117,7 @@ var draw = function() {
     }
     if (PaintID.checked) {
         console.log(PaintID)
-    }
+    }    
 }
 
 var lineClick = function() {
@@ -149,3 +149,7 @@ var PClick = function() {
 
 draw();
 canvas.addEventListener('mousedown', draw);
+const onClick = (event) => {
+  console.log(event.srcElement.id);
+}
+window.addEventListener('click', onClick);
