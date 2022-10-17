@@ -85,7 +85,7 @@ function splitOnY(square, splitAt) {
     squares.push(squareB);
 }
 
-var draw = function() {
+var draw = function(e) {
     if (LineID.checked) {
         console.log(LineID)
         inputDiv = document.getElementById("lineRange").value;
