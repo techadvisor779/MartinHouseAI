@@ -85,40 +85,38 @@ function splitOnY(square, splitAt) {
     squares.push(squareB);
 }
 
-var draw = function() {    
-  if (LineID.checked) {
-    inputDiv = document.getElementById("lineRange").value;
-    step = size / inputDiv;
-    squares = [{
-      x: 0,    
-      y: 0,
-      width: size,
-      height: size
-    }];
-    for (var i = 0; i < size; i += step) {
-        splitSquaresWith({ y: i });
-        splitSquaresWith({ x: i });
-    }
-    for (var i = 0; i < colors.length; i++) {
-        squares[Math.floor(Math.random() * squares.length)].color = colors[i];
-    }
-    for (var i = 0; i < squares.length; i++) {
-        c.beginPath();
-        c.rect(
-        squares[i].x,
-        squares[i].y,
-        squares[i].width,
-        squares[i].height
-        );
-        if(squares[i].color) {
-            c.fillStyle = squares[i].color;
-        } else {
-            c.fillStyle = white
+var draw = function() {
+    if (LineID.checked) {
+        inputDiv = document.getElementById("lineRange").value;
+        step = size / inputDiv;
+        squares = [{
+            x: 0,    
+            y: 0,
+            width: size,
+            height: size
+        }];
+        for (var i = 0; i < size; i += step) {
+            splitSquaresWith({ y: i });
+            splitSquaresWith({ x: i });
+        }
+        for (var i = 0; i < colors.length; i++) {
+            squares[Math.floor(Math.random() * squares.length)].color = colors[i];
+        }
+        for (var i = 0; i < squares.length; i++) {
+            c.beginPath();
+            c.rect( squares[i].x, squares[i].y, squares[i].width, squares[i].height);
+            if(squares[i].color) {
+                c.fillStyle = squares[i].color;
+            } else {
+                c.fillStyle = white;
+            }
+        }
+    } else {
+        pass
     }
     c.fill()
-    c.stroke();  
-  } 
-  }
+    c.stroke();
+    } 
 }
 
 var lineClick = function() {
