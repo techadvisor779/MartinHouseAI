@@ -85,7 +85,7 @@ function splitOnY(square, splitAt) {
     squares.push(squareB);
 }
 
-var draw = function(e) {
+var draw = function() {
     if (LineID.checked) {
         console.log(LineID)
         inputDiv = document.getElementById("lineRange").value;
@@ -116,7 +116,6 @@ var draw = function(e) {
         }     
     }
     if (PaintID.checked) {
-        onClick(e);
     }    
 }
 
@@ -147,9 +146,11 @@ var PClick = function() {
     }
 }
 
-var onClick = function (e) {
-    console.log("here", e.srcElement.id);
+const onClick = (event) => {
+  console.log(event.srcElement.id);
 }
+
 draw();
 canvas.addEventListener('mousedown', draw);
+window.addEventListener('click', onClick);
 
