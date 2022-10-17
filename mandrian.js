@@ -116,7 +116,6 @@ var draw = function() {
     }
     c.fill()
     c.stroke();
-    } 
 }
 
 var lineClick = function() {
