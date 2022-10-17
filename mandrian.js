@@ -86,37 +86,38 @@ function splitOnY(square, splitAt) {
 }
 
 var draw = function() {    
-  inputDiv = document.getElementById("lineRange").value;
-  step = size / inputDiv;
-  squares = [{
+  if (LineID.checked) {
+    inputDiv = document.getElementById("lineRange").value;
+    step = size / inputDiv;
+    squares = [{
       x: 0,    
       y: 0,
       width: size,
       height: size
-  }];
-  for (var i = 0; i < size; i += step) {
-    splitSquaresWith({ y: i });
-    splitSquaresWith({ x: i });
-  }
-  for (var i = 0; i < colors.length; i++) {
-    squares[Math.floor(Math.random() * squares.length)].color = colors[i];
-  }
-  for (var i = 0; i < squares.length; i++) {
-    c.beginPath();
-    c.rect(
-      squares[i].x,
-      squares[i].y,
-      squares[i].width,
-      squares[i].height
-    );
-    if(squares[i].color) {
-      c.fillStyle = squares[i].color;
-    } else {
-      c.fillStyle = white
+    }];
+    for (var i = 0; i < size; i += step) {
+        splitSquaresWith({ y: i });
+        splitSquaresWith({ x: i });
+    }
+    for (var i = 0; i < colors.length; i++) {
+        squares[Math.floor(Math.random() * squares.length)].color = colors[i];
+    }
+    for (var i = 0; i < squares.length; i++) {
+        c.beginPath();
+        c.rect(
+        squares[i].x,
+        squares[i].y,
+        squares[i].width,
+        squares[i].height
+        );
+        if(squares[i].color) {
+            c.fillStyle = squares[i].color;
+        } else {
+            c.fillStyle = white
     }
     c.fill()
-    c.stroke();
-  }
+    c.stroke();  
+  }      
 }
 
 var lineClick = function() {
@@ -129,18 +130,6 @@ var paintClick = function() {
     if (PaintID.checked) {
         LineID.checked = false;
         PaintID.checked = true;
-    }
-}
-var HClick = function() {
-    if (H_Line.checked) {
-        V_Line.checked = false;
-        H_Line.checked = true;
-    }
-}
-var VClick = function() {
-    if (V_Line.checked) {
-        H_Line.checked = false;
-        V_Line.checked = true;
     }
 }
 var TClick = function() {
