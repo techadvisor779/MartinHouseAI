@@ -116,7 +116,9 @@ var draw = function() {
         }     
     }
     if (PaintID.checked) {
-        console.log(PaintID)
+        const onClick = (event) => {
+            console.log(event.srcElement.id);
+        }
     }    
 }
 
@@ -149,7 +151,3 @@ var PClick = function() {
 
 draw();
 canvas.addEventListener('mousedown', draw);
-const onClick = (event) => {
-  console.log(event.srcElement.id);
-}
-canvas.addEventListener('click', onClick);
