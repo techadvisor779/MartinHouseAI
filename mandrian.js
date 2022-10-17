@@ -85,13 +85,6 @@ function splitOnY(square, splitAt) {
     squares.push(squareB);
 }
 
-inputDiv = document.getElementById("lineRange").value;
-step = size / inputDiv;
-for (var i = 0; i < size; i += step) {
-            splitSquaresWith({ y: i });
-            splitSquaresWith({ x: i });
-}
-
 var draw = function() {
         inputDiv = document.getElementById("lineRange").value;
         step = size / inputDiv;
@@ -116,9 +109,9 @@ var draw = function() {
             } else {
                 c.fillStyle = white
             }
-        }   
-    c.fill()
-    c.stroke();    
+            c.fill()
+            c.stroke(); 
+        }      
 }
 
 var lineClick = function() {
@@ -148,4 +141,5 @@ var PClick = function() {
     }
 }
 
+draw();
 canvas.addEventListener('mousedown', draw);
