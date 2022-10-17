@@ -106,9 +106,7 @@ var draw = function() {
                 c.fillStyle = white;
             }
         }
-    } else {
-        pass
-    }
+    }     
     c.fill()
     c.stroke();    
 }
