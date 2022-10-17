@@ -152,4 +152,4 @@ canvas.addEventListener('mousedown', draw);
 const onClick = (event) => {
   console.log(event.srcElement.id);
 }
-window.addEventListener('click', onClick);
+canvas.addEventListener('click', onClick);
