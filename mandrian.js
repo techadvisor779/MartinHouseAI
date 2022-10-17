@@ -148,7 +148,7 @@ var PClick = function() {
 }
 
 var onClick = (event) => {
-    console.log(event.srcElement.id);
+    console.log("here", event.srcElement.id);
 }
 
 draw();
