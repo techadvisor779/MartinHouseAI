@@ -115,7 +115,7 @@ var draw = function() {
         pass
     }
     c.fill()
-    c.stroke();
+    c.stroke();    
 }
 
 var lineClick = function() {
