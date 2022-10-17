@@ -148,7 +148,7 @@ var PClick = function() {
 }
 
 var onClick = function (e) {
-    console.log("here", event.srcElement.id);
+    console.log("here", e.srcElement.id);
 }
 draw();
 canvas.addEventListener('mousedown', draw);
