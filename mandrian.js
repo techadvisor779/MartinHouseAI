@@ -87,6 +87,7 @@ function splitOnY(square, splitAt) {
 
 var draw = function() {
     if (LineID.checked) {
+        console.log(LineID)
         inputDiv = document.getElementById("lineRange").value;
         step = size / inputDiv;
         squares = [{ x: 0, y: 0, width: size, height: size}];
@@ -115,7 +116,7 @@ var draw = function() {
         }     
     }
     if (PaintID.checked) {
-        pass;
+        console.log(PaintID)
     }
 }
 
