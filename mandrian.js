@@ -99,19 +99,20 @@ var draw = function() {
         }
         for (var i = 0; i < squares.length; i++) {
             c.beginPath();
-            c.rect( 
-                squares[i].x, 
-                squares[i].y, 
-                squares[i].width, 
-                squares[i].height
+            c.rect(
+            squares[i].x,
+            squares[i].y,
+            squares[i].width,
+            squares[i].height
             );
-            if(squares[i].color) {
+            if (squares[i].color) {
                 c.fillStyle = squares[i].color;
             } else {
-                c.fillStyle = white;
+                c.fillStyle = white
             }
         }
     }     
+    c.fill()
     c.stroke();    
 }
 
