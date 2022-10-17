@@ -89,12 +89,7 @@ var draw = function() {
     if (LineID.checked) {
         inputDiv = document.getElementById("lineRange").value;
         step = size / inputDiv;
-        squares = [{
-            x: 0,    
-            y: 0,
-            width: size,
-            height: size
-        }];
+        squares = [{ x: 0, y: 0, width: size, height: size}];
         for (var i = 0; i < size; i += step) {
             splitSquaresWith({ y: i });
             splitSquaresWith({ x: i });
