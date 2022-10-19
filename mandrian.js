@@ -85,7 +85,7 @@ function splitOnY(square, splitAt) {
     squares.push(squareB);
 }
 
-var draw = function() {
+var draw = function(e) {
     if (LineID.checked) {
         inputDiv = document.getElementById("lineRange").value;
         step = size / inputDiv;
@@ -114,6 +114,16 @@ var draw = function() {
             c.stroke(); 
         }     
     } 
+    if (PaintID.checked) {        
+        for (var i = 0; i < squares.length; i++) {   
+            if (e.clientX > squares[i].x && e.clientX > squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY < squares[i].y + squares[i].height) {
+                console.log(squares[i])
+                colorsChng = Math.random(6);
+                squares[i].color = colors[colorsChng];
+                c.fill();
+            }
+        }
+    }
 }
 
 var lineClick = function() {
@@ -143,20 +153,6 @@ var PClick = function() {
     }
 }
 
-var paintSq = function (e) {
-    if (PaintID.checked) {        
-        for (var i = 0; i < squares.length; i++) {
-            if (e.clientX > squares[i].x && e.clientX > squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY < squares[i].y + squares[i].height) {
-                console.log(squares[i])
-                colorsChng = Math.random(6);
-                squares[i].color = colors[colorsChng];
-                c.fill()
-            }
-        }
-    }
-}
-
 draw();
 canvas.addEventListener('mousedown', draw);
-window.addEventListener('click', paintSq);
 
