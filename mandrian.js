@@ -114,10 +114,10 @@ var draw = function(e) {
             c.stroke(); 
         }     
     } 
-    if (PaintID.checked) {        
-        for (var i = 0; i < squares.length; i++) {   
-            if (e.clientX > squares[i].x && e.clientX > squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY < squares[i].y + squares[i].height) {
-                console.log(squares[i])
+    if (PaintID.checked) {     
+        console.log(e.clientX, e.clientY)
+        if (e.clientX > squares[i].x && e.clientX > squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY < squares[i].y + squares[i].height) {
+            for (var i = 0; i < squares.length; i++) {  
                 colorsChng = Math.random(6);
                 squares[i].color = colors[colorsChng];
                 c.fill();
