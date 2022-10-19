@@ -114,9 +114,7 @@ var draw = function() {
             c.fill()
             c.stroke(); 
         }     
-    }
-    if (PaintID.checked) {
-    }    
+    } 
 }
 
 var lineClick = function() {
@@ -148,13 +146,11 @@ var PClick = function() {
 
 var paintSq = function (e) {
     if (PaintID.checked) {
+        console.log(e)
         for (var i = 0; i < squares.length; i++) {
             if (e.clientX > squares[i].x && e.clientX > squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY > squares[i].y + squares[i].height) {
-                if (squares[i].color) {
-                    c.fillStyle = squares[i].color;
-                } else {
-                    c.fillStyle = white
-                }
+                colorsChng = Math.random(6);
+                squares[i].color = colors[colorsChng];
                 c.fill()
                 c.stroke(); 
             }
