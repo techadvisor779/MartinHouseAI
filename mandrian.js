@@ -114,9 +114,9 @@ var draw = function(e) {
             c.stroke(); 
         }     
     } 
-    if (PaintID.checked) {     
-        console.log(e.clientX, e.clientY)
+    if (PaintID.checked) {             
         for (var i = 0; i < squares.length; i++) {  
+            console.log(e.clientX, e.clientY, squares[i].x, squares[i].y)
             if (e.clientX > squares[i].x && e.clientX < squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY < squares[i].y + squares[i].height) {
                 colorsChng = Math.random(6);
                 squares[i].color = colors[colorsChng];
