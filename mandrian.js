@@ -146,11 +146,27 @@ var PClick = function() {
     }
 }
 
+var paintSq = function (e) {
+    if (PaintID.checked) {
+        for (var i = 0; i < squares.length; i++) {
+            if (e.clientX > squares[i].x && e.clientX > squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY > squares[i].y + squares[i].height) {
+                if (squares[i].color) {
+                    c.fillStyle = squares[i].color;
+                } else {
+                    c.fillStyle = white
+                }
+                c.fill()
+                c.stroke(); 
+            }
+        }
+    }
+}
+
 const onClick = (event) => {
   console.log(event.srcElement.id);
 }
 
 draw();
 canvas.addEventListener('mousedown', draw);
-window.addEventListener('click', onClick);
+window.addEventListener('click', paintSq);
 
