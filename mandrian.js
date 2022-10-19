@@ -87,7 +87,6 @@ function splitOnY(square, splitAt) {
 
 var draw = function() {
     if (LineID.checked) {
-        console.log(LineID)
         inputDiv = document.getElementById("lineRange").value;
         step = size / inputDiv;
         squares = [{ x: 0, y: 0, width: size, height: size}];
@@ -145,21 +144,16 @@ var PClick = function() {
 }
 
 var paintSq = function (e) {
-    if (PaintID.checked) {
-        console.log(e)
+    if (PaintID.checked) {        
         for (var i = 0; i < squares.length; i++) {
-            if (e.clientX > squares[i].x && e.clientX > squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY > squares[i].y + squares[i].height) {
+            if (e.clientX > squares[i].x && e.clientX > squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY < squares[i].y + squares[i].height) {
+                console.log(squares[i])
                 colorsChng = Math.random(6);
                 squares[i].color = colors[colorsChng];
                 c.fill()
-                c.stroke(); 
             }
         }
     }
-}
-
-const onClick = (event) => {
-  console.log(event.srcElement.id);
 }
 
 draw();
