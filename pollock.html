@@ -45,13 +45,11 @@
     </div>
     <h1><b>Paint Like Pollock</b></h1>
     <canvas id="canvas1"></canvas>
-    <form onsubmit="submitForm(this)">
-        <center>
-        <label for="fname">Sign your art</label>
-        <input id="signItInput" width=350 height=120/>
-        <button>Submit</button>
-        </center>
-    </form>
+    <center>
+        <label>Sign your art</label>
+        <input id="signIt" width=350 height=120/>
+        <button onclick=submitForm()>Submit</button>
+    </center>
     <script type = "text/javascript" src="pollock.js"></script>    
 </body>   
 </html>
