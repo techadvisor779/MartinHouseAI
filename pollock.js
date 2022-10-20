@@ -549,7 +549,7 @@ function submitForm() {
     var val = document.getElementById('signIt').value;
     c.fillStyle = 'Black'
     c.font = " 18pt papyrus";
-    c.textAlign = "right"
+    c.textAlign = "center"
     c.fillText(val, 1000, 550);
 }
 
