@@ -45,10 +45,12 @@
     </div>
     <h1><b>Paint Like Pollock</b></h1>
     <canvas id="canvas1"></canvas>
-    <form onsubmit="submitForm(event)">
+    <form onsubmit="submitForm(this)">
         <center>
+        <input id="signItInput"/>
+  <button>Submit</button>
         <label for="fname">Sign your art</label>
-        <input type="text" id="signItInput" >
+        <input type="text"  >
         <input type="submit" value="Submit" width=350 height=120>
         </center>
     </form>
