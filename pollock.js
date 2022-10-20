@@ -550,7 +550,7 @@ function submitForm() {
     console.log("here", val);
     c.fillStyle = 'Black'
     c.font = "14px Georgia";
-    c.fillText(val, 1000, 550);
+    c.fillText(val, 1010, 550);
 }
 
 function assignColors(COLORS) {    
