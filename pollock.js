@@ -546,10 +546,10 @@ var disengage = function (e) {
 }    
 
 function submitForm() {
-    signature = document.getElementById('signIt')
+    signature = document.getElementById('signIt').valiue
     console.log(signature)
     c.fillStyle = 'Black'
-    c.font = "24px Georgia";
+    c.font = "18px Georgia";
     c.fillText(signature, 1000, 550);
 }
 
