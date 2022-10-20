@@ -545,7 +545,7 @@ var disengage = function (e) {
     sessionStorage.setItem('imgData', img); 
 }    
 
-var signIt = function () {
+function submitForm(event) {
     signature = document.getElementById('signIt')
     console.log(signature)
     c.fillStyle = 'Black'
