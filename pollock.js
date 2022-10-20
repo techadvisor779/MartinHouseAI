@@ -549,7 +549,11 @@ function submitForm() {
     var val = document.getElementById('signIt').value;
     console.log("here", val);
     c.fillStyle = 'Black'
-    c.font = "14px Georgia";
+    c.font = papyrus;
+    c.font-size = 18px;
+    c.font-weight = 180;
+    c.line-height = 0.8;
+    c.text-shadow = 2px 3px 5px black;
     c.fillText(val, 1010, 550);
 }
 
