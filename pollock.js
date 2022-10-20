@@ -548,9 +548,9 @@ var disengage = function (e) {
 function submitForm() {
     var val = document.getElementById('signIt').value;
     c.fillStyle = 'Black'
-    c.font = " 18pt papyrus";
-    c.textAlign = 'right';
-    c.fillText(val, 1100, 550);
+    c.font = "18pt papyrus";
+    c.text-align = 'right';
+    c.fillText(val, 1300, 550);
 }
 
 function assignColors(COLORS) {    
