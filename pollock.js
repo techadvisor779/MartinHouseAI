@@ -545,6 +545,14 @@ var disengage = function (e) {
     sessionStorage.setItem('imgData', img); 
 }    
 
+var signIt = function () {
+    signature = document.getElementById('signItInput')
+    console.log(signature)
+    c.fillStyle = 'Black'
+    c.font = "16px Georgia";
+    c.fillText(signature, 800, 550);
+}
+
 function assignColors(COLORS) {    
     if (color_choice = 0) {
         current_pallet = pallet0;
