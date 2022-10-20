@@ -547,7 +547,7 @@ var disengage = function (e) {
 
 function submitForm() {
     var val = document.getElementById('signIt').value;
-    console.log(val);
+    console.log("here", val);
     c.fillStyle = 'Black'
     c.font = "14px Georgia";
     c.fillText(val, 1000, 550);
