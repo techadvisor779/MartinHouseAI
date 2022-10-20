@@ -166,6 +166,13 @@ h3 {
     text-shadow: 2px 3px 5px black;
 }
 
+h4 {
+    font-family: papyrus, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 180;
+    line-height: 0.8;
+    text-shadow: 2px 3px 5px black;
+}
 
 p3 {
     text-align: justify;
