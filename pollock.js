@@ -546,7 +546,7 @@ var disengage = function (e) {
 }    
 
 var signIt = function () {
-    signature = document.getElementById('signItInput')
+    signature = document.getElementById('signIt')
     console.log(signature)
     c.fillStyle = 'Black'
     c.font = "16px Georgia";
