@@ -550,7 +550,7 @@ function submitForm() {
     c.fillStyle = 'Black'
     c.font = "18pt papyrus";
     c.textAlign = 'right';
-    c.fillText(val, 1400, 550);
+    c.fillText(val, 1800, 550);
 }
 
 function assignColors(COLORS) {    
