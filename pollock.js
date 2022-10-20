@@ -549,8 +549,8 @@ function submitForm(event) {
     signature = document.getElementById('signIt')
     console.log(signature)
     c.fillStyle = 'Black'
-    c.font = "16px Georgia";
-    c.fillText(signature, 800, 550);
+    c.font = "24px Georgia";
+    c.fillText(signature, 1000, 550);
 }
 
 function assignColors(COLORS) {    
