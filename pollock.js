@@ -546,7 +546,7 @@ var disengage = function (e) {
 }    
 
 function submitForm() {
-    var val = document.querySelector('input').value;
+    var val = document.querySelector('input');
     console.log(val);
     c.fillStyle = 'Black'
     c.font = "14px Georgia";
