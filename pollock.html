@@ -46,8 +46,11 @@
     <h1><b>Paint Like Pollock</b></h1>
     <canvas id="canvas1"></canvas>
     <form>
-        <label for="fname">Sign your art</label><br><br>
-        <input type="submit" value="Submit" onclick=signIt()>
+        <center>
+        <label for="fname">Sign your art</label>
+        <input type="text" id="signItInput" value="John"><br><br>
+        <input type="submit" value="Submit" onclick=signIt() width=300 height=100>
+        </center>
     </form>
     <script type = "text/javascript" src="pollock.js"></script>    
 </body>   
