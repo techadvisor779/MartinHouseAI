@@ -128,13 +128,12 @@ var draw = function(e) {
 }
 
 function submitForm() {
-    console.log("here")
     var val = document.getElementById('signIt').value;
     val = val + " '22" ;
     c.fillStyle = 'Black'
     c.font = "8pt papyrus";
     c.textAlign = 'right';
-    c.fillText(val, 280, 300);
+    c.fillText(val, 270, 300);
 }
 
 var lineClick = function() {
