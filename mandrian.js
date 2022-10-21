@@ -128,6 +128,7 @@ var draw = function(e) {
 }
 
 function submitForm() {
+    console.log("here")
     var val = document.getElementById('signIt').value;
     val = val + " '22" ;
     c.fillStyle = 'Black'
