@@ -549,8 +549,7 @@ function submitForm() {
     var val = document.getElementById('signIt').value;
     var cYear = new Date();
     console.log(cYear);
-    cYear = cYear.substr(2,2);
-    val = val + "  '" + cYear;
+    val = val + "  " + cYear;
     c.fillStyle = 'Black'
     c.font = "18pt papyrus";
     c.textAlign = 'right';
