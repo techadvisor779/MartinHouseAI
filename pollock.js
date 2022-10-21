@@ -547,7 +547,7 @@ var disengage = function (e) {
 
 function submitForm() {
     var val = document.getElementById('signIt').value;
-    let cYear = new Date();
+    var cYear = new Date();
     console.log(cYear);
     cYear = cYear.substr(2,2);
     val = val + "  '" + cYear;
