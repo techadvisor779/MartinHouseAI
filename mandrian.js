@@ -133,7 +133,7 @@ function submitForm() {
     c.fillStyle = 'Black'
     c.font = "8pt papyrus";
     c.textAlign = 'right';
-    c.fillText(val, 330, 300);
+    c.fillText(val, 280, 300);
 }
 
 var lineClick = function() {
