@@ -547,7 +547,7 @@ var disengage = function (e) {
 
 function submitForm() {
     var val = document.getElementById('signIt').value;
-    val = val + " '22 " ;
+    val = val + " '22" ;
     c.fillStyle = 'Black'
     c.font = "18pt papyrus";
     c.textAlign = 'right';
