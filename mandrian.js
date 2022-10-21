@@ -127,6 +127,15 @@ var draw = function(e) {
     }
 }
 
+function submitForm() {
+    var val = document.getElementById('signIt').value;
+    val = val + " '22" ;
+    c.fillStyle = 'Black'
+    c.font = "18pt papyrus";
+    c.textAlign = 'right';
+    c.fillText(val, 500, 550);
+}
+
 var lineClick = function() {
     if (LineID.checked) {
         PaintID.checked = false;
