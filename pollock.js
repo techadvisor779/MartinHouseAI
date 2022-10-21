@@ -551,7 +551,6 @@ function submitForm() {
     c.fillStyle = 'Black'
     c.font = "18pt papyrus";
     c.textAlign = 'right';
-    c.transform: rotate(10deg);
     c.fillText(val, 1320, 550);
 }
 
