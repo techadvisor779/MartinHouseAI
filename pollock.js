@@ -547,10 +547,13 @@ var disengage = function (e) {
 
 function submitForm() {
     var val = document.getElementById('signIt').value;
+    let cYear = currentDate.getFullYear();
+    cYear = cYear.substr(2,2);
+    val = val + " " + cYear;
     c.fillStyle = 'Black'
     c.font = "18pt papyrus";
     c.textAlign = 'right';
-    c.fillText(val, 1400, 550);
+    c.fillText(val, 1350, 550);
 }
 
 function assignColors(COLORS) {    
