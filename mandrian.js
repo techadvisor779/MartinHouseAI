@@ -132,9 +132,9 @@ function submitForm() {
     var val = document.getElementById('signIt').value;
     val = val + " '22" ;
     c.fillStyle = 'Black'
-    c.font = "8pt papyrus";
+    c.font = "10pt papyrus";
     c.textAlign = 'right';
-    c.fillText(val, 320, 300);
+    c.fillText(val, 340, 300);
 }
 
 var lineClick = function() {
