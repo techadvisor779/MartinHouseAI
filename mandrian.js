@@ -135,7 +135,7 @@ function submitForm() {
      c.font = "18pt papyrus";
      c.textAlign = 'right';
      var h3 = document.createElement('h3');          
-     h3.style.transform = "translate( 840px, -110px) rotate( -10deg)";
+     h3.style.transform = "translate( 850px, -110px) rotate( -10deg)";
      h3.textContent = val; 
      document.body.appendChild(h3);
 }
