@@ -553,8 +553,8 @@ function submitForm() {
     c.textAlign = 'right';
     var h3 = document.createElement('h3');  
     h3.textContent = val;         
-    h3.style.transform = "translate(1000px, -300px) rotate(-10deg)";
-    document.body.appendChild(h3); 
+    h3.style.transform = "translate(800px, -300px) rotate(-9deg)";
+    document.body.appendChild(h3);
 }
 
 function assignColors(COLORS) {    
