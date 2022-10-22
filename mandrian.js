@@ -3,9 +3,7 @@ var c = canvas.getContext('2d');
 
 var size = 320;
 var dpr = window.devicePixelRatio;
-canvas.width = size * dpr;
-canvas.height = size * dpr;
-c.scale(dpr, dpr);
+
 c.lineWidth = 6;
 var inputDiv = 7;
 var step = size / inputDiv;
