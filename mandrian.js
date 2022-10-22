@@ -5,7 +5,7 @@ var size = 320;
 var dpr = window.devicePixelRatio;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
-console.log( canvas.width, canvas.height);
+console.log( dpr, canvas.width, canvas.height);
 c.scale(dpr, dpr);
 c.lineWidth = 6;
 var inputDiv = 7;
