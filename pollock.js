@@ -554,7 +554,7 @@ function submitForm() {
      c.textAlign = 'right';
      var h3s = document.getElementsByTagName("h3");
      if (h3s) {
-          h3.setAttribute("value", val);
+          h3.textContent = val;
      } else {
           var h3 = document.createElement('h3');          
           h3.style.transform = "translate( 850px, -100px) rotate( -10deg)";
