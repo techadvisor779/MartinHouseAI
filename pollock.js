@@ -552,9 +552,8 @@ function submitForm() {
      c.fillStyle = 'Black';
      c.font = "18pt papyrus";
      c.textAlign = 'right';
-     c.fillText(val, 1320, 550);
      var h3 = document.createElement('h3');          
-     h3.style.transform = "translate( 852px, -100px) rotate( -10deg)";
+     h3.style.transform = "translate( 860px, -130px) rotate( -10deg)";
      h3.textContent = val; 
      document.body.appendChild(h3);
 }
