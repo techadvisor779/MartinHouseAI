@@ -418,9 +418,6 @@ var change_pallet2 = function () {
     c.fillStyle = 'MediumBlue'
     c.fillRect(270, 85, 30, 30)
 
-    c.fillStyle = 'Black'
-    c.var val = document.getElementById('signIt').value;
-    val = val + " '22" ;
     c.fillStyle = 'Black';
     c.font = "18pt papyrus";
     c.textAlign = 'right';
