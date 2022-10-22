@@ -551,7 +551,9 @@ function submitForm() {
     c.fillStyle = 'Black';
     c.font = "18pt papyrus";
     c.textAlign = 'right';
-    c.fillText(val, 1320, 550);
+    var H3 = document.createElement('H3');  
+    H3.textContent = val;         
+    document.body.appendChild(H3); 
 }
 
 function assignColors(COLORS) {    
