@@ -79,6 +79,7 @@ var randColor_Opt = false;
 var color_choice = 0;
 const arr = new Uint8ClampedArray(40_000);
 var initCanvas = true;
+var a = 1;
 
 var putPoint = function (e, dragging, dribble_COLORS, COLORS) {    ///  400, 0, 1000, 600);
     delta = (e.clientX * e.clientX) + (e.clientY * e.clientY);
@@ -546,15 +547,15 @@ var disengage = function (e) {
 }    
 
 function submitForm() {
-    var val = document.getElementById('signIt').value;
-    val = val + " '22" ;
-    c.fillStyle = 'Black';
-    c.font = "18pt papyrus";
-    c.textAlign = 'right';
-    var h3 = document.createElement('h3');  
-    h3.textContent = val;         
-    h3.style.transform = "translate(750px, -100px) rotate(-10deg)";
-    document.body.appendChild(h3);
+     var val = document.getElementById('signIt').value;
+     val = val + " '22" ;
+     c.fillStyle = 'Black';
+     c.font = "18pt papyrus";
+     c.textAlign = 'right';
+     var h3 = document.createElement('h3');          
+     h3.style.transform = "translate( 750px, -100px) rotate( -10deg)";
+     h3.textContent = val; 
+     document.body.appendChild(h3);
 }
 
 function assignColors(COLORS) {    
