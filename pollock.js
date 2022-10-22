@@ -552,10 +552,15 @@ function submitForm() {
      c.fillStyle = 'Black';
      c.font = "18pt papyrus";
      c.textAlign = 'right';
-     var h3 = document.createElement('h3');          
-     h3.style.transform = "translate( 850px, -100px) rotate( -10deg)";
-     h3.textContent = val; 
-     document.body.appendChild(h3);
+     var h3s = document.getElementsByTagName("h3");
+     if (h3s) {
+          h3.setAttribute("value", val);
+     } else {
+          var h3 = document.createElement('h3');          
+          h3.style.transform = "translate( 850px, -100px) rotate( -10deg)";
+          h3.textContent = val; 
+          document.body.appendChild(h3);
+     }
 }
 
 function assignColors(COLORS) {    
