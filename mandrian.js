@@ -129,12 +129,15 @@ var draw = function(e) {
 }
 
 function submitForm() {
-    var val = document.getElementById('signIt').value;
-    val = val + " '22" ;
-    c.fillStyle = 'Black'
-    c.font = "8pt papyrus";
-    c.textAlign = 'right';
-    c.fillText(val, 195, 100);
+     var val = document.getElementById('signIt').value;
+     val = val + " '22" ;
+     c.fillStyle = 'Black';
+     c.font = "18pt papyrus";
+     c.textAlign = 'right';
+     var h3 = document.createElement('h3');          
+     h3.style.transform = "translate( 950px, -130px) rotate( -10deg)";
+     h3.textContent = val; 
+     document.body.appendChild(h3);
 }
 
 var lineClick = function() {
