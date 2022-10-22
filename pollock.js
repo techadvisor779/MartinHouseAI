@@ -419,7 +419,11 @@ var change_pallet2 = function () {
     c.fillRect(270, 85, 30, 30)
 
     c.fillStyle = 'Black'
-    c.fillText("Background", 200, 146);
+    c.var val = document.getElementById('signIt').value;
+    val = val + " '22" ;
+    c.fillStyle = 'Black';
+    c.font = "18pt papyrus";
+    c.textAlign = 'right';
     c.strokeRect(181, 156, 28, 28)
     c.fillStyle = 'Grey'
     c.fillRect(210, 155, 30, 30)
