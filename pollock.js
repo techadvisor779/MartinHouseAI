@@ -553,7 +553,7 @@ function submitForm() {
     c.textAlign = 'right';
     var h3 = document.createElement('h3');  
     h3.textContent = val;         
-    h3.style.transform = "translate(750px, -100px) rotate(-9deg)";
+    h3.style.transform = "translate(751px, -100px) rotate(-9deg)";
     document.body.appendChild(h3);
 }
 
