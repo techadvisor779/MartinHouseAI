@@ -115,7 +115,8 @@ var draw = function(e) {
             c.stroke(); 
         }     
     } 
-    if (PaintID.checked) {             
+    if (PaintID.checked) {       
+        console.log( e.clientX, e.clientY);
         for (var i = 0; i < squares.length; i++) {  
             if (e.clientX > squares[i].x && e.clientX < squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY < squares[i].y + squares[i].height) {                
                 colorsChng = Math.random(6);
@@ -125,7 +126,6 @@ var draw = function(e) {
                 console.log("true", colorsChng, squares.length);
             }
         }
-        console.log("false", e.clientX, e.clientY);
     }
 }
 
