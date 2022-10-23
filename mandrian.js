@@ -117,15 +117,15 @@ var draw = function(e) {
         }     
     } 
     if (PaintID.checked) {       
-        console.log( e.clientX, e.clientY);
         for (var i = 0; i < squares.length; i++) {  
             if (1) { //e.clientX * dpr -380 > squares[i].x && e.clientX * dpr -380 < squares[i].x + squares[i].width && e.clientY * dpr -50 > squares[i].y && e.clientY * dpr -50 < squares[i].y + squares[i].height) {                
-                colorsChng = Math.random(6);
-                squares[i].color = colors[colorsChng];
-                console.log(squares[i].color);
+                squares[i].color + squares[i].color + 1;
+                if (squares[i].color > 6) {
+                    squares[i].color = 0;
+                }
+                c.fillStyle = squares[i].color;
                 c.fill();
                 c.stroke();
-                console.log( squares[i].x, squares[i].y);
             }
         }
     }
