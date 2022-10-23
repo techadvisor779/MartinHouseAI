@@ -124,6 +124,7 @@ var draw = function(e) {
                 squares[i].color = colors[colorsChng];
                 c.fill();
                 c.stroke();
+                console.log( squares[i].x, squares[i].y);
             }
         }
     }
