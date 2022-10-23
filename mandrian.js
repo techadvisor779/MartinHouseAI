@@ -118,6 +118,7 @@ var draw = function(e) {
     } 
     if (PaintID.checked) {       
         for (var i = 0; i < squares.length; i++) {  
+            console.log("here")
             //if (1) {  //e.clientX * dpr -380 > squares[i].x && e.clientX * dpr -380 < squares[i].x + squares[i].width && e.clientY * dpr -50 > squares[i].y && e.clientY * dpr -50 < squares[i].y + squares[i].height) {                
             squares[i].color + squares[i].color + 1;
             if (squares[i].color > 5) {
