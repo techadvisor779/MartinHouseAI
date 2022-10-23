@@ -117,7 +117,7 @@ var draw = function(e) {
     } 
     if (PaintID.checked) {             
         for (var i = 0; i < squares.length; i++) {  
-            if (e.clientX-550 > squares[i].x && e.clientX-550 < squares[i].x + squares[i].width && e.clientY-1000 > squares[i].y && e.clientY-1000 < squares[i].y + squares[i].height) {
+            if (e.clientX > squares[i].x && e.clientX < squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY < squares[i].y + squares[i].height) {
                 console.log("true", e.clientX, e.clientY,)
                 colorsChng = Math.random(6);
                 squares[i].color = colors[colorsChng];
