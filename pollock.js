@@ -1,15 +1,15 @@
 const canvas = document.getElementById('canvas1');
-var size = 1000;
-var dpr = window.devicePixelRatio;
-canvas.width = size * dpr;
-canvas.height = size * dpr;
+canvas.width = innerWidth;
+canvas.height = innerHeight-135;
+//var size = 1000;
+//var dpr = window.devicePixelRatio;
+//canvas.width = size * dpr;
+//canvas.height = size * dpr;
 //console.log( dpr, canvas.width, canvas.height);
 //c.scale(dpr, dpr);
 
-//canvas.width = innerWidth;
-//canvas.height = innerHeight-135;
 var c = canvas.getContext('2d');
-c.scale(dpr, dpr);
+//c.scale(dpr, dpr);
 var dataUrl = canvas.toDataURL("image/png");
 
 var img = new Image();
