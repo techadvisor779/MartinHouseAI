@@ -40,7 +40,7 @@ body {
 }
 
 .column3 {
-    display: block;
+    display: flex;
     column-width: 100px;
     word-wrap: normal;
     padding-top: 20px;
