@@ -112,7 +112,7 @@ var draw = function(e) {
             } else {
                 c.fillStyle = white
             }
-            c.fill()
+            c.fill();
             c.stroke(); 
         }     
     } 
