@@ -1,5 +1,5 @@
 const canvas = document.getElementById('canvas1');
-var size = 600;
+var size = 1000;
 var dpr = window.devicePixelRatio;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
