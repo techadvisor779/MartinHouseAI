@@ -122,6 +122,7 @@ var draw = function(e) {
             if (e.clientX * dpr > squares[i].x && e.clientX * dpr < squares[i].x + squares[i].width && e.clientY * dpr > squares[i].y && e.clientY * dpr < squares[i].y + squares[i].height) {                
                 colorsChng = Math.random(6);
                 squares[i].color = colors[colorsChng];
+                console.log(squares[i].color);
                 c.fill();
                 c.stroke();
                 console.log( squares[i].x, squares[i].y);
