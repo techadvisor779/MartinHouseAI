@@ -27,6 +27,18 @@ body {
     text-shadow: 2px 3px 5px black;
 }
 
+.column3 {
+    display: block;
+    column-width: 250px;
+    word-wrap: normal;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 30px;
+    border: 0px;
+    margin: 0px;
+    font-size: 24px;
+}
+
 .column4 {
     column-count: 1;
     width: 240px;
