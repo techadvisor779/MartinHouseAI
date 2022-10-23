@@ -19,7 +19,7 @@ document.getElementById('file-input').onchange = function () {
 let img;
   
 function preload() {
-  img = loadImage('sample-image.png');
+  img = loadImage('images/beautiful-house.jpg');
 }
   
 function setup() {
