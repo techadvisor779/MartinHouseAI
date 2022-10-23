@@ -117,9 +117,9 @@ var draw = function(e) {
         }     
     } 
     if (PaintID.checked) {       
-        console.log( e.clientX, e.clientY);
+        console.log( e.clientX, e.clientY, e.clientX*dpr, e.clientY*dpr);
         for (var i = 0; i < squares.length; i++) {  
-            if (e.clientX-650 > squares[i].x && e.clientX-650 < squares[i].x + squares[i].width && e.clientY-480 > squares[i].y && e.clientY-480 < squares[i].y + squares[i].height) {                
+            if (e.clientX  * dpr > squares[i].x && e.clientX * dpr < squares[i].x + squares[i].width && e.clientY * dpr > squares[i].y && e.clientY * dpr < squares[i].y * dpr + squares[i].height) {                
                 colorsChng = Math.random(6);
                 squares[i].color = colors[colorsChng];
                 c.fill();
