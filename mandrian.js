@@ -123,6 +123,7 @@ var draw = function(e) {
                 if (squares[i].color > 5) {
                     squares[i].color = 0;
                 }
+                console.log(squares[i].color)
                 c.fillStyle = squares[i].color;
                 c.fill();
                 c.stroke();
