@@ -5,7 +5,7 @@ var size = 350;
 var dpr = window.devicePixelRatio;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
-console.log( dpr, canvas.width, canvas.height);
+//console.log( dpr, canvas.width, canvas.height);
 c.scale(dpr, dpr);
 c.lineWidth = 6;
 var inputDiv = 7;
@@ -106,6 +106,7 @@ var draw = function(e) {
             squares[i].width,
             squares[i].height
             );
+            console.log( squares[i], squares[i], squares[i].width, squares[i].height);
             if (squares[i].color) {
                 c.fillStyle = squares[i].color;
             } else {
@@ -116,21 +117,20 @@ var draw = function(e) {
         }     
     } 
     if (PaintID.checked) {       
-        console.log( e.clientX, e.clientY);
+        //console.log( e.clientX, e.clientY);
         for (var i = 0; i < squares.length; i++) {  
-            console.log( squares[i].x, squares[i].x);
             if (e.clientX > squares[i].x && e.clientX < squares[i].x + squares[i].width && e.clientY > squares[i].y && e.clientY < squares[i].y + squares[i].height) {                
                 colorsChng = Math.random(6);
                 squares[i].color = colors[colorsChng];
                 c.fill();
                 c.stroke();
-                console.log("true", colorsChng, squares.length);
             }
         }
     }
 }
 
 function submitForm() {
+     div.parentNode.removeChild(h3);
      var val = document.getElementById('signIt').value;
      val = val + " '22" ;
      c.fillStyle = 'Black';
