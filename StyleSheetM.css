@@ -20,7 +20,7 @@ body {
 
 .column {
     width: 900px;
-    padding-left: 20px;
+    padding-left: 200px;
     float: left;
     display: flex;
     color: black;
