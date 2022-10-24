@@ -28,7 +28,6 @@ body {
 }
 
 .column2 {
-    display: block;
     column-width: auto;
     word-wrap: normal;
     padding-top: 20px;
