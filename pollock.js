@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas1');
-canvas.width = innerWidth-100;
-canvas.height = innerHeight-185;
+canvas.width = innerWidth-300;
+canvas.height = innerHeight-175;
 //var size = 1000;
 //var dpr = window.devicePixelRatio;
 //canvas.width = size * dpr;
