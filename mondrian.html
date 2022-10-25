@@ -35,34 +35,36 @@
                     </div>
                 </div>
             </div>
-
-    	<h1><b>Paint Like Mondrian</b></h1>
-	<div class="range-slider">
-		<h7><input type="radio" id="LineID" checked onclick=lineClick()>&Tab;Lines</h7>
-	 	<div class="range-slider">		 
-			<input type="range" class="slider" id="lineRange"  min="3" max="10">
-		</div>
-	 	<hr/>
-	<div class="range-slider">
-	 	<h7><input type="radio" id="PaintID" onclick=paintClick()>&Tab;Paint</h7>
-	 	<div class="range-slider">
-			<h7><input type="radio" id="Traditional" checked onclick=TClick()>&Tab;Traditional</h7>
-	 	</div>
-	 <div class="range-slider">
-		<h7><input type="radio" id="Pastel" onclick=PClick()>&Tab;Pastel</h7>
-	</div> 
-    </div>
-    <div class="column">
-	    <canvas id="canvas1"></canvas>
-    </div>
-    </div>
-    <div>
-    	<center><h7>
-        	<label>Sign your art</label>
-        	<input id="signIt" width=260 height=120 >
-        	<button onclick=submitForm()>Submit</button>
-    	</center></h7>
-    </div>
-    <script src="mandrian.js"></script>
+		<h1><b>Paint Like Mondrian</b></h1>
+		<div class="column">
+			<div class="range-slider">
+				<h7><input type="radio" id="LineID" checked onclick=lineClick()>&Tab;Lines</h7>
+	 			<div class="range-slider">		 
+					<input type="range" class="slider" id="lineRange"  min="3" max="10">
+				</div>
+	 			<hr/>
+				<div class="range-slider">
+	 				<h7><input type="radio" id="PaintID" onclick=paintClick()>&Tab;Paint</h7>
+	 				<div class="range-slider">
+						<h7><input type="radio" id="Traditional" checked onclick=TClick()>&Tab;Traditional</h7>
+	 				</div>
+	 				<div class="range-slider">
+					<h7><input type="radio" id="Pastel" onclick=PClick()>&Tab;Pastel</h7>
+					</div> 
+				</div>
+			</div>
+    		</div>
+		<div class="column">
+	    		<canvas id="canvas1"></canvas>
+    		</div>    	
+    		<div>
+    			<center><h7>
+        			<label>Sign your art</label>
+        			<input id="signIt" width=260 height=120 >
+        			<button onclick=submitForm()>Submit</button>
+    			</center></h7>
+    		</div>
+   	 	<script src="mandrian.js"></script>
+	</div>
 </body>
 </html>
