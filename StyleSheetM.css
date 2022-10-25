@@ -19,8 +19,8 @@ body {
 }
 
 .column {
-    width: 900px;
-    padding-left: 200px;
+    width: 200px;
+    padding-left: 20px;
     float: left;
     display: flex;
     color: black;
