@@ -61,7 +61,7 @@ body {
 }
 
 signIt {
-    transform: translateY( -20px);   
+    transform: translateY( -30px);   
 }
 
 h7 {
@@ -123,7 +123,7 @@ canvas {
     border-width: 4px;
     width: 750px;
     height: 500px;
-    transform: translateY( -50px);
+    transform: translateY( 20px);
 }
 
 canvas2 {
