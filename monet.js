@@ -19,11 +19,11 @@ document.getElementById('file-input').onchange = function () {
 let img;
   
 function preload() {
-  img = loadImage('images/beautiful-house.jpg');
+  img = loadImage('images/Claude-Monet-770x736.jpg');
 }
   
 function setup() {
-  image(img, 20, 40, 100, 100);
+  image(img, 20, 40, 650, 500);
 }
 
 function submitForm() {
