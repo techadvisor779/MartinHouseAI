@@ -1,4 +1,4 @@
-var canvas = document.querySelector('canvas');
+var canvas = document.querySelector('canvas2');
 var c = canvas.getContext('2d');
 
 var size = 600;
