@@ -155,6 +155,7 @@ var lineClick = function() {
     }
 }
 var paintClick = function() {
+    console.log("here paint")
     if (PaintID.checked) {
         LineID.checked = false;
         PaintID.checked = true;
