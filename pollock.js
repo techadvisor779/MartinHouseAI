@@ -559,6 +559,9 @@ var disengage = function (e) {
 }    
 
 function submitForm() {
+     if (h3) {
+        h3.parentNode.removeChild(h3);
+     }
      var val = document.getElementById('signIt').value;
      val = val + " '22" ;
      c.fillStyle = 'Black';
