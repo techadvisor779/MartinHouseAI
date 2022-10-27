@@ -143,7 +143,7 @@ function submitForm() {
     c.font = "12pt papyrus";
     c.textAlign = 'right';
     var h3 = document.createElement('h3');          
-    h3.style.transform = "translate( 800px, -100px) rotate( -10deg)";
+    h3.style.transform = "translate( 820px, -140px) rotate( -10deg)";
     h3.textContent = val; 
     document.body.appendChild(h3);
 }
