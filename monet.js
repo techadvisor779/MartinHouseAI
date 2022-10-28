@@ -9,14 +9,12 @@ canvas.height = size * dpr;
 document.getElementById('file-input').onchange = function () {
   loadImage(
     this.files[0],
-    function (img) { c.drawImage(img, 0,0,canvas.width,canvas.height), { maxWidth: 600 } // Options
+    function (img) { c.drawImage(img, 0,0,canvas.width,canvas.height)} // Options
   )
 }
 
 let img;  
-function preload() {
-  img = loadImage('images/Claude-Monet-770x736.jpg');
-}
+img = loadImage('images/Claude-Monet-770x736.jpg');
 
 function submitForm() {
     if (h3) {
@@ -33,9 +31,13 @@ function submitForm() {
     document.body.appendChild(h3);
 }
 
-var draw = function() {
-    c.drawImage( img, 0, 0, canvas.width, canvas.height);
+function setUp() {
+  for(let col=0; col< img.width; col++) {
+    for(let row=0; row< img.height; row++) {
+      let c = img.get(col,row);
+      stroke(color(c));
+      point(col,row);
+    }
+  }
 }
-
-draw();
 //canvas.addEventListener('mousedown', draw);
