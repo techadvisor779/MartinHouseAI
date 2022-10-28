@@ -6,8 +6,7 @@ var dpr = window.devicePixelRatio;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
 
-let img;  
-img = loadImage('images/Claude-Monet-770x736.jpg');
+let img = loadImage('images/Claude-Monet-770x736.jpg');
 
 function submitForm() {
     if (h3) {
@@ -25,8 +24,8 @@ function submitForm() {
 }
 
 function setUp() {
-  for(let col=0; col< img.width; col++) {
-    for(let row=0; row< img.height; row++) {
+  for(let col=0; col< img.width; col++ ) {
+    for(let row=0; row< img.height; row++ ) {
       let c = img.get(col,row);
       stroke(color(c));
       point(col,row);
