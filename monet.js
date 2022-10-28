@@ -23,15 +23,16 @@ function submitForm() {
     document.body.appendChild(h3);
 }
 
-function setUp() {
-  for(let col=0; col< img.width; col++ ) {
-    for(let row=0; row< img.height; row++ ) {
-      let c = img.get(col,row);
-      stroke(color(c));
-      point(col,row);
-    }
-  }
+//function setUp() {
+c.drawImage(img,0,0);
+  //for(let col=0; col< img.width; col++ ) {
+    //for(let row=0; row< img.height; row++ ) {
+      //let c = img.get(col,row);
+      //stroke(color(c));
+      //point(col,row);
+    //}
+  //}
 }
 
-setup();
+//setup();
 //canvas.addEventListener('mousedown', draw);
