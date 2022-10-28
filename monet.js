@@ -40,4 +40,6 @@ function setUp() {
     }
   }
 }
+
+setup();
 //canvas.addEventListener('mousedown', draw);
