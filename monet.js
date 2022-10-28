@@ -16,14 +16,9 @@ document.getElementById('file-input').onchange = function () {
   )
 }
 
-let img;
-  
+let img;  
 function preload() {
   img = loadImage('images/Claude-Monet-770x736.jpg');
-}
-  
-function setup() {
-  image(img, 20, 40, 650, 500);
 }
 
 function submitForm() {
@@ -39,6 +34,10 @@ function submitForm() {
     h3.style.transform = "translate( 800px, -100px) rotate( -10deg)";
     h3.textContent = val; 
     document.body.appendChild(h3);
+}
+
+var draw = function() {
+    c.drawImage(img, 0,0,canvas.width,canvas.height);
 }
 
 draw();
