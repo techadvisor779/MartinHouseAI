@@ -6,13 +6,6 @@ var dpr = window.devicePixelRatio;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
 
-document.getElementById('file-input').onchange = function () {
-  loadImage(
-    this.files[0],
-    function (img) { c.drawImage(img, 0,0,canvas.width,canvas.height)} // Options
-  )
-}
-
 let img;  
 img = loadImage('images/Claude-Monet-770x736.jpg');
 
