@@ -9,10 +9,7 @@ canvas.height = size * dpr;
 document.getElementById('file-input').onchange = function () {
   loadImage(
     this.files[0],
-    function (img) {
-      document.body.appendChild(img)
-    },
-    { maxWidth: 600 } // Options
+    function (img) { c.drawImage(img, 0,0,canvas.width,canvas.height), { maxWidth: 600 } // Options
   )
 }
 
@@ -37,8 +34,8 @@ function submitForm() {
 }
 
 var draw = function() {
-    c.drawImage(img, 0,0,canvas.width,canvas.height);
+    c.drawImage( img, 0, 0, canvas.width, canvas.height);
 }
 
 draw();
-canvas.addEventListener('mousedown', draw);
+//canvas.addEventListener('mousedown', draw);
