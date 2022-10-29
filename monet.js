@@ -6,7 +6,7 @@ var dpr = window.devicePixelRatio;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
 
-let img = new Image;
+let img = new Image();
 img.src = "images/Claude-Monet-770x736.jpg";
 c.drawImage(img,0,0);
 
