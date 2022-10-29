@@ -14,11 +14,11 @@ var white = '#F2F5F1';
 var colorsP = ['#f6cdd2', '#cfddec', '#fdf7d9', '#f6cdd2', '#cfddec', '#fdf7d9', '#000000']
 var colorsT = ['#D40920', '#1356A2', '#F7D842', '#D40920', '#1356A2', '#F7D842', '#000000']
 var colors = colorsT;
-const buttonL = document.getElementById("lineID");
-const buttonP = document.getElementById("paintID");
+const buttonL = document.getElementById("LineID");
+const buttonP = document.getElementById("PaintID");
 const buttonT = document.getElementById("Traditional");
 const buttonPP = document.getElementById("Pastel");
-var slider = document.getElementById("lineRange");
+var slider = document.getElementById("LineRange");
 console.log(buttonL, slider, buttonP);
 var stepVal = 0;
 var squares = [{
@@ -147,18 +147,18 @@ function submitForm() {
     document.body.appendChild(h3);
 }
 
-var lineClick = function() {
+var LineClick = function() {
     console.log("here line", lineID)
-    if (lineID.checked) {
-        paintID.checked = false;
-        lineID.checked = true;
+    if (LineID.checked) {
+        PaintID.checked = false;
+        LineID.checked = true;
     }
 }
-var paintClick = function() {
+var PaintClick = function() {
     console.log("here paint")
-    if (paintID.checked) {
-        lineID.checked = false;
-        paintID.checked = true;
+    if (PaintID.checked) {
+        LineID.checked = false;
+        PaintID.checked = true;
     }
 }
 var TClick = function() {
