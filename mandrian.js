@@ -19,7 +19,7 @@ const buttonP = document.getElementById("PaintID");
 const buttonT = document.getElementById("Traditional");
 const buttonPP = document.getElementById("Pastel");
 var slider = document.getElementById("LineRange");
-console.log(buttonL, slider, buttonP);
+console.log(buttonL, slider, buttonP, buttonT, buttonPP);
 var stepVal = 0;
 var squares = [{
     x: 0,
