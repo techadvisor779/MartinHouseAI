@@ -14,10 +14,8 @@ var white = '#F2F5F1';
 var colorsP = ['#f6cdd2', '#cfddec', '#fdf7d9', '#f6cdd2', '#cfddec', '#fdf7d9', '#000000']
 var colorsT = ['#D40920', '#1356A2', '#F7D842', '#D40920', '#1356A2', '#F7D842', '#000000']
 var colors = colorsT;
-const buttonL = document.getElementById("LineID");
-const buttonH = document.getElementById("H_Line");
-const buttonV = document.getElementById("V_Line");
-const buttonP = document.getElementById("PaintID");
+const buttonL = document.getElementById("lineID");
+const buttonP = document.getElementById("paintID");
 const buttonT = document.getElementById("Traditional");
 const buttonPP = document.getElementById("Pastel");
 var slider = document.getElementById("lineRange");
@@ -149,16 +147,16 @@ function submitForm() {
 }
 
 var lineClick = function() {
-    if (LineID.checked) {
-        PaintID.checked = false;
-        LineID.checked = true;
+    if (lineID.checked) {
+        paintID.checked = false;
+        lineID.checked = true;
     }
 }
 var paintClick = function() {
     console.log("here paint")
-    if (PaintID.checked) {
-        LineID.checked = false;
-        PaintID.checked = true;
+    if (paintID.checked) {
+        lineID.checked = false;
+        paintID.checked = true;
     }
 }
 var TClick = function() {
