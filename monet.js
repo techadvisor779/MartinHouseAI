@@ -8,6 +8,8 @@ canvas.height = size * dpr;
 
 let img = new Image();
 img.src = "images/Claude-Monet-770x736.jpg";
+img.width = canvas.width;
+img.height = canvas.height;
 c.drawImage(img,0,0);
 
 function submitForm() {
