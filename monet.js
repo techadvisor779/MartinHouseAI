@@ -7,6 +7,7 @@ canvas.width = size * dpr;
 canvas.height = size * dpr;
 
 let img = loadImage('images/Claude-Monet-770x736.jpg');
+c.drawImage(img,0,0);
 
 function submitForm() {
     if (h3) {
@@ -23,16 +24,4 @@ function submitForm() {
     document.body.appendChild(h3);
 }
 
-//function setUp() {
-c.drawImage(img,0,0);
-  //for(let col=0; col< img.width; col++ ) {
-    //for(let row=0; row< img.height; row++ ) {
-      //let c = img.get(col,row);
-      //stroke(color(c));
-      //point(col,row);
-    //}
-  //}
-/}
-
-//setup();
-//canvas.addEventListener('mousedown', draw);
+canvas.addEventListener('mousedown', draw);
