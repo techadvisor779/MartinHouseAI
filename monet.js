@@ -32,7 +32,7 @@ c.drawImage(img,0,0);
       //point(col,row);
     //}
   //}
-}
+/}
 
 //setup();
 //canvas.addEventListener('mousedown', draw);
