@@ -38,43 +38,35 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        
+	</div>     
         <h1><b>Paint Like Mondrian</b></h1>
         <div class="column">
         	<div class="range-slider">
                 	<h7><input type="radio" id="lineID" onclick=lineClick() checked>&Tab;Lines</h7>
                 	<div class="range-slider">
                     		<input type="range" class="slider" id="lineRange" min="3" max="10">
-			</div>	    
-
-            	<hr />
-                <h7><input type="radio" id="paintID" onclick=paintClick()>&Tab;Paint</h7>
-                <div class="range-slider">
-                    	<h7><input type="radio" id="Traditional" onclick=TClick() checked>&Tab;Traditional</h7>
-		</div>
-		<div class="range-slider">
-                    	<h7><input type="radio" id="Pastel" onclick=PClick()>&Tab;Pastel</h7>
-                </div>
-        </div>
+			</div>
+			<hr />
+                	<h7><input type="radio" id="paintID" onclick=paintClick()>&Tab;Paint</h7>
+                	<div class="range-slider">
+                    		<h7><input type="radio" id="Traditional" onclick=TClick() checked>&Tab;Traditional</h7>
+			</div>
+			<div class="range-slider">
+                    		<h7><input type="radio" id="Pastel" onclick=PClick()>&Tab;Pastel</h7>
+                	</div>
+        	</div>
 	</div>
-    <canvas id="canvas1"></canvas>
-    </div>
-    </div>
-    <div class="signIt">
-        <center>
-            <h7>
-                <label>Sign your
-                    art</label>
-                <input id="signIt"
-                    width=260
-                    height=120>
-                <button
-                    onclick=submitForm()>Submit</button>
-        </center>
-        </h7>
-    </div>
-    <script src="mandrian.js"></script>
+    	<canvas id="canvas1"></canvas>
+    	</div>
+    	</div>
+    	<div class="signIt">
+        	<center>
+            		<h7><label>Sign your art</label>
+                	<input id="signIt" width=260 height=120>
+                	<button onclick=submitForm()>Submit</button>
+        	</center></h7>        	
+    	</div>
+    	<script src="mandrian.js"></script>
 </body>
 
 </html>
