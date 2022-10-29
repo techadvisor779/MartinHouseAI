@@ -147,6 +147,7 @@ function submitForm() {
 }
 
 var lineClick = function() {
+    console.log("here line")
     if (lineID.checked) {
         paintID.checked = false;
         lineID.checked = true;
@@ -160,6 +161,7 @@ var paintClick = function() {
     }
 }
 var TClick = function() {
+    
     if (Traditional.checked) {
         Pastel.checked = false;
         Traditional.checked = true;
