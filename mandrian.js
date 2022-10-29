@@ -148,7 +148,7 @@ function submitForm() {
 }
 
 var lineClick = function() {
-    console.log("here line")
+    console.log("here line", lineID)
     if (lineID.checked) {
         paintID.checked = false;
         lineID.checked = true;
