@@ -1,17 +1,18 @@
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
-
+let img = new Image();
 var size = 600;
 var dpr = window.devicePixelRatio;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
 
-let img = new Image();
-img.src = "images/Claude-Monet-770x736.jpg";
-img.width = canvas.width;
-img.height = canvas.height;
-console.log(img);
-c.drawImage(img,0,0);
+var initLoad = function() {
+    img.src = "images/Claude-Monet-770x736.jpg";
+    img.width = canvas.width;
+    img.height = canvas.height;
+    console.log(img);
+    c.drawImage(img,0,0);
+}
 
 function submitForm() {
     if (h3) {
@@ -28,4 +29,4 @@ function submitForm() {
     document.body.appendChild(h3);
 }
 
-canvas.addEventListener('mousedown', draw);
+canvas.addEventListener('load', initLoad);
