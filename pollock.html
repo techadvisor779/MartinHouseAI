@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" debug="True">
+    <title>Paint like Pollock</title>
+    <img id="img_pollock" src="https://www.theartstory.org/images20/works/pollock_jackson_5.jpg" width="120" height="80" hidden="True" />
+    <img id="img_pollock2" src="https://i.pinimg.com/736x/ab/99/2f/ab992f6d4997597c7a42dd181eee2017--jackson-pollock-print-design.jpg" width="120" height="80" hidden="True" />
+    <img id="img_pollock3" src="https://images-na.ssl-images-amazon.com/images/I/A1JeHXqWugL._SL1500_.jpg" width="120" height="80" hidden="True" />
+    <img id="clear" src="images/resetBtn.png" hidden="false"></img>
+    <img id="undo" src="images/resetBtn.png" hidden="false"></img>
+    <link rel="stylesheet" type="text/css" href="src/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="src/site.css" />
+    <link rel="stylesheet" type="text/css" href="src/StyleSheet3.css" />
+    <style> {overflow: auto;}</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand">Martin House</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1><b>Paint Like Pollock</b></h1>
+    <canvas id="canvas1"></canvas>
+    <center>
+        <label>Sign your art</label>
+        <input id="signIt" width=260 height=120 >
+        <button onclick=submitForm()>Submit</button>
+    </center>
+    <script type = "text/javascript" src="src/pollock.js"></script>    
+</body>   
+</html>
