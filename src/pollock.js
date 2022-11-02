@@ -2,7 +2,7 @@ const canvas = document.getElementById('canvas1');
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 //var size = 1000;
-var dpr = window.devicePixelRatio * 0.6;
+var dpr = window.devicePixelRatio * 0.64;
 canvas.width = canvas.width * dpr;
 canvas.height = canvas.height * dpr;
 //console.log( dpr, canvas.width, canvas.height);
