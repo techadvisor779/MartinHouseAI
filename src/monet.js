@@ -25,8 +25,7 @@ myImage.addEventListener("load", function() {
 
 function submitForm() {
     var val = document.getElementById('signIt').value;
-    val = val + " '22" ;
-     
+    val = val + " '22" ;     
     //var h3 = document.createElement('h3');          
     //h3.style.transform = "translate( 900px, -220px) rotate( -10deg)";
     c.fillStyle = 'Black';
