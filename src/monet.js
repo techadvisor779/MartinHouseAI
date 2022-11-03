@@ -7,9 +7,9 @@ canvas.height = 400 * dpr;
 var myImage = new Image();
 
 function initPic() {    
-    myImage = document.getElementById("img_monet").src;
+    myImage = document.getElementById("img_monet");
     console.log(myImage);
-    //c.drawImage(myImage, 0, 0);
+    c.drawImage(myImage, 0, 0);
 }
 
 function myFunction(){
