@@ -14,9 +14,9 @@ function initPic() {
 
 function myFunction(){
     var imgInput = document.querySelector("#imgInput").value;    
-    myImage.src = imgInput;
+    //myImage.src = imgInput;
     //c.drawImage(myImage, 0, 0);
-    console.log(imgInput, myImage)
+    console.log(imgInput)
 }
 
 myImage.addEventListener("load", function() {
