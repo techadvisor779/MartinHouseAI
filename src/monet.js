@@ -8,7 +8,8 @@ var myImage = new Image();
 
 function initPic() {    
     myImage = document.getElementById("myImage");
-    c.drawImage(myImage, 0, 0);
+    console.log(myImage);
+    //c.drawImage(myImage, 0, 0);
 }
 
 function myFunction(){
