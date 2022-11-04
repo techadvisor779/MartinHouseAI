@@ -1,6 +1,6 @@
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
-var size = 700;
+//var size = 700;
 var dpr = window.devicePixelRatio;
 canvas.width = 550 * dpr;
 canvas.height = 400 * dpr;
@@ -13,9 +13,9 @@ function initPic() {
 }
 
 function myFunction(){
-    var imgInput = document.querySelector("#imgInput").value;    
+    var imgInput = document.querySelector("#imgInput");    
     //myImage.src = imgInput;
-    //c.drawImage(myImage, 0, 0);
+    c.drawImage(myImage, 0, 0);
     console.log(imgInput)
 }
 
