@@ -14,11 +14,18 @@ function initPic() {
 }
 
 function myFunction(){
-    var imgInput = document.getElementById("myImage");   
-    myImage.src = imgInput;
-    c.drawImage(imgInput, 0, 0);
-    console.log(imgInput)
+    document.getElementById('myImage').onchange = function () {
+        loadImage(this.files[0], { maxWidth: 600 }).then(function (data) {
+            document.body.appendChild(data.image)
+    })}
 }
+
+// function myFunction(){
+//     var imgInput = document.getElementById("myImage");   
+//     myImage.src = imgInput;
+//     c.drawImage(imgInput, 0, 0);
+//     console.log(imgInput)
+// }
 
 function submitForm() {
     var val = document.getElementById('signIt').value;
