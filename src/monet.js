@@ -13,9 +13,9 @@ function initPic() {
 }
 
 function myFunction(){
-    var imgInput = document.querySelector("#imgInput");    
+    var imgInput = document.querySelector("#file");    
     //myImage.src = imgInput;
-    c.drawImage(myImage, 0, 0);
+    c.drawImage(imgInput, 0, 0);
     console.log(imgInput)
 }
 
