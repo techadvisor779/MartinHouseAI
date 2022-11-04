@@ -5,6 +5,7 @@ var dpr = window.devicePixelRatio;
 canvas.width = 550 * dpr;
 canvas.height = 400 * dpr;
 var myImage = new Image();
+myImage.src="images/Claude-Monet-770x736.jpg";
 
 function initPic() {    
     myImage = document.getElementById("img_monet");
@@ -14,15 +15,10 @@ function initPic() {
 
 function myFunction(){
     var imgInput = document.querySelector("#file");    
-    //myImage.src = imgInput;
+    myImage.src = imgInput;
     c.drawImage(imgInput, 0, 0);
     console.log(imgInput)
 }
-
-myImage.addEventListener("load", function() {
-    console.log(imgInput)
-    //c.drawImage(myImage, 0, 0)
-    }, false);
 
 function submitForm() {
     var val = document.getElementById('signIt').value;
