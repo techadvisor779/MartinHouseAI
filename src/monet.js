@@ -16,7 +16,7 @@ function initPic() {
 function myFunction(){
     document.getElementById('myImage').onchange = function () {
         loadImage(this.files[0], { maxWidth: 600 }).then(function (data) {
-            document.body.appendChild(data.image)
+            c.drawImage(myImage, 0, 0);
     })}
 }
 
