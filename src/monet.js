@@ -20,7 +20,8 @@ function myFunction(){
 }
 
 myImage.addEventListener("load", function() {
-    c.drawImage(myImage, 0, 0)
+    console.log(imgInput)
+    //c.drawImage(myImage, 0, 0)
     }, false);
 
 function submitForm() {
