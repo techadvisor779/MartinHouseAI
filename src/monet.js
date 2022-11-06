@@ -6,26 +6,19 @@ canvas.width = 550 * dpr;
 canvas.height = 400 * dpr;
 var startImage = new Image();
 startImage.src="images/Claude-Monet-770x736.jpg";
-var myImage = new Image();
+var uploadImage = new Image();
 
 function initPic() {    
     startImage = document.getElementById("img_monet");
-    console.log(startImage);
     c.drawImage(startImage, 0, 0);
 }
 
 function myFunction(){
-     console.log(document.getElementById('myImage'), myImage);
-     myImage.src = document.getElementById('myImage').value;
-     const fileInput = document.querySelector('input[type="file"]');
-
-    function read(callback) {
-        const file = fileInput.files.item(0);
-        const reader = new FileReader();
-        myImage.src = reader.result;
-        //reader.onload = () => {
-        //    callback(reader.result);
-    }
+     reader.addEventListener("load", () => {
+         uploadImage = reader.result;
+         c.drawImage(uploadImage, 0, 0);
+     }
+     reader.readDataAsURL
 }
 
 function myDownload () {
@@ -34,6 +27,7 @@ function myDownload () {
     a.href = canvas.toDataURL();
     a.download = "my_Monet.png";
     a.click();
+    document.removeChild(a);
     console.log(dataURI)
 }
 
