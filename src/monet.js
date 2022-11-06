@@ -15,8 +15,9 @@ function initPic() {
 
 function myFunction(){
     document.getElementById('myImage').onchange = function () {
-        loadImage(this.files[0], { maxWidth: 600 }).then(function (data) {
-            c.drawImage(myImage, 0, 0);
+        console.log(document.getElementById('myImage').result);
+        myImage.src = document.getElementById('myImage').result;
+        c.drawImage(myImage, 0, 0);
     })}
 }
 
