@@ -14,7 +14,7 @@ function initPic() {
 }
 
 function myFunction(){
-     console.log(document.getElementById('myImage'));
+     console.log(document.getElementById('myImage'), myImage);
      myImage.src = document.getElementById('myImage').value;
      c.drawImage( myImage, 0, 0, canvas.width, canvas.height);
 // 
