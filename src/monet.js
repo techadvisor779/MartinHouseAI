@@ -17,7 +17,7 @@ function myFunction(){
      reader.addEventListener("load", () => {
          uploadImage = reader.result;
          c.drawImage(uploadImage, 0, 0);
-     }
+     })
      reader.readDataAsURL
 }
 
