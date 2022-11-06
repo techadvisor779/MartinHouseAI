@@ -17,19 +17,15 @@ function initPic() {
 function myFunction(){
      console.log(document.getElementById('myImage'), myImage);
      myImage.src = document.getElementById('myImage').value;
-     c.drawImage( myImage, 0, 0, canvas.width, canvas.height);
-// 
-//     document.getElementById('myImage').onchange = function (evt) {
-//         var tgt = evt.target || window.event.srcElement,
-//             files = tgt.files;
+     const fileInput = document.querySelector('input[type="file"]');
 
-//         // FileReader support
-//         if (FileReader && files && files.length) {
-//             var fr = new FileReader();
-//             fr.onload = () => showImage(myImage);
-//             fr.readAsDataURL(files[0]);
-//         }
-//     }
+    function read(callback) {
+        const file = fileInput.files.item(0);
+        const reader = new FileReader();
+        myImage.src = reader.result;
+        //reader.onload = () => {
+        //    callback(reader.result);
+    }
 }
 
 function submitForm() {
