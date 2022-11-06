@@ -6,17 +6,17 @@ canvas.width = 550 * dpr;
 canvas.height = 400 * dpr;
 var startImage = new Image();
 startImage.src="images/Claude-Monet-770x736.jpg";
-var uploadImage = new Image();
 
 function initPic() {    
     startImage = document.getElementById("img_monet");
     c.drawImage(startImage, 0, 0);
 }
 
-function myFunction(){
+var imgInput = document.getElementById("myImage").value;
+imgInput.addEventListener("change", () => {
     var reader = new FileReader();
     reader.addEventListener("load", () => {
-        uploadImage = reader.result;         
+        startImage = reader.result;         
     });
     reader.readDataAsURL;
     c.drawImage(uploadImage, 0, 0);
