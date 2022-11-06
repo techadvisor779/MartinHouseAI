@@ -13,13 +13,13 @@ function initPic() {
     c.drawImage(myImage, 0, 0);
 }
 
-//function myFunction(){
+function myFunction(){
 //     console.log(document.getElementById('myImage').result);
 //     myImage.src = document.getElementById('myImage').result;
 //     c.drawImage( myImage, 0, 0);
 // 
-document.getElementById('myImage').onchange = function (evt) {
-    var tgt = evt.target || window.event.srcElement,
+    document.getElementById('myImage').onchange = function (evt) {
+        var tgt = evt.target || window.event.srcElement,
             files = tgt.files;
 
         // FileReader support
@@ -28,6 +28,7 @@ document.getElementById('myImage').onchange = function (evt) {
             fr.onload = () => showImage(fr);
             fr.readAsDataURL(files[0]);
         }
+    }
 }
 
 function submitForm() {
