@@ -14,11 +14,9 @@ function initPic() {
 }
 
 function myFunction(){
-    document.getElementById('myImage').onchange = function () {
-        console.log(document.getElementById('myImage').result);
-        myImage.src = document.getElementById('myImage').result;
-        c.drawImage(myImage, 0, 0);
-    })}
+    console.log(document.getElementById('myImage').result);
+    myImage.src = document.getElementById('myImage').result;
+    c.drawImage(myImage, 0, 0);
 }
 
 // function myFunction(){
