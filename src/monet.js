@@ -15,9 +15,7 @@ function initPic() {
 var imgInput = document.getElementById("myImage").value;
 imgInput.addEventListener("change", () => {
     var reader = new FileReader();
-    reader.addEventListener("load", () => {
-        startImage = reader.result;         
-    });
+    reader.addEventListener("load", startImage = reader.result);
     reader.readDataAsURL;
     c.drawImage(uploadImage, 0, 0);
 }
