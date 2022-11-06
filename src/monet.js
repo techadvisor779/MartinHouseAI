@@ -28,6 +28,11 @@ function myFunction(){
     }
 }
 
+function myDownload () {
+    const dataURI = canvas.toDataURL();
+    console.log(dataURI)
+}
+
 function submitForm() {
     var val = document.getElementById('signIt').value;
     val = val + " '22" ;     
