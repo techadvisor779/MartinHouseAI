@@ -14,6 +14,7 @@ function initPic() {
 }
 
 function myFunction(){
+    var reader = new FileReader();
     reader.addEventListener("load", () => {
         uploadImage = reader.result;         
     });
