@@ -13,18 +13,22 @@ function initPic() {
     c.drawImage(myImage, 0, 0);
 }
 
-function myFunction(){
-    console.log(document.getElementById('myImage').result);
-    myImage.src = document.getElementById('myImage').result;
-    c.drawImage( myImage, 0, 0);
-}
+//function myFunction(){
+//     console.log(document.getElementById('myImage').result);
+//     myImage.src = document.getElementById('myImage').result;
+//     c.drawImage( myImage, 0, 0);
+// 
+document.getElementById('myImage').onchange = function (evt) {
+    var tgt = evt.target || window.event.srcElement,
+            files = tgt.files;
 
-// function myFunction(){
-//     var imgInput = document.getElementById("myImage");   
-//     myImage.src = imgInput;
-//     c.drawImage(imgInput, 0, 0);
-//     console.log(imgInput)
-// }
+        // FileReader support
+        if (FileReader && files && files.length) {
+            var fr = new FileReader();
+            fr.onload = () => showImage(fr);
+            fr.readAsDataURL(files[0]);
+        }
+}
 
 function submitForm() {
     var val = document.getElementById('signIt').value;
