@@ -4,13 +4,14 @@ var c = canvas.getContext('2d');
 var dpr = window.devicePixelRatio;
 canvas.width = 550 * dpr;
 canvas.height = 400 * dpr;
+var startImage = new Image();
+startImage.src="images/Claude-Monet-770x736.jpg";
 var myImage = new Image();
-myImage.src="images/Claude-Monet-770x736.jpg";
 
 function initPic() {    
-    myImage = document.getElementById("img_monet");
-    console.log(myImage);
-    c.drawImage(myImage, 0, 0);
+    startImage = document.getElementById("img_monet");
+    console.log(startImage);
+    c.drawImage(startImage, 0, 0);
 }
 
 function myFunction(){
