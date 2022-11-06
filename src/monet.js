@@ -29,9 +29,8 @@ function myFunction(){
 }
 
 function myDownload () {
-    const a = document.createElement("a");
-    
-    document.appendChild(a);
+    const a = document.createElement("a");    
+    document.body.appendChild(a);
     a.href = canvas.toDataURL();
     a.download = "my_Monet.png";
     a.click();
