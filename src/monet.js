@@ -14,11 +14,11 @@ function initPic() {
 }
 
 function myFunction(){
-     reader.addEventListener("load", () => {
-         uploadImage = reader.result;
-         c.drawImage(uploadImage, 0, 0);
-     })
-     reader.readDataAsURL
+    reader.addEventListener("load", () => {
+        uploadImage = reader.result;         
+    });
+    reader.readDataAsURL;
+    c.drawImage(uploadImage, 0, 0);
 }
 
 function myDownload () {
