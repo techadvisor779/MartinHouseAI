@@ -14,21 +14,21 @@ function initPic() {
 }
 
 function myFunction(){
-//     console.log(document.getElementById('myImage').result);
+     console.log(document.getElementById('myImage'));
 //     myImage.src = document.getElementById('myImage').result;
 //     c.drawImage( myImage, 0, 0);
 // 
-    document.getElementById('myImage').onchange = function (evt) {
-        var tgt = evt.target || window.event.srcElement,
-            files = tgt.files;
+//     document.getElementById('myImage').onchange = function (evt) {
+//         var tgt = evt.target || window.event.srcElement,
+//             files = tgt.files;
 
-        // FileReader support
-        if (FileReader && files && files.length) {
-            var fr = new FileReader();
-            fr.onload = () => showImage(fr);
-            fr.readAsDataURL(files[0]);
-        }
-    }
+//         // FileReader support
+//         if (FileReader && files && files.length) {
+//             var fr = new FileReader();
+//             fr.onload = () => showImage(myImage);
+//             fr.readAsDataURL(files[0]);
+//         }
+//     }
 }
 
 function submitForm() {
