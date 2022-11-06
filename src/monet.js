@@ -18,7 +18,7 @@ imgInput.addEventListener("change", () => {
     reader.addEventListener("load", startImage = reader.result);
     reader.readDataAsURL;
     c.drawImage(uploadImage, 0, 0);
-}
+});
 
 function myDownload () {
     const a = document.createElement("a");    
