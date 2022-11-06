@@ -29,7 +29,12 @@ function myFunction(){
 }
 
 function myDownload () {
-    const dataURI = canvas.toDataURL();
+    const a = document.createElement("a");
+    
+    document.appendChild(a);
+    a.href = canvas.toDataURL();
+    a.download = "my_Monet.png";
+    a.click();
     console.log(dataURI)
 }
 
