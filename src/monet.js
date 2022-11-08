@@ -13,7 +13,7 @@ function initPic() {
 }
 
 var imgInput = document.getElementById("myImage").value;
-var function loadImg() {
+function loadImg() {
     var reader = new FileReader();
     reader.addEventListener("load", startImage = reader.result);
     reader.readDataAsURL;
@@ -21,6 +21,7 @@ var function loadImg() {
     console.log(startImage, reader)
     //c.drawImage(uploadImage, 0, 0);
 //});
+}
 
 function myDownload () {
     const a = document.createElement("a");    
