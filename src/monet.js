@@ -12,15 +12,15 @@ function initPic() {
     c.drawImage(startImage, 0, 0);
 }
 
-var imgInput = document.getElementById("myImage");
-imgInput.addEventListener("change", () => {
+var imgInput = document.getElementById("myImage").value;
+var function loadImg() {
     var reader = new FileReader();
     reader.addEventListener("load", startImage = reader.result);
     reader.readDataAsURL;
     var temp = reader.readDataAsURL;
     console.log(startImage, reader)
     //c.drawImage(uploadImage, 0, 0);
-});
+//});
 
 function myDownload () {
     const a = document.createElement("a");    
