@@ -12,12 +12,14 @@ function initPic() {
     c.drawImage(startImage, 0, 0);
 }
 
-var imgInput = document.getElementById("myImage").value;
+var imgInput = document.getElementById("myImage");
 imgInput.addEventListener("change", () => {
     var reader = new FileReader();
     reader.addEventListener("load", startImage = reader.result);
     reader.readDataAsURL;
-    c.drawImage(uploadImage, 0, 0);
+    var temp = reader.readDataAsURL;
+    console.log(startImage, reader)
+    //c.drawImage(uploadImage, 0, 0);
 });
 
 function myDownload () {
