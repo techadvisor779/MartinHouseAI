@@ -9,16 +9,18 @@ startImage.src="images/Claude-Monet-770x736.jpg";
 
 function initPic() {    
     startImage = document.getElementById("img_monet");
+    startImage.width = startImage.width * dpr;
+    startImage.height = startImage.height * dpr;
     c.drawImage(startImage, 0, 0);
 }
 
-var imgInput = document.getElementById("myImage").value;
+var imgInput = document.getElementById('myImage').value;
 function loadImg() {
     var reader = new FileReader();
     reader.addEventListener("load", startImage = reader.result);
     reader.readDataAsURL;
     var temp = reader.readDataAsURL;
-    console.log(startImage, reader)
+    console.log(startImage, reader, temp)
     //c.drawImage(uploadImage, 0, 0);
 //});
 }
@@ -47,6 +49,26 @@ function submitForm() {
     c.fillText(val, 650, 480);
     //document.body.appendChild(h3);
 }
+
+document.onpaste = (event) => {
+  const items = (event.clipboardData || event.originalEvent.clipboardData)
+    .items;
+  console.log(JSON.stringify(items));
+  let blob = null;
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].type.indexOf("image") === 0) {
+      blob = items[i].getAsFile();
+    }
+  }
+
+  if (blob !== null) {
+    const reader = new FileReader();
+    reader.onload = (event) =>{
+      console.log(event.target.result); 
+    };
+    reader.readAsDataURL(blob);
+  }
+};
 
 initPic();
 //document.addEventListener('onchange', myFunction);
