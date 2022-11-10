@@ -14,7 +14,7 @@ function initPic() {
     c.drawImage(startImage, 0, 0);
 }
 
-var imgInput = document.getElementById('myImage').value;
+var imgInput = document.getElementById('myImage');
 function loadImg() {
     var reader = new FileReader();
     reader.addEventListener("load", startImage = reader.result);
