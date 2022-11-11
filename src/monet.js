@@ -43,7 +43,7 @@ document.getElementById('myImage').addEventListener('change', (e) => {
       if (file) {
         processFile(file);
       }  
-      });
+      })
 }
                                                     
 //     imgInput = reader.result;
