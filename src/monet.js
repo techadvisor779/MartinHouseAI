@@ -40,15 +40,16 @@ const processFile = (file) => {
 
 document.getElementById('myImage').addEventListener('change', (e) => {
       const file = document.getElementById('myImage').files[0];
-
       if (file) {
         processFile(file);
       }  
+      });
+}
+                                                    
 //     imgInput = reader.result;
 //     var temp = reader.readDataAsURL;
 //     console.log(imgInput, reader, temp)
 //     //c.drawImage(uploadImage, 0, 0);
-}
 
 function myDownload () {
     const a = document.createElement("a");    
