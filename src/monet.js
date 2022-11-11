@@ -7,7 +7,7 @@ canvas.height = 400 * dpr;
 var startImage = new Image();
 
 startImage = document.getElementById("img_monet");
-startImage.src="images/Claude-Monet-770x736.jpg";
+//startImage.src="images/Claude-Monet-770x736.jpg";
 startImage.width = startImage.width * dpr;
 startImage.height = startImage.height * dpr;
 c.drawImage(startImage, 0, 0);
@@ -15,10 +15,39 @@ c.drawImage(startImage, 0, 0);
 var imgInput = document.getElementById('myImage');
 function loadImg() {
     var reader = new FileReader();
-    imgInput = reader.result;
-    var temp = reader.readDataAsURL;
-    console.log(imgInput, reader, temp)
-    //c.drawImage(uploadImage, 0, 0);
+    
+    const loaded = (e) => {
+      const fr = e.target;
+      var result = fr.result;
+
+      changeStatus('Finished Loading!');
+      console.log('Result:', result);
+    }
+}
+
+const loaded = (e) => {
+      const fr = e.target;
+      var result = fr.result;
+    
+      console.log('Result:', result);
+    }
+
+const processFile = (file) => {
+      const fr = new FileReader();
+      fr.readAsDataURL(file);
+      fr.addEventListener('loadend', loaded);
+    }
+
+document.getElementById('myImage').addEventListener('change', (e) => {
+      const file = document.getElementById('myImage').files[0];
+
+      if (file) {
+        processFile(file);
+      }  
+//     imgInput = reader.result;
+//     var temp = reader.readDataAsURL;
+//     console.log(imgInput, reader, temp)
+//     //c.drawImage(uploadImage, 0, 0);
 }
 
 function myDownload () {
