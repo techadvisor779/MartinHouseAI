@@ -5,24 +5,20 @@ var dpr = window.devicePixelRatio;
 canvas.width = 550 * dpr;
 canvas.height = 400 * dpr;
 var startImage = new Image();
-startImage.src="images/Claude-Monet-770x736.jpg";
 
-function initPic() {    
-    startImage = document.getElementById("img_monet");
-    startImage.width = startImage.width * dpr;
-    startImage.height = startImage.height * dpr;
-    c.drawImage(startImage, 0, 0);
-}
+startImage = document.getElementById("img_monet");
+startImage.src="images/Claude-Monet-770x736.jpg";
+startImage.width = startImage.width * dpr;
+startImage.height = startImage.height * dpr;
+c.drawImage(startImage, 0, 0);
 
 var imgInput = document.getElementById('myImage');
 function loadImg() {
     var reader = new FileReader();
-    reader.addEventListener("load", startImage = reader.result);
-    reader.readDataAsURL;
+    imgInput = reader.result;
     var temp = reader.readDataAsURL;
-    console.log(startImage, reader, temp)
+    console.log(imgInput, reader, temp)
     //c.drawImage(uploadImage, 0, 0);
-//});
 }
 
 function myDownload () {
@@ -70,5 +66,4 @@ document.onpaste = (event) => {
   }
 };
 
-initPic();
 //document.addEventListener('onchange', myFunction);
