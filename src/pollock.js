@@ -559,22 +559,14 @@ var disengage = function (e) {
 }    
 
 function submitForm() {
-     //if (h3) {
-     //   h3.parentNode.removeChild(h3);
-     //}
      var val = document.getElementById('signIt').value;
      val = val + " '22" ;
-     
-     //var h3 = document.createElement('h3');          
-     //h3.style.transform = "translate( 900px, -220px) rotate( -10deg)";
      c.fillStyle = 'Black';
      c.font = "12pt papyrus";
      c.textAlign = 'right';
-     //h3.textContent = val; 
      c.strokeStyle = 'Black';
      c.fillStyle = 'Black';
-     c.fillText(val, canvas.width-100, 550);
-     //document.body.appendChild(h3);
+     c.fillText(val, canvas.width-110, 550);
 }
 
 function assignColors(COLORS) {    
