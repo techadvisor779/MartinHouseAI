@@ -573,7 +573,7 @@ function submitForm() {
      //h3.textContent = val; 
      c.strokeStyle = 'Black';
      c.fillStyle = 'Black';
-     c.fillText(val, 1230, 550);
+     c.fillText(val, 1200, 550);
      //document.body.appendChild(h3);
 }
 
