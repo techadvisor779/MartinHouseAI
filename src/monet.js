@@ -1,57 +1,62 @@
+
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
-//var size = 700;
 var dpr = window.devicePixelRatio;
-canvas.width = 550 * dpr;
+console.log(dpr)
+canvas.width = 500 * dpr;
 canvas.height = 400 * dpr;
 var startImage = new Image();
 
 startImage = document.getElementById("img_monet");
-//startImage.src="images/Claude-Monet-770x736.jpg";
-startImage.width = startImage.width * dpr;
-startImage.height = startImage.height * dpr;
-c.drawImage(startImage, 0, 0);
-
+c.drawImage( startImage, 0, 0, canvas.width, canvas.height);
 var imgInput = document.getElementById('myImage');
 function loadImg() {
-    var reader = new FileReader();
-    
+    var reader = new FileReader();  
     const loaded = (e) => {
       const fr = e.target;
-      var result = fr.result;
-
-      changeStatus('Finished Loading!');
-      console.log('Result:', result);
+      var result = fr.result;      
     }
 }
 
 const loaded = (e) => {
-      const fr = e.target;
-      var result = fr.result;
-    
-      console.log('Result:', result);
-    }
+       const fr = e.target;       
+       startImage.src = fr.result;  
+       console.log(fr)     
+       if (startImage.width>canvas.width || startImage.height>canvas.height) {
+            var scale = canvas.width/startImage.width;      
+            startImage.width = startImage.naturalWidth*dpr*scale;
+            startImage.height = startImage.naturalHeight*dpr*scale;      
+       }
+       else {
+            var scale = 1;
+       }
+       canvas.width = startImage.width;
+       canvas.height = startImage.height;  
+       //c.drawImage( startImage, 0, 0, canvas.width*scale, canvas.height*scale); 
+       c.beginPath();
+       c.moveTo(0,0);
+       c.rect( 0, 0, canvas.width, canvas.height);
+       c.fillStyle = 'black';
+       c.lineWidth = 5;
+       c.stroke();
+       alert(`${startImage.width} x ${startImage.height}`); 
+       c.drawImage( startImage, 0, 0, startImage.width*scale, startImage.height*scale);
+     }
 
 const processFile = (file) => {
       const fr = new FileReader();
-      fr.readAsDataURL(file);
+      fr.readAsDataURL(file);    
       fr.addEventListener('loadend', loaded);
-    }
+    };
 
 document.getElementById('myImage').addEventListener('change', (e) => {
       const file = document.getElementById('myImage').files[0];
       if (file) {
         processFile(file);
-      }  
-      })
-}
-                                                    
-//     imgInput = reader.result;
-//     var temp = reader.readDataAsURL;
-//     console.log(imgInput, reader, temp)
-//     //c.drawImage(uploadImage, 0, 0);
+      }        
+});
 
-function myDownload () {
+function myDownload() {
     const a = document.createElement("a");    
     document.body.appendChild(a);
     a.href = canvas.toDataURL();
@@ -64,36 +69,28 @@ function myDownload () {
 function submitForm() {
     var val = document.getElementById('signIt').value;
     val = val + " '22" ;     
-    //var h3 = document.createElement('h3');          
-    //h3.style.transform = "translate( 900px, -220px) rotate( -10deg)";
     c.fillStyle = 'Black';
     c.font = "12pt papyrus";
     c.textAlign = 'right';
-     //h3.textContent = val; 
     c.strokeStyle = 'Black';
     c.fillStyle = 'Black';
-    c.fillText(val, 650, 480);
-    //document.body.appendChild(h3);
+    c.fillText( val, canvas.width - 50, canvas.height - 30);
+}
+    
+function monetImg() {
+    var c2 = canvas.getContext('2d');
+    var img = new Image();
+    img.crossOrigin = "Anonymous";
+    //img.data = c2.getImageData( 0, 0, img.naturalWidth, img.naturalHeight);
+    console.log(img)
 }
 
-document.onpaste = (event) => {
-  const items = (event.clipboardData || event.originalEvent.clipboardData)
-    .items;
-  console.log(JSON.stringify(items));
-  let blob = null;
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].type.indexOf("image") === 0) {
-      blob = items[i].getAsFile();
+function handleEvent(event) {
+    eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
+
+    if (event.type === "load") {
+        preview.src = reader.result;
     }
-  }
+}
 
-  if (blob !== null) {
-    const reader = new FileReader();
-    reader.onload = (event) =>{
-      console.log(event.target.result); 
-    };
-    reader.readAsDataURL(blob);
-  }
-};
-
-//document.addEventListener('onchange', myFunction);
+//element.addEventListener('onchange', myFunction);
