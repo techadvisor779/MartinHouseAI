@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8" />
+  <title>Martin House AI - Monet Filter</title>
+  <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paint like Monet</title>
     <link rel="stylesheet" type="text/css" href="src/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="src/siteM.css" />
-    <link rel="stylesheet" type="text/css" href="src/StyleSheetM2.css" />
-    <img id="img_monet" src="images/Under-Construction.png" width="620" height="600" hidden = true/>
+    
+    <link rel="stylesheet" type="text/css" href="src/StyleSheetM.css" />
+    <img id="img_monet" src="images/Under-Construction.png" value="images/Under-Construction.png" width="620" height="600" hidden = true/>
 </head>
-
 <body>
-    <div class="container">
+  <div class="container">
         <div class="hero">
             <div class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -30,30 +30,111 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="history.html">History</a></li>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            
+                            <li><a href="contact.html">Contact</a></li>                            
+                            <li style="align-content: right;"><a href="resume.html">Creator</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-    <h1><b>Paint Like Monet</b></h1>
-    <div class="column4">
-        <h7><input type="file" id="myImage"  accept="image/*" value="images/Claude-Monet-770x736.jpg" /></h7>
-        <br />
-        <center><button type="button" onclick="monetImg();">Monet it</button>
-        <span style="padding-left:2em"><button type="button" >Download</button></center></center><span>
-    </div>
-    <div class="column3">
-        <canvas id="canvas"></canvas>          
-    </div>  
-    <br />
-    <center>
-        <label>Sign your art</label>
-        <input id="signIt" id="myImage" width=260 height=120 >
-        <button onclick=submitForm()>Submit</button>
-    </center>
-    <script src="src/monet.js"></script>
+    <h1 style="color: white;"><b>Paint Like Monet</b></h1>
+  <div class="column4">
+    <p><center>Click the button to load the image and apply the Monet filter:</center></p>
+    <br /><br />
+    <input type="file" id="file-input"  accept="image/*" value="images/Claude-Monet-770x736.jpg" />
+    <br><br>
+    <center><button type="button" style="padding-left: 3em;padding-right: 3em;" onclick="filterImg();">Filter Image</button>
+  </div>
+  <div class="column3">
+    <canvas id="image-canvas" width="600" height="400"></canvas>
+  </div>
+  <script>
+    // Get the canvas element and its context
+    var canvas = document.getElementById('image-canvas');
+    var context = canvas.getContext('2d');
+    
+    function submitForm() {
+      var val = document.getElementById('signIt').value;
+      val = val + " '22" ;     
+      context.fillStyle = 'Black';
+      context.font = "12pt papyrus";
+      context.textAlign = 'right';
+      context.strokeStyle = 'Black';
+      context.fillStyle = 'Black';
+      context.fillText( val, canvas.width - 50, canvas.height - 30);
+    }
+    // Add an event listener to the file input
+    document.getElementById('file-input').addEventListener('change', function() {
+      // Get the selected file, or use the default image file if no file was selected
+      var file = this.files[0] || 'images/Claude-Monet-770x736.jpg';
+
+      // Create a new image element
+      var image = new Image();
+
+      // Set the source of the image to the file data or the default image file
+      image.src = file instanceof File ? URL.createObjectURL(file) : file;
+
+      // Wait for the image to load
+      image.onload = function() {
+        // Clear the canvas before drawing the new image
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw the image onto the canvas
+        context.drawImage(image, 0, 0);
+
+        // Get the image data from the canvas
+        var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+
+        // Modify the image data to apply the Monet filter
+        const rowWidths = [10, 12, 14, 16, 18, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 18, 16, 14, 12, 10];
+
+        // Get the width and height of the image
+        const width = imageData.width;
+        const height = imageData.height;
+
+        // Create an array to hold the new pixel values
+        const newData = [];
+
+        // Iterate over each row and column of the image
+        // for (let y = 0; y < height; y++) {
+        //   for (let x = 0; x < width; x++) {
+        //     // Calculate the index of the current pixel in the imageData.data array
+        //     const i = (y * width + x) * 4;
+
+        //     // Calculate the x-coordinate within the current row
+        //     const rowX = x % rowWidths[y];
+
+        //     // Calculate the x-coordinate of the pixel in the previous row with the same column as the current pixel
+        //     const prevRowX = rowX + rowWidths[y] - rowWidths[y - 1];
+
+        //     // Calculate the index of the pixel in the previous row with the same column as the current pixel
+        //     const prevRowI = ((y - 1) * width + prevRowX) * 4;
+
+        //     // Set the red, green, and blue values of the current pixel to the same values as the pixel in the previous row
+        //     newData[i] = imageData.data[prevRowI];
+        //     newData[i + 1] = imageData.data[prevRowI + 1];
+        //     newData[i + 2] = imageData.data[prevRowI + 2];
+        //     newData[i + 3] = imageData.data[prevRowI + 3];
+        //   }
+        // }
+
+        // // Update the image data with the new pixel values
+        // for (let i = 0; i < imageData.data.length; i++) {
+        //   imageData.data[i] = newData[i];
+        // }
+
+        // Draw the modified image data back onto the canvas
+        context.putImageData(imageData, 0, 0);
+      };
+    });
+
+  </script>
+  <br />
+  <center>
+    <label style="color: white; text-shadow: 2px 3px 5px black;padding-right: 2em;padding-left: 2em;">Sign your art</label>
+    <input id="signIt" id="myImage" width=260 height=120 style="padding-right: 2em;"><label>&nbsp&nbsp&nbsp</label>
+    <button onclick="submitForm();" style="padding-left: 3em;padding-right: 3em;">Sign it</button>
+  </center>
 </body>
 </html>
