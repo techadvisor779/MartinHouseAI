@@ -4,7 +4,7 @@ body {
     background-size: 100% 1450px;
     padding: 1em;
     margin-top: 30pt;
-    overflow: visible;
+    overflow: scroll;
 }
 
 .range-slider {
@@ -60,6 +60,12 @@ body {
     padding-top: 140px;
 }
 
+h1 {
+    font-family: papyrus, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 2px 3px 5px black;
+}
+
 h7 {
     font-family: papyrus, Helvetica, sans-serif;
     width: 220px;
@@ -112,9 +118,10 @@ range-slider .slider::-webkit-slider-thumb {
 }
 
 canvas {
-    background-color: white;
-    margin-top: 0px;
-    margin-left: 80px;
+    background-color: black;
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-left: 8%;
     margin-bottom: 10px;
     border-color: black;
     border-width: 4px;
