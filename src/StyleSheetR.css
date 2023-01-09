@@ -1,0 +1,44 @@
+
+body {
+  font-family: termina, sans-serif;
+  color: var(--text-color);
+  background: #404e5a;
+  transition: 1s ease-out;
+  overflow-x: hidden;
+}
+
+p {
+    font-size: 14px;
+}
+
+section {
+  width: 100%;
+  position: relative;
+  display: block;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 50px 10vw;
+  margin-left: 30px;
+  max-width: 1000px;  
+  place-items: center;
+  transition: 1s ease-out;
+}
+
+section:hover {
+  background: #DADEE6;
+  font-size: 1.2em;
+  box-shadow: 4px 10px 14px black;
+}
+
+img {
+    object-fit: contain;
+}
+
+img:hover {
+  text-shadow: 1px 2px 3px black;
+}
+
+.column2 {
+    align-content: center;
+    width: 200px;
+}
