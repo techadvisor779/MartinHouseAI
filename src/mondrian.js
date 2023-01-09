@@ -2,7 +2,7 @@ var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
 
 var dpr = window.devicePixelRatio;
-canvas.width = window.innerWidth*.34;
+canvas.width = window.innerWidth*.35;
 canvas.height = window.innerWidth*dpr*.22;
 var size = canvas.width*.8;
 //console.log( dpr, canvas.width, canvas.height);
@@ -125,7 +125,7 @@ var draw = function(e) {
 
 function ColorChange(e) {
     if (PaintID.checked) {   
-        var xAdj = 227;  //344
+        var xAdj = 127;  //344
         var yAdj = 114;       
         var x = e.clientX-xAdj;
         var y = e.clientY-yAdj; 
