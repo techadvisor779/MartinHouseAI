@@ -1,10 +1,11 @@
 body {
     margin: 0;
-    background: linear-gradient(0deg, #664600e3 0%, #a2d4de 100%);
+    background: linear-gradient(0deg, #000000 0%, #a2d4de 100%);
     background-size: 100% 1450px;
     padding: 1em;
     margin-top: 30pt;
     overflow: scroll;
+    padding-bottom: 20px;
 }
 
 .range-slider {
@@ -64,7 +65,10 @@ h1 {
     font-family: papyrus, Helvetica, sans-serif;
     text-align: center;
     text-shadow: 2px 3px 5px black;
-    padding: 0;
+    font-weight: 500;
+    line-height: 1.1;
+    color: black;
+    text-shadow: 2px 3px 5px black;
 }
 
 h7 {
@@ -74,6 +78,19 @@ h7 {
     color: white;
     text-shadow: 2px 3px 5px black;
     padding-left: 0px;
+}
+
+h9 {
+    font-family: papyrus, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 4;
+    color: white;
+    text-shadow: 2px 3px 5px black;
+    padding-top: 0px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    text-align: center;    
 }
 
 hr {
@@ -126,8 +143,6 @@ canvas {
     margin-bottom: 10px;
     border-color: black;
     border-width: 4px;
-    width: 750px;
-    height: 500px;
 }
 
 range-slider .slider-thumb::before {
@@ -191,4 +206,86 @@ range-slider:hover .slider-thumb:before {
     .neu-range-slider {
         width: 100%;
     }
+}
+
+
+button {
+    position: flex;
+    background-color: white;
+    border-radius: 5px;
+    shadow: 2px 3px 5px black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+button:hover {
+    background-color: dimgrey;
+}
+
+}
+
+.btn {
+    background-color: DodgerBlue;
+    padding-top: 0px;
+    border: none;
+    color: white;
+    padding: 12px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 10px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+img {
+    position: relative;
+    justify-items:flex-end;
+}
+
+a
+
+.tab {
+    text-align: right;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;    
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+    padding-left: 20px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
 }
