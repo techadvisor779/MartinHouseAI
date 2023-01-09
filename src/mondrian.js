@@ -129,7 +129,7 @@ function ColorChange(e) {
         var yAdj = 114;       
         var x = e.clientX-xAdj;
         var y = e.clientY-yAdj; 
-        console.log(x, y)
+        console.log(canvas.getBoundingClientRect().left, canvas.getBoundingClientRect().top)
         var xMaxLimit=x;
         var yMaxLimit=y+1;     
         var xMinLimit=x-1;
