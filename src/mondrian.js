@@ -129,6 +129,7 @@ function ColorChange(e) {
         var yAdj = 130;       
         var x = e.clientX-xAdj;
         var y = e.clientY-yAdj; 
+        console.log(x, y);
         console.log(x, y)
         var xMaxLimit=x;
         var yMaxLimit=y+1;     
