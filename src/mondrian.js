@@ -125,11 +125,10 @@ var draw = function(e) {
 
 function ColorChange(e) {
     if (PaintID.checked) {   
-        var xAdj = 327;  //344
-        var yAdj = 114;       
+        var xAdj = canvas.getBoundingClientRect().left;  //344
+        var yAdj = canvas.getBoundingClientRect().top;       
         var x = e.clientX-xAdj;
         var y = e.clientY-yAdj; 
-        console.log(canvas.getBoundingClientRect().left, canvas.getBoundingClientRect().top)
         var xMaxLimit=x;
         var yMaxLimit=y+1;     
         var xMinLimit=x-1;
