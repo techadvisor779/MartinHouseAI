@@ -2,7 +2,7 @@ var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
 
 var dpr = window.devicePixelRatio;
-canvas.width = window.innerWidth*.35;
+canvas.width = window.innerWidth*dpr*.35;
 canvas.height = window.innerWidth*dpr*.22;
 var size = canvas.width*.8;
 //console.log( dpr, canvas.width, canvas.height);
@@ -129,6 +129,7 @@ function ColorChange(e) {
         var yAdj = canvas.getBoundingClientRect().top;       
         var x = e.clientX-xAdj;
         var y = e.clientY-yAdj; 
+        console.log(x,y);
         var xMaxLimit=x;
         var yMaxLimit=y+1;     
         var xMinLimit=x-1;
