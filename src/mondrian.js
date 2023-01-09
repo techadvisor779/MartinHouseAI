@@ -125,8 +125,8 @@ var draw = function(e) {
 
 function ColorChange(e) {
     if (PaintID.checked) {   
-        var xAdj = 344;
-        var yAdj = 130;       
+        var xAdj = 227;  //344
+        var yAdj = 114;       
         var x = e.clientX-xAdj;
         var y = e.clientY-yAdj; 
         console.log(x, y)
