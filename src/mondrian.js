@@ -126,7 +126,7 @@ var draw = function(e) {
 function ColorChange(e) {
     if (PaintID.checked) {   
         var xAdj = canvas.getBoundingClientRect().left;  //344
-        var yAdj = canvas.getBoundingClientRect().top;    //-212   
+        var yAdj = canvas.getBoundingClientRect().top-211;    //-212   
         var x = e.clientX-xAdj;
         var y = e.clientY-yAdj; 
         console.log(x,y);
