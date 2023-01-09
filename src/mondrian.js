@@ -1,25 +1,25 @@
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
 
-var size = 450;
 var dpr = window.devicePixelRatio;
-canvas.width = size * dpr;
-canvas.height = size * dpr;
+canvas.width = window.innerWidth*dpr*.34;
+canvas.height = window.innerWidth*dpr*.22;
+var size = canvas.width*.7255;
 //console.log( dpr, canvas.width, canvas.height);
-c.scale(dpr, dpr);
+//c.scale(dpr, dpr);
 c.lineWidth = 6;
 var inputDiv = 7;
 var step = size / inputDiv;
 var white = '#F2F5F1';
-var colorsP = ['#f6cdd2', '#cfddec', '#fdf7d9', '#f6cdd2', '#cfddec', '#fdf7d9', '#000000']
+var colorsP = ['#f6cdd2', '#cfddec', '#fdf7d9', '#f6cdd2', '#cfddec', '#fdf7d9', '#000000', ]
 var colorsT = ['#D40920', '#1356A2', '#F7D842', '#D40920', '#1356A2', '#F7D842', '#000000']
 var colors = colorsT;
+var colorIndex = 0;
 const buttonL = document.getElementById("LineID");
 const buttonP = document.getElementById("PaintID");
 const buttonT = document.getElementById("Traditional");
 const buttonPP = document.getElementById("Pastel");
 var slider = document.getElementById("LineRange");
-console.log(buttonL, slider, buttonP, buttonT, buttonPP);
 var stepVal = 0;
 var squares = [{
     x: 0,
@@ -90,8 +90,8 @@ function splitOnY(square, splitAt) {
 var draw = function(e) {
     if (LineID.checked) {
         inputDiv = document.getElementById("LineRange").value;
-        step = size / inputDiv;
-        squares = [{ x: 0, y: 0, width: size, height: size}];
+        step = (size / inputDiv);
+        squares = [{ x: 0, y: 0, width: size*dpr, height: size*dpr}];
         for (var i = 0; i < size; i += step) {
             splitSquaresWith({ y: i });
             splitSquaresWith({ x: i });
@@ -118,61 +118,119 @@ var draw = function(e) {
             c.stroke(); 
         }     
     } 
-    // if (PaintID.checked) {       
-    //     for (var i = 0; i < squares.length; i++) {  
-    //         //if (1) {  //e.clientX * dpr -380 > squares[i].x && e.clientX * dpr -380 < squares[i].x + squares[i].width && e.clientY * dpr -50 > squares[i].y && e.clientY * dpr -50 < squares[i].y + squares[i].height) {                
-    //         //squares[i].color + squares[i].color + 1; 
-    //         //squares[Math.floor(Math.random() * squares.length)].color = colors[i];
-    //         squares[i].color = colors[Math.floor(Math.random()*5)];
-    //         //if (i >= 6) {
-    //         //    squares[i].color = '#f6cdd2';
-    //         //}
-    //         c.fillStyle = squares[i].color;
-    //         c.fill();
-    //         c.stroke();
-    //         console.log(squares[i].color);
-    //         //}
-    //     }
-    // }
+    c.beginPath();
+    c.rect(0,0,canvas.width,canvas.height);
+    c.stroke();   
+}
+
+function ColorChange(e) {
+    if (PaintID.checked) {   
+        var xAdj = 394;
+        var yAdj = 130;       
+        var x = e.clientX-xAdj;
+        var y = e.clientY-yAdj; 
+        console.log(x, y)
+        var xMaxLimit=x;
+        var yMaxLimit=y+1;     
+        var xMinLimit=x-1;
+        var yMinLimit=y-1;          
+        var step=1;
+        myFlag = true;
+        while (myFlag) {   
+            imageData = c.getImageData(x+step, y, 1, 1); 
+            pixelData = imageData.data;  
+            if (pixelData[0] == 0 && pixelData[1] == 0 && pixelData[2] == 0) {
+                xMaxLimit = x+step; 
+                myFlag = false; 
+                break;              
+            }
+            step++;
+        }  
+        step=1;
+        myFlag = true;
+        while (myFlag) {            
+            imageData = c.getImageData(x-step, y, 1, 1);
+            pixelData = imageData.data;              
+            if (pixelData[0] == 0 && pixelData[1] == 0 && pixelData[2] == 0) {
+                xMinLimit = xMinLimit-step;
+                myFlag = false; 
+                break;
+            }
+            step++;
+        } 
+        step=1;
+        myFlag = true; 
+        while (myFlag) {            
+            imageData = c.getImageData(x, y+step, 1, 1);
+            pixelData = imageData.data;              
+            if (pixelData[0] == 0 && pixelData[1] == 0 && pixelData[2] == 0) {
+                yMaxLimit = y+step;
+                myFlag = false; 
+                break;
+            }
+            step++;
+        } 
+        step=1;
+        myFlag = true;   
+        while (myFlag) {            
+            imageData = c.getImageData(x, y-step, 1, 1);
+            pixelData = imageData.data;              
+            if (pixelData[0] == 0 && pixelData[1] == 0 && pixelData[2] == 0) {
+                yMinLimit = y-step+1;
+                myFlag = false; 
+                break;
+            }
+            step++;
+        }            
+        c.beginPath();
+        if (colorIndex <= 5) { 
+            c.fillStyle = colors[colorIndex];
+        }
+        else {
+            c.fillStyle = 'White';
+        }
+        c.fillRect(xMinLimit+2, yMinLimit, xMaxLimit-xMinLimit-2, yMaxLimit-yMinLimit);
+        c.fill();
+        step=1;   
+        colorIndex++;
+        if (colorIndex >= 7) {
+            colorIndex = 0;     
+        }
+    
+    }
 }
 
 function submitForm() {
      var val = document.getElementById('signIt').value;
      val = val + " '22" ;     
-     //var h3 = document.createElement('h3');          
-     //h3.style.transform = "translate( 900px, -220px) rotate( -10deg)";
      c.fillStyle = 'Black';
      c.font = "10pt papyrus";
      c.textAlign = 'right';
-     //h3.textContent = val; 
      c.strokeStyle = 'Black';
      c.fillStyle = 'Black';
-     c.fillText(val, 430, 420);
-     //document.body.appendChild(h3);
+     c.fillText(val, canvas.width-30, canvas.height-30);
 }
 
 var LineClick = function() {
-    console.log("here line", LineID)
     if (LineID.checked) {
         PaintID.checked = false;
         LineID.checked = true;
     }
 }
 var PaintClick = function() {
-    console.log("here paint")
     if (PaintID.checked) {
         LineID.checked = false;
         PaintID.checked = true;
     }
 }
-var TClick = function() {
-    
+var TClick = function() {    
     if (Traditional.checked) {
         Pastel.checked = false;
         Traditional.checked = true;
         colors = colorsT;
     }
 }
+
 var PClick = function() {
     if (Pastel.checked) {
         Traditional.checked = false;
@@ -182,4 +240,14 @@ var PClick = function() {
 }
 
 draw();
-canvas.addEventListener('mousedown', draw);
+canvas.addEventListener('mousedown', (e) => {
+    draw();
+    ColorChange(e);
+});
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth*dpr*.48;
+    canvas.height = window.innerWidth;
+    size = canvas.width*.7255;
+    draw(canvas)
+})
