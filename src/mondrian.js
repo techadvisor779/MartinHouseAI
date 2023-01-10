@@ -4,7 +4,7 @@ var c = canvas.getContext('2d');
 var dpr = window.devicePixelRatio;
 canvas.width = window.innerWidth*dpr*.4;
 canvas.height = window.innerWidth*dpr*.22;
-var size = canvas.width*dpr;
+var size = canvas.width;
 //console.log( dpr, canvas.width, canvas.height);
 //c.scale(dpr, dpr);
 c.lineWidth = 6;
