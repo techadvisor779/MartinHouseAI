@@ -2,9 +2,9 @@ var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
 
 var dpr = window.devicePixelRatio;
-canvas.width = window.innerWidth*dpr*.35;
+canvas.width = window.innerWidth*dpr*.34;
 canvas.height = window.innerWidth*dpr*.22;
-var size = canvas.width*.8;
+var size = canvas.width*.7255;
 //console.log( dpr, canvas.width, canvas.height);
 //c.scale(dpr, dpr);
 c.lineWidth = 6;
@@ -125,11 +125,12 @@ var draw = function(e) {
 
 function ColorChange(e) {
     if (PaintID.checked) {   
-        var xAdj = canvas.getBoundingClientRect().left;  //344
-        var yAdj = canvas.getBoundingClientRect().top-200;    //-212   
+        var xAdj = canvas.offsetLeft;  //394
+        var yAdj = canvas.offsetLeft-160;  //130     
+        console.log(yAdj)
         var x = e.clientX-xAdj;
         var y = e.clientY-yAdj; 
-        console.log(x,y);
+        console.log(x, y)
         var xMaxLimit=x;
         var yMaxLimit=y+1;     
         var xMinLimit=x-1;
