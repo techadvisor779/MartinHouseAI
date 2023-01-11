@@ -511,11 +511,8 @@ function submitForm() {
      c.textAlign = 'right';
      c.strokeStyle = 'Black';
      console.log(bg_color, 'here');
-     if (bg_color == 'Black') {
-        c.fillStyle = 'White';
-     }
-     else {
-        c.fillStyle = 'Black';
+     if (bg_color == '#000000') {
+        c.fillStyle = '#ffffff';
     }
     c.fillText(val, canvas.width-50, canvas.height-30); //  1230, 540);
 }
