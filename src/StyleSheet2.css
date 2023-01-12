@@ -21,6 +21,8 @@ body {
 }
 
 .h3 {
+    font-family: Helvetica, Helvetica, sans-serif;
+    font: bold;
     padding-left: 450px;
     color: black;
     float: left;
