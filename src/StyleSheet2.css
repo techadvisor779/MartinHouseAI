@@ -1,16 +1,11 @@
 
 body {
-    background: linear-gradient(0deg, #00ffff 35%, #000000 100%);   
-    padding-top: 40pt;
-    padding-left: 20px;
-    margin-bottom: 80px;
-    overflow: auto;
-}
-
-.h1 {
-    color: white;
+    background: linear-gradient(0deg, #000000 10%, #858585 80%);
+    padding-top: 50px;
     padding-left: 0px;
-    margin-bottom: 0px;
+    overflow: none;
+    width: 100%;
+    height: 100%;
 }
 
 .h2 {
@@ -20,10 +15,8 @@ body {
 }
 
 .h3 {
-    font-family: Helvetica, Helvetica, sans-serif;
-    font: bold;
     padding-left: 450px;
-    color: white;
+    color: black;
     float: left;
     align-content: left;
 }
@@ -33,6 +26,7 @@ body {
     width: 30%;
     display: inline-block;
     height: fit-content;
+    padding-right: 80px;
 }
 
 .column2 {
@@ -45,41 +39,14 @@ body {
 }
 
 .column3 {
-    width: 55%;
+    font-family: Verdana, Verdana, Geneva, sans-serif;
+    font: bold;
+    color: white;
+    width: 65%;
     padding-left: 100px;
     margin: 0px;
     float: left;
     font:bold;
-}
-
-.container .img {
-    position: relative;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.container .img2 {
-    position: relative;
-    padding-left: 160px;
-    padding-right: 50px;
-}
-
-.container .img3 {
-    position: relative;
-    padding-left: 220px;
-    padding-right: 0px;
-}
-
-.container .img4 {
-    position: relative;
-    padding-left: 80px;
-    padding-right: 40px;
-}
-
-.container .img5 {
-    position: relative;
-    padding-left: 31px;
-    padding-right: 0px;
 }
 
 .textColmn {
@@ -98,25 +65,25 @@ body {
     height: 100%;
 }
 
-    /* Style the button and place it in the middle of the container/image */
-    .container .btn {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        background-color: #555;
-        color: white;
-        font-size: 16px;
-        padding: 12px 24px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-    }
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+    position: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-        .container .btn:hover {
-            background-color: black;
-        }
+.container .btn:hover {
+    background-color: black;
+}
 
 .hero {
     height: 100%;
@@ -125,9 +92,13 @@ body {
 }
 
 h1 {
-    padding-left: 0px;
-    padding-bottom: 40px;
-    width: 100%;    
+    font-family: papyrus, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: black;
+    text-shadow: 2px 3px 5px black;
+    padding-bottom: 0px;
 }
 
 p {
@@ -142,4 +113,8 @@ p2 {
     padding: 5px;
     width: 500px;
     padding-right: 50px;
+}
+
+spacer {
+    padding-right: 600px;
 }
