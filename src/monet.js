@@ -8,6 +8,7 @@ canvas.height = 400 * dpr;
 var startImage = new Image();
 
 startImage = document.getElementById("img_monet");
+startImage.src = "https://github.com/techadvisor779/MartinHouseAI/blob/2dbfafdbb01398b508ee8de1d77f2346b2b3bebd/images/poppies.jpg";
 c.drawImage( startImage, 0, 0, canvas.width, canvas.height);
 var imgInput = document.getElementById('myImage');
 function loadImg() {
